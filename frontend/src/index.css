@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory text-textMain font-sans antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif;
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-content mx-auto px-5 sm:px-8 lg:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-gold text-white font-sans font-semibold tracking-wide text-sm px-7 py-3.5 rounded-full transition-all duration-300 hover:bg-darkCoffee hover:shadow-soft active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent border border-darkCoffee/30 text-darkCoffee font-sans font-semibold tracking-wide text-sm px-7 py-3.5 rounded-full transition-all duration-300 hover:border-gold hover:text-gold active:scale-95;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent border border-white/40 text-white font-sans font-semibold tracking-wide text-sm px-7 py-3.5 rounded-full transition-all duration-300 hover:bg-white hover:text-darkCoffee active:scale-95;
+  }
+
+  .section-label {
+    @apply inline-block uppercase tracking-[0.2em] text-xs sm:text-sm font-semibold text-gold mb-3;
+  }
+
+  .section-heading {
+    @apply font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-textMain;
+  }
+
+  .gold-italic {
+    @apply italic text-gold font-serif;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-beige/60 overflow-hidden;
+  }
+
+  .link-underline {
+    @apply relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .admin-card {
+    @apply bg-white rounded-xl shadow-card border border-beige/70 p-6;
+  }
+
+  .admin-input {
+    @apply w-full border border-beige rounded-lg px-4 py-2.5 text-sm text-textMain bg-ivory focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition;
+  }
+
+  .admin-label {
+    @apply block text-sm font-semibold text-darkCoffee mb-1.5;
+  }
+
+  .admin-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-darkCoffee text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition hover:bg-gold disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .admin-btn-danger {
+    @apply inline-flex items-center justify-center gap-2 bg-red-50 text-red-600 font-semibold text-sm px-4 py-2 rounded-lg transition hover:bg-red-100;
+  }
+}
