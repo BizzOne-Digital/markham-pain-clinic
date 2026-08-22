@@ -16,15 +16,15 @@ export default function TrustFeaturesBar() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-white rounded-2xl shadow-soft border border-beige/70 grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-beige overflow-x-auto"
+        className="bg-white rounded-xl lg:rounded-2xl shadow-soft border border-beige/70 grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-beige overflow-x-auto"
       >
         {FEATURES.map(({ icon: Icon, title, text }) => (
-          <div key={title} className="p-6 flex flex-col items-center text-center gap-3">
-            <span className="w-12 h-12 rounded-full border border-gold/40 text-gold flex items-center justify-center text-xl">
+          <div key={title} className="p-3 sm:p-4 lg:p-6 flex flex-col items-center text-center gap-1.5 lg:gap-3">
+            <span className="w-8 h-8 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full border border-gold/40 text-gold flex items-center justify-center text-sm sm:text-base lg:text-xl">
               <Icon />
             </span>
-            <p className="font-serif text-base text-textMain">{title}</p>
-            <p className="text-textSecondary text-xs leading-relaxed">{text}</p>
+            <p className="font-serif text-xs sm:text-sm lg:text-base text-textMain leading-tight">{title}</p>
+            <p className="hidden sm:block text-textSecondary text-[11px] lg:text-xs leading-snug">{text}</p>
           </div>
         ))}
       </motion.div>

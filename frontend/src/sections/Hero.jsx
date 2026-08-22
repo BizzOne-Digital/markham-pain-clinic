@@ -8,17 +8,20 @@ export default function Hero() {
   const [videoOpen, setVideoOpen] = useState(false)
 
   return (
-    <section className="relative overflow-hidden pt-10 sm:pt-14 pb-32 sm:pb-40 min-h-[640px] sm:min-h-[720px] flex items-center">
+    <section className="relative overflow-hidden pt-10 sm:pt-14 pb-24 sm:pb-28 lg:pb-40 min-h-[560px] sm:min-h-[640px] lg:min-h-[720px] flex items-center">
       <div className="absolute inset-0">
         <img
           src="/hero.png"
           alt="Woman doing a core exercise on a mat in a bright studio"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ivory from-25% via-ivory/70 via-35% to-transparent to-50%" />
+        {/* Mobile/tablet: fuller overlay so text stays readable over the whole image */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/95 via-ivory/85 to-ivory/60 lg:hidden" />
+        {/* Desktop: left-side fade only, image stays fully clear on the right */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-ivory from-25% via-ivory/70 via-35% to-transparent to-50%" />
       </div>
 
-      <div className="relative w-full pl-6 sm:pl-12 lg:pl-20">
+      <div className="relative w-full pl-6 pr-6 sm:pl-12 sm:pr-12 lg:pl-20 lg:pr-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,7 +29,7 @@ export default function Hero() {
           className="max-w-md"
         >
           <span className="section-label">Welcome to Markham Pain Clinic</span>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] text-textMain mt-3">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-[3.4rem] leading-[1.1] text-textMain mt-3">
             Evidence-Based
             <br />
             Pain Relief.
