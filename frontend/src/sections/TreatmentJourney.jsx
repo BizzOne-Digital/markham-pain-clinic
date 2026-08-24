@@ -6,13 +6,13 @@ const STEPS = [
     num: '01',
     title: 'Make an Appointment',
     text: 'Call, email or book online — our team will schedule your first visit quickly.',
-    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800&auto=format&fit=crop',
   },
   {
     num: '02',
     title: 'Get a Consultation',
     text: 'We assess your condition, discuss your goals and design a personalized treatment plan.',
-    image: 'https://images.unsplash.com/photo-1666214280165-2ec1b6e18464?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800&auto=format&fit=crop',
   },
   {
     num: '03',
@@ -54,8 +54,16 @@ export default function TreatmentJourney() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-white rounded-2xl overflow-hidden shadow-soft"
             >
-              <div className="h-40 overflow-hidden">
-                <img src={step.image} alt={step.title} loading="lazy" className="w-full h-full object-cover" />
+              <div className="h-40 overflow-hidden bg-beige">
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                  }}
+                />
               </div>
               <div className="p-6 text-center">
                 <h3 className="font-serif text-lg text-textMain mb-2">{step.title}</h3>
