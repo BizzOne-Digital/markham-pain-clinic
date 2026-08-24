@@ -28,12 +28,10 @@ export default function Hero() {
           className="max-w-md"
         >
           <span className="section-label !text-gold">Welcome to Markham Pain Clinic</span>
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-[3.4rem] leading-[1.1] text-white mt-3">
-            Evidence-Based
-            <br />
-            Pain Relief.
-            <br />
-            <span className="italic text-gold font-serif">Restoring Life.</span>
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-[3.4rem] leading-[1.35] text-white mt-4 space-y-1">
+            <span className="block">Evidence-Based</span>
+            <span className="block">Pain Relief.</span>
+            <span className="block italic text-gold font-serif mt-1">Restoring Life.</span>
           </h1>
           <p className="text-beige/90 text-base sm:text-lg mt-6 max-w-sm leading-relaxed">
             Advanced, personalized and non-surgical treatment solutions designed to help you move
