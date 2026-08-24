@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden md:flex bg-beige/70 text-xs text-darkCoffee">
+      <div className="hidden md:flex bg-darkCoffee text-xs text-beige/90">
         <div className="container-app flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
             <a href={`tel:${CLINIC_INFO.phone.replace(/\s/g, '')}`} className="flex items-center gap-1.5 hover:text-gold transition">
@@ -39,12 +39,12 @@ export default function Header() {
       </div>
 
       <div
-        className={`bg-white/95 backdrop-blur-md transition-all duration-300 ${
+        className={`bg-darkCoffee transition-all duration-300 ${
           scrolled ? 'shadow-soft py-2' : 'py-4'
         }`}
       >
         <div className="container-app flex items-center justify-between">
-          <NavLink to="/" className="font-serif text-xl sm:text-2xl text-darkCoffee font-semibold tracking-tight">
+          <NavLink to="/" className="font-serif text-xl sm:text-2xl text-white font-semibold tracking-tight">
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
@@ -56,7 +56,7 @@ export default function Header() {
                 end={link.to === '/'}
                 className={({ isActive }) =>
                   `text-sm font-medium tracking-wide link-underline ${
-                    isActive ? 'text-gold' : 'text-textMain hover:text-gold'
+                    isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'
                   }`
                 }
               >
@@ -73,7 +73,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="lg:hidden text-2xl text-darkCoffee"
+            className="lg:hidden text-2xl text-white"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
@@ -97,11 +97,11 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-ivory z-[70] shadow-soft p-6 flex flex-col"
+              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-darkCoffee z-[70] shadow-soft p-6 flex flex-col"
             >
               <div className="flex justify-between items-center mb-8">
-                <span className="font-serif text-lg text-darkCoffee">Menu</span>
-                <button type="button" onClick={() => setOpen(false)} className="text-2xl text-darkCoffee" aria-label="Close menu">
+                <span className="font-serif text-lg text-white">Menu</span>
+                <button type="button" onClick={() => setOpen(false)} className="text-2xl text-white" aria-label="Close menu">
                   <FiX />
                 </button>
               </div>
@@ -112,7 +112,7 @@ export default function Header() {
                     to={link.to}
                     end={link.to === '/'}
                     onClick={() => setOpen(false)}
-                    className={({ isActive }) => `text-base font-medium ${isActive ? 'text-gold' : 'text-textMain'}`}
+                    className={({ isActive }) => `text-base font-medium ${isActive ? 'text-gold' : 'text-beige/90'}`}
                   >
                     {link.label}
                   </NavLink>

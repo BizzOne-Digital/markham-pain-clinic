@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FiPhone, FiMail, FiMapPin, FiClock, FiInstagram, FiCheckCircle } from 'react-icons/fi'
 import SEO from '../components/SEO.jsx'
-import SectionLabel from '../components/SectionLabel.jsx'
+import PageBanner from '../components/PageBanner.jsx'
 import enquiriesApi from '../services/enquiriesApi'
 import { CLINIC_INFO } from '../utils/placeholderData'
 
@@ -55,14 +55,7 @@ export default function Contact() {
   return (
     <>
       <SEO title="Contact Us" description="Get in touch with Markham Pain Clinic to book an appointment or ask a question." />
-      <section className="pt-16 sm:pt-20 pb-4 bg-white text-center">
-        <div className="container-app max-w-2xl mx-auto">
-          <SectionLabel>Contact Us</SectionLabel>
-          <h1 className="section-heading">
-            Let&apos;s Start Your <span className="gold-italic">Recovery.</span>
-          </h1>
-        </div>
-      </section>
+      <PageBanner title="Contact Us" crumb="Contact" />
 
       <section className="section-padding bg-white">
         <div className="container-app grid lg:grid-cols-2 gap-14">

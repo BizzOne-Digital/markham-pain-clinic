@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import SEO from '../components/SEO.jsx'
-import SectionLabel from '../components/SectionLabel.jsx'
+import PageBanner from '../components/PageBanner.jsx'
 import TestimonialCard from '../components/TestimonialCard.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import AppointmentCTA from '../sections/AppointmentCTA.jsx'
@@ -34,16 +34,7 @@ export default function Testimonials() {
         title="Testimonials"
         description="Read real patient testimonials about their pain relief and recovery experience at Markham Pain Clinic."
       />
-      <section className="section-padding bg-ivory text-center">
-        <div className="container-app max-w-3xl mx-auto">
-          <SectionLabel>TESTIMONIALS</SectionLabel>
-          <h1 className="section-heading mb-6">Real Stories From Real Patients</h1>
-          <p className="text-textSecondary leading-relaxed">
-            Hear directly from patients who have experienced lasting relief and recovery through our
-            personalized treatment plans.
-          </p>
-        </div>
-      </section>
+      <PageBanner title="Testimonials" crumb="Testimonials" />
       <section className="section-padding bg-white">
         <div className="container-app">
           {loading ? (

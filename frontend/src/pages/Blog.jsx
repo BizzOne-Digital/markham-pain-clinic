@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import SEO from '../components/SEO.jsx'
-import SectionLabel from '../components/SectionLabel.jsx'
+import PageBanner from '../components/PageBanner.jsx'
 import BlogCard from '../components/BlogCard.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import EmptyState from '../components/EmptyState.jsx'
@@ -34,12 +34,7 @@ export default function Blog() {
         title="Blog"
         description="Read the latest tips and insights on pain management, physiotherapy, and recovery from Markham Pain Clinic."
       />
-      <section className="section-padding bg-ivory text-center">
-        <div className="container-app max-w-3xl mx-auto">
-          <SectionLabel>OUR BLOG</SectionLabel>
-          <h1 className="section-heading mb-6">Tips & Insights for Better Health</h1>
-        </div>
-      </section>
+      <PageBanner title="Latest News & Blogs" crumb="Blog" />
       <section className="section-padding bg-white">
         <div className="container-app">
           {loading ? (

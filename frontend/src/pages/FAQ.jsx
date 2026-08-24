@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import SEO from '../components/SEO.jsx'
-import SectionLabel from '../components/SectionLabel.jsx'
+import PageBanner from '../components/PageBanner.jsx'
 import Accordion from '../components/Accordion.jsx'
 import AppointmentCTA from '../sections/AppointmentCTA.jsx'
 import faqsApi from '../services/faqsApi'
@@ -28,13 +28,8 @@ export default function FAQ() {
   return (
     <>
       <SEO title="FAQ" description="Answers to common questions about appointments, treatments and what to expect at Markham Pain Clinic." />
-      <section className="pt-16 sm:pt-20 pb-14 bg-white text-center">
-        <div className="container-app max-w-2xl mx-auto">
-          <SectionLabel>FAQ</SectionLabel>
-          <h1 className="section-heading">Frequently Asked Questions</h1>
-        </div>
-      </section>
-      <section className="section-padding bg-ivory pt-0">
+      <PageBanner title="Frequently Asked Questions" crumb="FAQ" />
+      <section className="section-padding bg-ivory">
         <div className="container-app max-w-3xl">
           <Accordion items={faqs} />
         </div>

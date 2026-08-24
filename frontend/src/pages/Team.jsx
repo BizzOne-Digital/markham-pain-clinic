@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import SEO from '../components/SEO.jsx'
-import SectionLabel from '../components/SectionLabel.jsx'
+import PageBanner from '../components/PageBanner.jsx'
 import TeamCard from '../components/TeamCard.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import AppointmentCTA from '../sections/AppointmentCTA.jsx'
@@ -34,16 +34,7 @@ export default function Team() {
         title="Our Team"
         description="Meet the licensed physiotherapists, acupuncturists, and pain specialists at Markham Pain Clinic."
       />
-      <section className="section-padding bg-ivory text-center">
-        <div className="container-app max-w-3xl mx-auto">
-          <SectionLabel>OUR TEAM</SectionLabel>
-          <h1 className="section-heading mb-6">Meet the Experts Behind Your Recovery</h1>
-          <p className="text-textSecondary leading-relaxed">
-            Our team of licensed, experienced clinicians is dedicated to helping you recover with
-            evidence-based, compassionate care.
-          </p>
-        </div>
-      </section>
+      <PageBanner title="Our Team" crumb="Our Team" />
       <section className="section-padding bg-white">
         <div className="container-app">
           {loading ? (
