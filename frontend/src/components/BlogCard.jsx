@@ -28,7 +28,7 @@ export default function BlogCard({ post, index = 0 }) {
         </div>
         <h3 className="font-serif text-lg text-textMain mb-2 leading-snug">{post.title}</h3>
         <p className="text-textSecondary text-sm mb-4">{truncateText(post.excerpt, 110)}</p>
-        <Link to={`/blog/${post.slug}`} className="text-sm font-semibold link-underline text-darkCoffee">
+        <Link to={`/blog/${post.slug}`} className="btn-primary w-full justify-center !py-2.5 !text-xs">
           Read More
         </Link>
       </div>

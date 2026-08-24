@@ -3,13 +3,14 @@ import Hero from '../sections/Hero.jsx'
 import ServicesPreview from '../sections/ServicesPreview.jsx'
 import StatisticsBar from '../sections/StatisticsBar.jsx'
 import AboutPreview from '../sections/AboutPreview.jsx'
-import WhyChooseUs from '../sections/WhyChooseUs.jsx'
-import TreatmentJourney from '../sections/TreatmentJourney.jsx'
 import ConditionsGrid from '../sections/ConditionsGrid.jsx'
-import TestimonialsSection from '../sections/TestimonialsSection.jsx'
+import TreatmentJourney from '../sections/TreatmentJourney.jsx'
 import TeamPreview from '../sections/TeamPreview.jsx'
-import FAQPreview from '../sections/FAQPreview.jsx'
+import WhyChooseUs from '../sections/WhyChooseUs.jsx'
+import TestimonialsSection from '../sections/TestimonialsSection.jsx'
 import BlogPreviewSection from '../sections/BlogPreviewSection.jsx'
+import InsuranceBilling from '../sections/InsuranceBilling.jsx'
+import FAQPreview from '../sections/FAQPreview.jsx'
 import AppointmentCTA from '../sections/AppointmentCTA.jsx'
 
 export default function Home() {
@@ -25,13 +26,14 @@ export default function Home() {
       </div>
       <StatisticsBar />
       <AboutPreview />
-      <WhyChooseUs />
-      <TreatmentJourney />
       <ConditionsGrid />
-      <TestimonialsSection />
+      <TreatmentJourney />
       <TeamPreview />
-      <FAQPreview />
+      <WhyChooseUs />
+      <TestimonialsSection />
       <BlogPreviewSection />
+      <InsuranceBilling />
+      <FAQPreview />
       <AppointmentCTA />
     </>
   )

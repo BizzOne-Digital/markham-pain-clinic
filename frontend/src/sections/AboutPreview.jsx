@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FiCheck } from 'react-icons/fi'
 import SectionLabel from '../components/SectionLabel.jsx'
 import Button from '../components/Button.jsx'
+import QuickQueryForm from '../components/QuickQueryForm.jsx'
 
 const POINTS = ['Evidence-based treatments', 'One-on-one personalized care', 'Focused on long-term results']
 
@@ -40,13 +41,17 @@ export default function AboutPreview() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-[2rem] overflow-hidden shadow-soft aspect-[4/5]"
+          className="relative rounded-[2rem] overflow-hidden shadow-soft aspect-[4/5] flex items-end"
         >
           <img
             src="/about.png"
             alt="Warm, modern clinic reception interior"
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+          <div className="relative w-full p-5 sm:p-6">
+            <QuickQueryForm />
+          </div>
         </motion.div>
       </div>
     </section>
