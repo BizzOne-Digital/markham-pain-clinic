@@ -70,7 +70,7 @@ export default function Header() {
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
-          <nav className="hidden xl:flex items-center gap-7">
+          <nav className="hidden xl:flex items-center gap-5 ml-6">
             <NavLink
               to="/"
               end
