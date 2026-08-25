@@ -1,20 +1,44 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FiMenu, FiX, FiPhone, FiMail, FiInstagram } from 'react-icons/fi'
+import { FiMenu, FiX, FiPhone, FiMail, FiInstagram, FiChevronDown } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 import useScrollPosition from '../hooks/useScrollPosition'
+import NavDropdown from './NavDropdown.jsx'
 import { CLINIC_INFO } from '../utils/placeholderData'
 
-const NAV_LINKS = [
-  { label: 'Home', to: '/' },
+const ABOUT_ITEMS = [
   { label: 'About Us', to: '/about' },
-  { label: 'Services', to: '/services' },
   { label: 'Our Team', to: '/team' },
-  { label: 'Blog', to: '/blog' },
+]
+
+const SERVICE_ITEMS = [
+  { label: 'Physiotherapy', to: '/services/physiotherapy' },
+  { label: 'Acupuncture & Dry Needling', to: '/services/acupuncture-dry-needling' },
+  { label: 'Chronic Pain Management', to: '/services/chronic-pain-management' },
+  { label: 'Sports Injury Rehabilitation', to: '/services/sports-injury-rehabilitation' },
+  { label: 'Manual Therapy', to: '/services/manual-therapy' },
+  { label: 'View All Services', to: '/services' },
+]
+
+const CONDITION_ITEMS = [
+  { label: 'Back Pain', to: '/conditions' },
+  { label: 'Neck Pain', to: '/conditions' },
+  { label: 'Shoulder Pain', to: '/conditions' },
+  { label: 'Sports Injuries', to: '/conditions' },
+  { label: 'View All Conditions', to: '/conditions' },
+]
+
+const SIMPLE_LINKS = [
+  { label: 'Products', to: '/products' },
   { label: 'Testimonials', to: '/testimonials' },
   { label: 'FAQ', to: '/faq' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Social Service', to: '/social-service' },
   { label: 'Contact', to: '/contact' },
 ]
+
+const whatsappUrl = `https://wa.me/${CLINIC_INFO.phone.replace(/[^\d]/g, '')}`
 
 export default function Header() {
   const scrolled = useScrollPosition(20)
@@ -40,40 +64,54 @@ export default function Header() {
 
       <div
         className={`bg-darkCoffee transition-all duration-300 ${
-          scrolled ? 'shadow-soft py-2' : 'py-4'
+          scrolled ? 'shadow-soft py-2' : 'py-3'
         }`}
       >
-        <div className="container-app flex items-center justify-between">
-          <NavLink to="/" className="font-serif text-xl sm:text-2xl text-white font-semibold tracking-tight">
+        <div className="container-app flex items-center justify-between gap-4">
+          <NavLink to="/" className="font-serif text-lg sm:text-xl text-white font-semibold tracking-tight flex-shrink-0">
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
-          <nav className="hidden lg:flex items-center gap-7">
-            {NAV_LINKS.map((link) => (
+          <nav className="hidden xl:flex items-center gap-5">
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => `text-[13px] font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+            >
+              Home
+            </NavLink>
+            <NavDropdown label="About Us" items={ABOUT_ITEMS} />
+            <NavDropdown label="Services" items={SERVICE_ITEMS} />
+            <NavDropdown label="Conditions Treated" items={CONDITION_ITEMS} />
+            {SIMPLE_LINKS.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
-                end={link.to === '/'}
-                className={({ isActive }) =>
-                  `text-sm font-medium tracking-wide link-underline ${
-                    isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'
-                  }`
-                }
+                className={({ isActive }) => `text-[13px] font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
               >
                 {link.label}
               </NavLink>
             ))}
           </nav>
 
-          <div className="hidden lg:block">
-            <NavLink to="/contact" className="btn-primary !py-2.5 !px-6 !text-xs">
+          <div className="hidden xl:flex items-center gap-3 flex-shrink-0">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="w-9 h-9 rounded-full bg-white/10 text-green-400 flex items-center justify-center hover:bg-white/20 transition"
+            >
+              <FaWhatsapp size={18} />
+            </a>
+            <NavLink to="/contact" className="btn-primary !py-2.5 !px-5 !text-xs whitespace-nowrap">
               BOOK APPOINTMENT
             </NavLink>
           </div>
 
           <button
             type="button"
-            className="lg:hidden text-2xl text-white"
+            className="xl:hidden text-2xl text-white"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
@@ -97,7 +135,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-darkCoffee z-[70] shadow-soft p-6 flex flex-col"
+              className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-darkCoffee z-[70] shadow-soft p-6 flex flex-col overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-8">
                 <span className="font-serif text-lg text-white">Menu</span>
@@ -105,18 +143,34 @@ export default function Header() {
                   <FiX />
                 </button>
               </div>
-              <nav className="flex flex-col gap-5">
-                {NAV_LINKS.map((link) => (
+              <nav className="flex flex-col gap-1">
+                <NavLink to="/" end onClick={() => setOpen(false)} className="py-2 text-base font-medium text-beige/90">
+                  Home
+                </NavLink>
+
+                <MobileGroup label="About Us" items={ABOUT_ITEMS} onNavigate={() => setOpen(false)} />
+                <MobileGroup label="Services" items={SERVICE_ITEMS} onNavigate={() => setOpen(false)} />
+                <MobileGroup label="Conditions Treated" items={CONDITION_ITEMS} onNavigate={() => setOpen(false)} />
+
+                {SIMPLE_LINKS.map((link) => (
                   <NavLink
                     key={link.to}
                     to={link.to}
-                    end={link.to === '/'}
                     onClick={() => setOpen(false)}
-                    className={({ isActive }) => `text-base font-medium ${isActive ? 'text-gold' : 'text-beige/90'}`}
+                    className="py-2 text-base font-medium text-beige/90"
                   >
                     {link.label}
                   </NavLink>
                 ))}
+
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-2 text-base font-medium text-beige/90 flex items-center gap-2"
+                >
+                  <FaWhatsapp className="text-green-400" /> WhatsApp
+                </a>
               </nav>
               <NavLink to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-8 justify-center">
                 BOOK APPOINTMENT
@@ -126,5 +180,42 @@ export default function Header() {
         )}
       </AnimatePresence>
     </header>
+  )
+}
+
+function MobileGroup({ label, items, onNavigate }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="border-b border-white/10">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between py-2 text-base font-medium text-beige/90"
+      >
+        {label}
+        <FiChevronDown className={`transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden pl-4"
+          >
+            {items.map((item) => (
+              <NavLink
+                key={item.to + item.label}
+                to={item.to}
+                onClick={onNavigate}
+                className="block py-2 text-sm text-beige/80"
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import {
   FiGrid, FiHome, FiLayers, FiUsers, FiStar, FiFileText, FiHelpCircle,
-  FiBarChart2, FiActivity, FiPhoneCall, FiMail, FiSettings, FiLogOut,
+  FiBarChart2, FiActivity, FiPhoneCall, FiMail, FiSettings, FiLogOut, FiShoppingBag, FiHeart,
 } from 'react-icons/fi'
 import useAuth from '../../hooks/useAuth'
 
@@ -10,6 +10,8 @@ const LINKS = [
   { label: 'Homepage', to: '/admin/homepage', icon: FiHome },
   { label: 'Services', to: '/admin/services', icon: FiLayers },
   { label: 'Conditions', to: '/admin/conditions', icon: FiActivity },
+  { label: 'Products', to: '/admin/products', icon: FiShoppingBag },
+  { label: 'Social Service', to: '/admin/social-service', icon: FiHeart },
   { label: 'Team', to: '/admin/team', icon: FiUsers },
   { label: 'Testimonials', to: '/admin/testimonials', icon: FiStar },
   { label: 'Blog', to: '/admin/blog', icon: FiFileText },

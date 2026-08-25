@@ -19,6 +19,8 @@ const homepageRoutes = require('./routes/homepageRoutes');
 const conditionRoutes = require('./routes/conditionRoutes');
 const statisticRoutes = require('./routes/statisticRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
+const productRoutes = require('./routes/productRoutes');
+const socialServiceRoutes = require('./routes/socialServiceRoutes');
 
 const app = express();
 
@@ -71,6 +73,8 @@ app.use('/api/homepage', homepageRoutes);
 app.use('/api/conditions', conditionRoutes);
 app.use('/api/stats', statisticRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/social-services', socialServiceRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

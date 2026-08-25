@@ -14,6 +14,9 @@ import Blog from '../pages/Blog.jsx'
 import BlogDetail from '../pages/BlogDetail.jsx'
 import FAQ from '../pages/FAQ.jsx'
 import Contact from '../pages/Contact.jsx'
+import Conditions from '../pages/Conditions.jsx'
+import Products from '../pages/Products.jsx'
+import SocialService from '../pages/SocialService.jsx'
 import NotFound from '../pages/NotFound.jsx'
 import PrivacyPolicy from '../pages/PrivacyPolicy.jsx'
 import TermsConditions from '../pages/TermsConditions.jsx'
@@ -28,6 +31,8 @@ import BlogEditor from '../admin/pages/BlogEditor.jsx'
 import FAQManager from '../admin/pages/FAQManager.jsx'
 import StatisticsManager from '../admin/pages/StatisticsManager.jsx'
 import ConditionsManager from '../admin/pages/ConditionsManager.jsx'
+import ProductsManager from '../admin/pages/ProductsManager.jsx'
+import SocialServiceManager from '../admin/pages/SocialServiceManager.jsx'
 import EnquiriesManager from '../admin/pages/EnquiriesManager.jsx'
 import SettingsManager from '../admin/pages/SettingsManager.jsx'
 import HomepageManager from '../admin/pages/HomepageManager.jsx'
@@ -46,6 +51,9 @@ export default function AppRoutes() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/conditions" element={<Conditions />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/social-service" element={<SocialService />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
@@ -60,6 +68,8 @@ export default function AppRoutes() {
           <Route path="homepage" element={<HomepageManager />} />
           <Route path="services" element={<ServicesManager />} />
           <Route path="conditions" element={<ConditionsManager />} />
+          <Route path="products" element={<ProductsManager />} />
+          <Route path="social-service" element={<SocialServiceManager />} />
           <Route path="team" element={<TeamManager />} />
           <Route path="testimonials" element={<TestimonialsManager />} />
           <Route path="blog" element={<BlogManager />} />
