@@ -31,8 +31,6 @@ const CONDITION_ITEMS = [
 
 const SIMPLE_LINKS = [
   { label: 'Products', to: '/products' },
-  { label: 'Testimonials', to: '/testimonials' },
-  { label: 'FAQ', to: '/faq' },
   { label: 'Blog', to: '/blog' },
   { label: 'Social Service', to: '/social-service' },
   { label: 'Contact', to: '/contact' },
@@ -72,11 +70,11 @@ export default function Header() {
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
-          <nav className="hidden xl:flex items-center gap-5">
+          <nav className="hidden xl:flex items-center gap-7">
             <NavLink
               to="/"
               end
-              className={({ isActive }) => `text-[13px] font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+              className={({ isActive }) => `text-sm font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
             >
               Home
             </NavLink>
@@ -87,7 +85,7 @@ export default function Header() {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className={({ isActive }) => `text-[13px] font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+                className={({ isActive }) => `text-sm font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
               >
                 {link.label}
               </NavLink>

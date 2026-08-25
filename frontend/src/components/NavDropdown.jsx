@@ -25,7 +25,7 @@ export default function NavDropdown({ label, items }) {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1 text-[13px] font-medium tracking-wide text-beige/90 hover:text-gold transition"
+        className="flex items-center gap-1 text-sm font-medium tracking-wide text-beige/90 hover:text-gold transition"
       >
         {label}
         <FiChevronDown className={`text-xs transition-transform ${open ? 'rotate-180' : ''}`} />
