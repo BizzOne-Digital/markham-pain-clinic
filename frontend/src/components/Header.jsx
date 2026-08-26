@@ -8,7 +8,7 @@ import NavDropdown from './NavDropdown.jsx'
 import { CLINIC_INFO } from '../utils/placeholderData'
 
 const ABOUT_ITEMS = [
-  { label: 'About Us', to: '/about' },
+  { label: 'Our Clinic', to: '/about' },
   { label: 'Our Team', to: '/team' },
 ]
 
@@ -25,15 +25,32 @@ const CONDITION_ITEMS = [
   { label: 'Back Pain', to: '/conditions' },
   { label: 'Neck Pain', to: '/conditions' },
   { label: 'Shoulder Pain', to: '/conditions' },
+  { label: 'Knee Pain', to: '/conditions' },
   { label: 'Sports Injuries', to: '/conditions' },
-  { label: 'View All Conditions', to: '/conditions' },
+  { label: 'Muscle Strains', to: '/conditions' },
+  { label: 'Joint Pain', to: '/conditions' },
+  { label: 'Sciatica', to: '/conditions' },
+  { label: 'Postural Issues', to: '/conditions' },
+  { label: 'Chronic Pain', to: '/conditions' },
+  { label: 'Mobility Problems', to: '/conditions' },
+  { label: 'Workplace Injuries', to: '/conditions' },
+]
+
+const PRODUCT_ITEMS = [
+  { label: 'Braces', to: '/products' },
+  { label: 'Massager', to: '/products' },
+  { label: 'TENS Unit', to: '/products' },
+  { label: 'Pain Relief Creams', to: '/products' },
+  { label: 'Hot and Cold Pack', to: '/products' },
+  { label: 'Custom Made Orthotics', to: '/products' },
+  { label: 'Posture Corrector Brace', to: '/products' },
 ]
 
 const SIMPLE_LINKS = [
-  { label: 'Products', to: '/products' },
-  { label: 'Blog', to: '/blog' },
+  { label: "FAQ's", to: '/faq' },
+  { label: 'Blogs', to: '/blog' },
   { label: 'Social Service', to: '/social-service' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Contact Us', to: '/contact' },
 ]
 
 const whatsappUrl = `https://wa.me/${CLINIC_INFO.phone.replace(/[^\d]/g, '')}`
@@ -70,22 +87,23 @@ export default function Header() {
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
-          <nav className="hidden xl:flex items-center gap-6 ml-8">
+          <nav className="hidden xl:flex items-center gap-5 ml-6">
             <NavLink
               to="/"
               end
-              className={({ isActive }) => `text-base font-semibold tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+              className={({ isActive }) => `text-base font-bold uppercase tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
             >
               Home
             </NavLink>
             <NavDropdown label="About Us" items={ABOUT_ITEMS} />
-            <NavDropdown label="Services" items={SERVICE_ITEMS} />
-            <NavDropdown label="Conditions Treated" items={CONDITION_ITEMS} />
+            <NavDropdown label="Services" items={SERVICE_ITEMS} columns={2} />
+            <NavDropdown label="Conditions" items={CONDITION_ITEMS} columns={3} />
+            <NavDropdown label="Products" items={PRODUCT_ITEMS} />
             {SIMPLE_LINKS.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
-                className={({ isActive }) => `text-base font-semibold tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+                className={({ isActive }) => `text-base font-bold uppercase tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
               >
                 {link.label}
               </NavLink>
@@ -97,10 +115,9 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Chat on WhatsApp"
-              className="w-9 h-9 rounded-full bg-white/10 text-green-400 flex items-center justify-center hover:bg-white/20 transition"
+              className="inline-flex items-center gap-2 bg-green-500 text-white font-bold text-xs uppercase tracking-wide px-4 py-2.5 rounded-full hover:bg-green-600 transition whitespace-nowrap"
             >
-              <FaWhatsapp size={18} />
+              <FaWhatsapp size={16} /> WhatsApp
             </a>
             <NavLink to="/contact" className="btn-primary !py-2.5 !px-5 !text-xs whitespace-nowrap">
               BOOK APPOINTMENT
@@ -148,7 +165,8 @@ export default function Header() {
 
                 <MobileGroup label="About Us" items={ABOUT_ITEMS} onNavigate={() => setOpen(false)} />
                 <MobileGroup label="Services" items={SERVICE_ITEMS} onNavigate={() => setOpen(false)} />
-                <MobileGroup label="Conditions Treated" items={CONDITION_ITEMS} onNavigate={() => setOpen(false)} />
+                <MobileGroup label="Conditions" items={CONDITION_ITEMS} onNavigate={() => setOpen(false)} />
+                <MobileGroup label="Products" items={PRODUCT_ITEMS} onNavigate={() => setOpen(false)} />
 
                 {SIMPLE_LINKS.map((link) => (
                   <NavLink
