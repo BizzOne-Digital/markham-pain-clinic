@@ -188,6 +188,27 @@ const FAQS = [
   { question: 'How do I book an appointment?', answer: 'You can call us, email us, or use the contact form on this website and our team will reach out to schedule your visit.', order: 8 },
 ];
 
+const EXTRA_SERVICE_NAMES = [
+  'Chiropractic Care',
+  'Massage Therapy',
+  'Acupuncture',
+  'Cupping Therapy',
+  'Dry Needling',
+  'Spinal Manipulation/Adjustment',
+  'Electrotherapeutic Modalities',
+  'Dancer Rehabilitation',
+  'Myofascial Release',
+  'Vestibular Therapy',
+  'McKenzie Method',
+  'Soft Tissue Release',
+  'Relaxation Method',
+  'Therapeutic Exercise',
+  'Return to Work/Play',
+  'Trigger Point Release',
+  'Deep Tissue Massage',
+  'Psychological Services',
+];
+
 const CONDITIONS = [
   'Back Pain', 'Neck Pain', 'Shoulder Pain', 'Knee Pain', 'Sports Injuries', 'Muscle Strains',
   'Joint Pain', 'Sciatica', 'Postural Issues', 'Chronic Pain', 'Mobility Problems', 'Workplace Injuries',
@@ -269,6 +290,24 @@ const seed = async () => {
   } else {
     console.log('Services already exist, skipping');
   }
+
+  let extraServicesCreated = 0;
+  for (const [i, name] of EXTRA_SERVICE_NAMES.entries()) {
+    const existing = await Service.findOne({ title: name });
+    if (existing) continue;
+    const slug = await generateUniqueSlug(Service, name);
+    await Service.create({
+      title: name,
+      slug,
+      shortDescription: `Professional ${name.toLowerCase()} to support your recovery and long-term wellbeing.`,
+      description: `Our ${name.toLowerCase()} service is delivered by experienced clinicians as part of a personalized treatment plan tailored to your condition and goals.`,
+      image: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+      order: SERVICES.length + i + 1,
+    });
+    extraServicesCreated += 1;
+  }
+  if (extraServicesCreated > 0) console.log(`${extraServicesCreated} additional services created`);
+  else console.log('Additional services already exist, skipping');
 
   const existingTeam = await TeamMember.countDocuments();
   if (existingTeam === 0) {

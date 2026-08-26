@@ -14,10 +14,27 @@ const ABOUT_ITEMS = [
 
 const SERVICE_ITEMS = [
   { label: 'Physiotherapy', to: '/services/physiotherapy' },
-  { label: 'Acupuncture & Dry Needling', to: '/services/acupuncture-dry-needling' },
   { label: 'Chronic Pain Management', to: '/services/chronic-pain-management' },
   { label: 'Sports Injury Rehabilitation', to: '/services/sports-injury-rehabilitation' },
   { label: 'Manual Therapy', to: '/services/manual-therapy' },
+  { label: 'Chiropractic Care', to: '/services/chiropractic-care' },
+  { label: 'Massage Therapy', to: '/services/massage-therapy' },
+  { label: 'Acupuncture', to: '/services/acupuncture' },
+  { label: 'Cupping Therapy', to: '/services/cupping-therapy' },
+  { label: 'Dry Needling', to: '/services/dry-needling' },
+  { label: 'Spinal Manipulation/Adjustment', to: '/services/spinal-manipulationadjustment' },
+  { label: 'Electrotherapeutic Modalities', to: '/services/electrotherapeutic-modalities' },
+  { label: 'Dancer Rehabilitation', to: '/services/dancer-rehabilitation' },
+  { label: 'Myofascial Release', to: '/services/myofascial-release' },
+  { label: 'Vestibular Therapy', to: '/services/vestibular-therapy' },
+  { label: 'McKenzie Method', to: '/services/mckenzie-method' },
+  { label: 'Soft Tissue Release', to: '/services/soft-tissue-release' },
+  { label: 'Relaxation Method', to: '/services/relaxation-method' },
+  { label: 'Therapeutic Exercise', to: '/services/therapeutic-exercise' },
+  { label: 'Return to Work/Play', to: '/services/return-to-workplay' },
+  { label: 'Trigger Point Release', to: '/services/trigger-point-release' },
+  { label: 'Deep Tissue Massage', to: '/services/deep-tissue-massage' },
+  { label: 'Psychological Services', to: '/services/psychological-services' },
   { label: 'View All Services', to: '/services' },
 ]
 
