@@ -70,11 +70,11 @@ export default function Header() {
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
-          <nav className="hidden xl:flex items-center gap-5 ml-6">
+          <nav className="hidden xl:flex items-center gap-6 ml-8">
             <NavLink
               to="/"
               end
-              className={({ isActive }) => `text-sm font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+              className={({ isActive }) => `text-base font-semibold tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
             >
               Home
             </NavLink>
@@ -85,7 +85,7 @@ export default function Header() {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className={({ isActive }) => `text-sm font-medium tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+                className={({ isActive }) => `text-base font-semibold tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
               >
                 {link.label}
               </NavLink>

@@ -25,10 +25,10 @@ export default function NavDropdown({ label, items }) {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1 text-sm font-medium tracking-wide text-beige/90 hover:text-gold transition"
+        className="flex items-center gap-1.5 text-base font-semibold tracking-wide text-beige/90 hover:text-gold transition"
       >
         {label}
-        <FiChevronDown className={`text-xs transition-transform ${open ? 'rotate-180' : ''}`} />
+        <FiChevronDown className={`text-sm transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
         {open && (
@@ -37,22 +37,24 @@ export default function NavDropdown({ label, items }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 6 }}
             transition={{ duration: 0.15 }}
-            className="absolute left-0 top-full mt-2 min-w-[220px] bg-white rounded-xl shadow-soft border border-beige/70 py-2 z-50"
+            className="absolute left-0 top-full pt-2 min-w-[280px] z-50"
           >
-            {items.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `block px-4 py-2 text-sm transition ${
-                    isActive ? 'text-gold bg-beige/40' : 'text-textMain hover:bg-beige/40 hover:text-gold'
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            <div className="bg-darkCoffee rounded-xl shadow-soft border border-white/10 py-3 divide-y divide-white/10">
+              {items.map((item) => (
+                <NavLink
+                  key={item.to + item.label}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `block px-6 py-3 text-[15px] font-medium transition ${
+                      isActive ? 'text-gold' : 'text-beige/90 hover:text-gold hover:bg-white/5'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
