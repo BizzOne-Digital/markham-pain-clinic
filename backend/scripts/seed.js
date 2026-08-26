@@ -214,6 +214,13 @@ const CONDITIONS = [
   'Joint Pain', 'Sciatica', 'Postural Issues', 'Chronic Pain', 'Mobility Problems', 'Workplace Injuries',
 ];
 
+const EXTRA_CONDITION_NAMES = [
+  'Vertigo', 'Wrist Pain', 'Headaches', 'Balance Disorder', 'Fibromyalgia Treatment',
+  'Hip Pain', 'Hand Pain', 'Elbow Pain', 'Gait Disorders', 'Arthritis Treatment',
+  'Motor Vehicle Accident Injuries', 'Foot Pain', 'Ankle Pain', 'Concussions',
+  'WSIB Injuries', 'Dance Injuries', 'Dizziness Treatment',
+];
+
 const seed = async () => {
   await connectDB();
 
@@ -357,6 +364,17 @@ const seed = async () => {
   } else {
     console.log('Conditions already exist, skipping');
   }
+
+  let extraConditionsCreated = 0;
+  for (const [i, name] of EXTRA_CONDITION_NAMES.entries()) {
+    const existing = await Condition.findOne({ name });
+    if (existing) continue;
+    const slug = await generateUniqueSlug(Condition, name);
+    await Condition.create({ name, slug, order: CONDITIONS.length + i + 1 });
+    extraConditionsCreated += 1;
+  }
+  if (extraConditionsCreated > 0) console.log(`${extraConditionsCreated} additional conditions created`);
+  else console.log('Additional conditions already exist, skipping');
 
   console.log('Seeding complete');
   await mongoose.connection.close();
