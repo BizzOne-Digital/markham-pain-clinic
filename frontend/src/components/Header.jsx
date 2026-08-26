@@ -79,7 +79,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50">
       <div className="hidden md:flex bg-darkCoffee text-xs text-beige/90">
-        <div className="container-app flex justify-between items-center py-2">
+        <div className="w-full px-4 sm:px-6 lg:px-8 flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
             <a href={`tel:${CLINIC_INFO.phone.replace(/\s/g, '')}`} className="flex items-center gap-1.5 hover:text-gold transition">
               <FiPhone /> {CLINIC_INFO.phone}
@@ -99,16 +99,16 @@ export default function Header() {
           scrolled ? 'shadow-soft py-2' : 'py-3'
         }`}
       >
-        <div className="container-app flex items-center justify-between gap-4">
-          <NavLink to="/" className="font-serif text-lg sm:text-xl text-white font-semibold tracking-tight flex-shrink-0">
+        <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+          <NavLink to="/" className="font-serif text-lg sm:text-xl text-white font-semibold tracking-tight flex-shrink-0 whitespace-nowrap">
             Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
-          <nav className="hidden xl:flex items-center gap-5 ml-6">
+          <nav className="hidden xl:flex items-center gap-4 ml-4">
             <NavLink
               to="/"
               end
-              className={({ isActive }) => `text-base font-bold uppercase tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+              className={({ isActive }) => `text-sm font-bold uppercase tracking-wide whitespace-nowrap ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
             >
               Home
             </NavLink>
@@ -120,7 +120,7 @@ export default function Header() {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className={({ isActive }) => `text-base font-bold uppercase tracking-wide ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
+                className={({ isActive }) => `text-sm font-bold uppercase tracking-wide whitespace-nowrap ${isActive ? 'text-gold' : 'text-beige/90 hover:text-gold'}`}
               >
                 {link.label}
               </NavLink>
