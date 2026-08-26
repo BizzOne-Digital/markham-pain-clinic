@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['Manrope', 'system-ui', 'sans-serif'],
+        heading: ['Rajdhani', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         soft: '0 10px 40px -10px rgba(92, 70, 52, 0.15)',

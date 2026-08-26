@@ -13,7 +13,7 @@ export default function InsuranceBilling() {
     <section className="py-14 bg-white border-y border-beige/70 overflow-hidden">
       <div className="container-app text-center mb-8">
         <SectionLabel>Direct Billing</SectionLabel>
-        <h2 className="font-serif text-2xl sm:text-3xl text-textMain">
+        <h2 className="font-heading font-bold text-2xl sm:text-3xl text-textMain">
           Direct Billing with Major Insurance Providers
         </h2>
         <p className="text-textSecondary text-sm mt-3 max-w-xl mx-auto">

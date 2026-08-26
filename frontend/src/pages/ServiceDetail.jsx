@@ -76,13 +76,13 @@ export default function ServiceDetail() {
         <div className="container-app grid lg:grid-cols-3 gap-14">
           <div className="lg:col-span-2 space-y-12">
             <div>
-              <h2 className="font-serif text-2xl text-textMain mb-4">Overview</h2>
+              <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Overview</h2>
               <p className="text-textSecondary leading-relaxed">{service.description}</p>
             </div>
 
             {service.benefits?.length > 0 && (
               <div>
-                <h2 className="font-serif text-2xl text-textMain mb-4">Benefits</h2>
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Benefits</h2>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {service.benefits.map((b) => (
                     <li key={b} className="flex items-center gap-2 text-textMain text-sm">
@@ -95,7 +95,7 @@ export default function ServiceDetail() {
 
             {service.whoCanBenefit?.length > 0 && (
               <div>
-                <h2 className="font-serif text-2xl text-textMain mb-4">Who Can Benefit</h2>
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Who Can Benefit</h2>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {service.whoCanBenefit.map((w) => (
                     <li key={w} className="flex items-center gap-2 text-textMain text-sm">
@@ -108,7 +108,7 @@ export default function ServiceDetail() {
 
             {service.conditionsTreated?.length > 0 && (
               <div>
-                <h2 className="font-serif text-2xl text-textMain mb-4">Conditions Treated</h2>
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Conditions Treated</h2>
                 <div className="flex flex-wrap gap-3">
                   {service.conditionsTreated.map((c) => (
                     <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">
@@ -121,7 +121,7 @@ export default function ServiceDetail() {
 
             {service.treatmentProcess?.length > 0 && (
               <div>
-                <h2 className="font-serif text-2xl text-textMain mb-4">Our Process</h2>
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Our Process</h2>
                 <ol className="space-y-4">
                   {service.treatmentProcess.map((step, i) => (
                     <li key={step} className="flex gap-4 items-start">
@@ -138,7 +138,7 @@ export default function ServiceDetail() {
 
           <div>
             <div className="admin-card sticky top-24">
-              <h3 className="font-serif text-xl text-textMain mb-4">Have Questions?</h3>
+              <h3 className="font-heading font-bold text-xl text-textMain mb-4">Have Questions?</h3>
               <Accordion items={service.faqs?.length ? service.faqs : PLACEHOLDER_FAQS.slice(0, 3)} />
               <Link to="/contact" className="btn-primary w-full mt-6 justify-center">
                 BOOK APPOINTMENT

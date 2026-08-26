@@ -20,7 +20,7 @@ export default function AppointmentCTA() {
         transition={{ duration: 0.6 }}
         className="relative container-app text-center text-white max-w-2xl mx-auto"
       >
-        <h2 className="font-serif text-3xl sm:text-4xl mb-4">Ready to Start Feeling Better?</h2>
+        <h2 className="font-heading font-bold text-3xl sm:text-4xl mb-4">Ready to Start Feeling Better?</h2>
         <p className="text-beige/90 mb-8 leading-relaxed">
           Take the first step toward better mobility, reduced pain and improved quality of life.
         </p>

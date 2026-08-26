@@ -41,7 +41,7 @@ export default function TreatmentJourney() {
       <div className="container-app relative">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <SectionLabel>The Process</SectionLabel>
-          <h2 className="font-serif text-3xl sm:text-4xl text-white">Your Journey to Feeling Better</h2>
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white">Your Journey to Feeling Better</h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
