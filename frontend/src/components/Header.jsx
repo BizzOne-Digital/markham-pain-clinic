@@ -36,6 +36,7 @@ const SERVICE_ITEMS = [
   { label: 'Deep Tissue Massage', to: '/services/deep-tissue-massage' },
   { label: 'Psychological Services', to: '/services/psychological-services' },
   { label: 'View All Services', to: '/services' },
+  { label: 'Social Service', to: '/social-service' },
 ]
 
 const CONDITION_ITEMS = [
@@ -83,7 +84,6 @@ const PRODUCT_ITEMS = [
 const SIMPLE_LINKS = [
   { label: "FAQ's", to: '/faq' },
   { label: 'Blogs', to: '/blog' },
-  { label: 'Social Service', to: '/social-service' },
   { label: 'Contact Us', to: '/contact' },
 ]
 

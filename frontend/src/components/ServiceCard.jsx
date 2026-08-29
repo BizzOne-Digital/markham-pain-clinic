@@ -20,7 +20,7 @@ export default function ServiceCard({ service, index = 0 }) {
         />
       </div>
       <div className="p-6">
-        <h3 className="font-serif text-xl text-textMain mb-2">{service.name}</h3>
+        <h3 className="font-heading font-bold text-xl text-textMain mb-2">{service.name}</h3>
         <p className="text-textSecondary text-sm leading-relaxed mb-4">{service.shortDescription}</p>
         <Link
           to={`/services/${service.slug}`}

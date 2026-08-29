@@ -33,7 +33,7 @@ export default function ServicesPreview() {
 
   return (
     <section className="section-padding bg-white">
-      <div className="container-app">
+      <div className="container-app !max-w-[1360px]">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <SectionLabel>Our Services</SectionLabel>
           <motion.h2

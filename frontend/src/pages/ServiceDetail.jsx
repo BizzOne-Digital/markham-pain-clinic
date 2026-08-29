@@ -1,18 +1,29 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, NavLink } from 'react-router-dom'
 import { FiCheckCircle, FiArrowLeft } from 'react-icons/fi'
 import SEO from '../components/SEO.jsx'
-import Accordion from '../components/Accordion.jsx'
-import AppointmentCTA from '../sections/AppointmentCTA.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import servicesApi from '../services/servicesApi'
-import { PLACEHOLDER_SERVICES, PLACEHOLDER_FAQS } from '../utils/placeholderData'
+import { PLACEHOLDER_SERVICES } from '../utils/placeholderData'
 
 export default function ServiceDetail() {
   const { slug } = useParams()
   const [service, setService] = useState(null)
+  const [allServices, setAllServices] = useState(PLACEHOLDER_SERVICES)
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
+
+  useEffect(() => {
+    servicesApi
+      .getAll()
+      .then((res) => {
+        const data = res?.data?.data
+        if (Array.isArray(data) && data.length) setAllServices(data)
+      })
+      .catch(() => {
+        // Fallback: keep default placeholder service list
+      })
+  }, [])
 
   useEffect(() => {
     let active = true
@@ -62,27 +73,58 @@ export default function ServiceDetail() {
     <>
       <SEO title={service.name} description={service.shortDescription} />
 
-      <section className="relative bg-darkCoffee">
-        <div className="absolute inset-0">
-          <img src={service.image} alt={service.name} className="w-full h-full object-cover opacity-40" />
-        </div>
-        <div className="relative container-app py-24 sm:py-32 text-center">
-          <h1 className="font-serif text-3xl sm:text-5xl text-white">{service.name}</h1>
-          <p className="text-beige/80 mt-4 max-w-xl mx-auto">{service.shortDescription}</p>
-        </div>
-      </section>
-
       <section className="section-padding bg-white">
-        <div className="container-app grid lg:grid-cols-3 gap-14">
-          <div className="lg:col-span-2 space-y-12">
-            <div>
-              <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Overview</h2>
-              <p className="text-textSecondary leading-relaxed">{service.description}</p>
+        <div className="container-app grid lg:grid-cols-[280px_1fr] gap-10">
+          <aside className="lg:sticky lg:top-24 h-fit">
+            <div className="bg-darkCoffee rounded-2xl overflow-hidden">
+              <h2 className="font-heading font-bold text-white text-lg px-6 py-5 border-b border-white/10">
+                Our Services
+              </h2>
+              <nav className="py-2">
+                {allServices.map((s) => (
+                  <NavLink
+                    key={s._id || s.slug}
+                    to={`/services/${s.slug}`}
+                    className={({ isActive }) =>
+                      `block px-6 py-2.5 text-sm font-semibold border-b border-white/5 last:border-0 transition ${
+                        isActive || s.slug === slug ? 'text-gold bg-white/5' : 'text-beige/90 hover:text-gold'
+                      }`
+                    }
+                  >
+                    {s.name}
+                  </NavLink>
+                ))}
+              </nav>
             </div>
 
+            <div className="admin-card mt-6">
+              <h3 className="font-heading font-bold text-lg text-textMain mb-2">Need Help?</h3>
+              <p className="text-textSecondary text-sm mb-4">Contact our team for professional guidance.</p>
+              <Link to="/contact" className="btn-primary w-full justify-center">
+                BOOK APPOINTMENT
+              </Link>
+            </div>
+          </aside>
+
+          <article>
+            <h1 className="font-heading font-bold text-3xl sm:text-4xl text-textMain mb-6">{service.name}</h1>
+
+            <p className="text-textSecondary leading-relaxed mb-8">{service.description}</p>
+
+            {service.image && (
+              <div className="rounded-2xl overflow-hidden mb-8 aspect-video">
+                <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
+              </div>
+            )}
+
+            <h2 className="font-heading font-bold text-2xl text-textMain mb-4">What is {service.name}?</h2>
+            <p className="text-textSecondary leading-relaxed mb-8">{service.shortDescription}</p>
+
             {service.benefits?.length > 0 && (
-              <div>
-                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Benefits</h2>
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">
+                  How {service.name} Supports Your Recovery
+                </h2>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {service.benefits.map((b) => (
                     <li key={b} className="flex items-center gap-2 text-textMain text-sm">
@@ -94,7 +136,7 @@ export default function ServiceDetail() {
             )}
 
             {service.whoCanBenefit?.length > 0 && (
-              <div>
+              <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Who Can Benefit</h2>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {service.whoCanBenefit.map((w) => (
@@ -107,7 +149,7 @@ export default function ServiceDetail() {
             )}
 
             {service.conditionsTreated?.length > 0 && (
-              <div>
+              <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Conditions Treated</h2>
                 <div className="flex flex-wrap gap-3">
                   {service.conditionsTreated.map((c) => (
@@ -120,7 +162,7 @@ export default function ServiceDetail() {
             )}
 
             {service.treatmentProcess?.length > 0 && (
-              <div>
+              <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Our Process</h2>
                 <ol className="space-y-4">
                   {service.treatmentProcess.map((step, i) => (
@@ -134,21 +176,9 @@ export default function ServiceDetail() {
                 </ol>
               </div>
             )}
-          </div>
-
-          <div>
-            <div className="admin-card sticky top-24">
-              <h3 className="font-heading font-bold text-xl text-textMain mb-4">Have Questions?</h3>
-              <Accordion items={service.faqs?.length ? service.faqs : PLACEHOLDER_FAQS.slice(0, 3)} />
-              <Link to="/contact" className="btn-primary w-full mt-6 justify-center">
-                BOOK APPOINTMENT
-              </Link>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
-
-      <AppointmentCTA />
     </>
   )
 }
