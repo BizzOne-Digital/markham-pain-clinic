@@ -25,15 +25,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-md"
+          className="max-w-3xl"
         >
-          <span className="section-label !text-gold !text-sm sm:!text-base">Welcome to Markham Pain Clinic</span>
-          <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[3.8rem] leading-[1.15] text-white mt-4 space-y-1 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
-            <span className="block">Evidence-Based</span>
-            <span className="block">Pain Relief.</span>
-            <span className="block italic text-gold font-serif mt-2">Restoring Life.</span>
+          <p className="font-heading font-semibold text-white text-lg sm:text-xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            Welcome to Markham Pain Clinic
+          </p>
+          <h1 className="font-heading font-bold text-[2.75rem] sm:text-6xl lg:text-[5.5rem] leading-[1.02] text-white mt-2 [text-shadow:0_2px_16px_rgba(0,0,0,0.55)]">
+            Evidence-Based Pain Relief.
           </h1>
-          <p className="text-beige/90 text-base sm:text-lg mt-6 max-w-sm leading-relaxed">
+          <p className="italic text-gold font-serif text-3xl sm:text-4xl lg:text-5xl mt-2 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            Restoring Life.
+          </p>
+          <p className="text-beige/90 text-base sm:text-lg mt-6 max-w-md leading-relaxed">
             Advanced, personalized and non-surgical treatment solutions designed to help you move
             better, feel stronger and live with less pain.
           </p>
