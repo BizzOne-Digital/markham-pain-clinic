@@ -16,8 +16,8 @@ export default function Hero() {
           <source src="/banner.webm" type="video/webm" />
         </video>
         {/* Dark overlay so text stays readable over any part of the moving video */}
-        <div className="absolute inset-0 bg-darkCoffee/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-darkCoffee/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-darkCoffee/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-darkCoffee/50 via-darkCoffee/20 to-transparent" />
       </div>
 
       <div className="relative w-full pl-6 pr-6 sm:pl-12 sm:pr-12 lg:pl-20 lg:pr-0">
@@ -28,10 +28,10 @@ export default function Hero() {
           className="max-w-md"
         >
           <span className="section-label !text-gold !text-sm sm:!text-base">Welcome to Markham Pain Clinic</span>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.8rem] leading-[1.3] text-white mt-4 space-y-1">
+          <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[3.8rem] leading-[1.15] text-white mt-4 space-y-1 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
             <span className="block">Evidence-Based</span>
             <span className="block">Pain Relief.</span>
-            <span className="block italic text-gold font-serif mt-1">Restoring Life.</span>
+            <span className="block italic text-gold font-serif mt-2">Restoring Life.</span>
           </h1>
           <p className="text-beige/90 text-base sm:text-lg mt-6 max-w-sm leading-relaxed">
             Advanced, personalized and non-surgical treatment solutions designed to help you move
