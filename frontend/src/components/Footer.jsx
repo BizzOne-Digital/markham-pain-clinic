@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container-app py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <h3 className="font-serif text-xl text-white mb-3">
-            Markham <span className="text-gold italic">Pain Clinic</span>
+            Markham <span className="text-gold italic font-serif">Pain Clinic</span>
           </h3>
           <p className="text-sm text-beige/70 leading-relaxed">
             Evidence-based, personalized pain management and physiotherapy care dedicated to restoring
@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">Quick Links</h4>
+          <h4 className="text-white font-heading font-bold text-sm uppercase tracking-wide mb-4">Quick Links</h4>
           <ul className="space-y-2.5 text-sm text-beige/70">
             {[
               ['Home', '/'],
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">Our Services</h4>
+          <h4 className="text-white font-heading font-bold text-sm uppercase tracking-wide mb-4">Our Services</h4>
           <ul className="space-y-2.5 text-sm text-beige/70">
             {PLACEHOLDER_SERVICES.map((service) => (
               <li key={service.slug}>
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">Contact</h4>
+          <h4 className="text-white font-heading font-bold text-sm uppercase tracking-wide mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-beige/70">
             <li className="flex items-center gap-2">
               <FiPhone className="text-gold" /> {CLINIC_INFO.phone}
