@@ -1,9 +1,24 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiPhone, FiMail, FiMapPin, FiInstagram } from 'react-icons/fi'
 import { CLINIC_INFO, PLACEHOLDER_SERVICES } from '../utils/placeholderData'
+import servicesApi from '../services/servicesApi'
 
 export default function Footer() {
   const year = new Date().getFullYear()
+  const [services, setServices] = useState(PLACEHOLDER_SERVICES)
+
+  useEffect(() => {
+    servicesApi
+      .getAll()
+      .then((res) => {
+        const data = res?.data?.data
+        if (Array.isArray(data) && data.length) setServices(data)
+      })
+      .catch(() => {
+        // Fallback: keep default placeholder service list
+      })
+  }, [])
 
   return (
     <footer className="bg-darkCoffee text-beige">
@@ -40,11 +55,11 @@ export default function Footer() {
 
         <div>
           <h4 className="text-white font-heading font-bold text-sm uppercase tracking-wide mb-4">Our Services</h4>
-          <ul className="space-y-2.5 text-sm text-beige/70">
-            {PLACEHOLDER_SERVICES.map((service) => (
+          <ul className="space-y-2.5 text-sm text-beige/70 max-h-64 overflow-y-auto pr-2 footer-scroll">
+            {services.map((service) => (
               <li key={service.slug}>
                 <Link to={`/services/${service.slug}`} className="hover:text-gold transition">
-                  {service.name}
+                  {service.name || service.title}
                 </Link>
               </li>
             ))}

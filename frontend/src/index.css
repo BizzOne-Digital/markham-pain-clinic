@@ -14,6 +14,17 @@ h1, h2, h3, h4 {
   @apply font-serif;
 }
 
+.footer-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.footer-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.footer-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+
 @layer components {
   .container-app {
     @apply max-w-content mx-auto px-5 sm:px-8 lg:px-10;
