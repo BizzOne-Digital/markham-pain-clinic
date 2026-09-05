@@ -16,8 +16,8 @@ export const PLACEHOLDER_SERVICES = [
     treatmentProcess: ['Initial assessment', 'Personalized treatment plan', 'Hands-on therapy & exercise', 'Progress tracking & adjustment'],
   },
   {
-    _id: 'acupuncture-dry-needling',
-    slug: 'acupuncture-dry-needling',
+    _id: 'acupuncture-and-dry-needling',
+    slug: 'acupuncture-and-dry-needling',
     name: 'Acupuncture & Dry Needling',
     shortDescription: 'Targeted needling therapy to relieve muscle tension and chronic pain.',
     description:

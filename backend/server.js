@@ -28,6 +28,18 @@ if (process.env.NODE_ENV !== 'test') {
   connectDB().catch((error) => {
     console.error('Failed to connect to MongoDB:', error.message);
   });
+
+  // On a cold serverless start, the connection above may still be in progress
+  // when the first request arrives. Without this, Mongoose queries buffer for
+  // up to 10s and time out instead of waiting for the connection to be ready.
+  app.use(async (req, res, next) => {
+    try {
+      await connectDB();
+      next();
+    } catch (error) {
+      res.status(503).json({ success: false, message: 'Database connection unavailable, please retry.' });
+    }
+  });
 }
 
 const allowedOrigins = (process.env.FRONTEND_URL || '')
