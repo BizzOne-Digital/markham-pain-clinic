@@ -287,6 +287,42 @@ const EXTRA_BLOGS = [
     featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
     status: 'published',
   },
+  {
+    title: 'Common Causes of Back Pain and How Physiotherapy Helps',
+    categories: ['Physiotherapy'],
+    excerpt: 'Back pain can come from many everyday habits. Here is what commonly causes it and how physiotherapy addresses it.',
+    content:
+      'Back pain is rarely caused by a single dramatic event — more often it builds up gradually from poor posture, prolonged sitting, weak core muscles, repetitive lifting, or simply staying in one position for too long. Sudden movements, sports strain, or an old injury that never fully healed can also contribute to ongoing discomfort.\n\nPhysiotherapy addresses back pain by first identifying which of these factors is at play through a hands-on assessment of posture, movement, and muscle strength. Treatment typically combines manual therapy to ease immediate tension with a progressive exercise program that strengthens the core and back muscles, improves flexibility, and corrects the movement habits that led to the pain in the first place.\n\nBecause back pain often returns if the underlying cause is not addressed, the goal of physiotherapy is not just short-term relief but building the strength and habits that prevent it from coming back.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: '5 Exercises to Relieve Neck and Shoulder Tension',
+    categories: ['Posture'],
+    excerpt: 'Simple, physiotherapist-recommended exercises to ease the tightness that builds up from desk work.',
+    content:
+      'Neck and shoulder tension from long hours at a desk usually responds well to a handful of simple, consistent exercises. Chin tucks — gently drawing the head straight back without tilting — help counter the forward-head posture that builds up from screen time. Shoulder blade squeezes, done by pulling the shoulder blades together and holding for a few seconds, strengthen the upper back muscles that support good posture.\n\nUpper trapezius stretches, where you gently tilt your head toward one shoulder while keeping the opposite shoulder relaxed and down, target one of the most commonly tight muscles in this area. Doorway chest stretches open up the front of the shoulders, which tend to shorten from prolonged sitting, while neck rotations through a comfortable range help maintain mobility and reduce stiffness.\n\nDoing these a few times throughout the day, rather than only once, makes the biggest difference. If tension persists despite regular stretching, it is worth having it assessed to check for underlying muscle imbalances that stretching alone will not resolve.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Sports Injury Recovery: Get Back in the Game Faster',
+    categories: ['Sports Injuries'],
+    excerpt: 'A structured recovery plan helps athletes return safely and confidently after an injury.',
+    content:
+      'Recovering from a sports injury is about more than waiting for pain to subside — a structured approach reduces the risk of re-injury and helps athletes return with confidence rather than hesitation. The process typically starts with an assessment to understand the extent of the injury and identify any compensations that may have developed while favoring the affected area.\n\nEarly-stage treatment focuses on managing pain and swelling while gently restoring range of motion, followed by a progressive strengthening program that rebuilds the muscle support around the injured area. As strength returns, sport-specific drills are introduced to retrain the movement patterns, agility, and reaction speed needed for the athlete\'s particular sport, rather than jumping straight from rehab exercises back into competition.\n\nA final return-to-sport assessment helps confirm that strength, mobility, and confidence have all recovered enough to handle the demands of play — because rushing this last step is one of the most common reasons athletes get re-injured.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'How to Improve Your Posture and Avoid Injuries',
+    categories: ['Posture'],
+    excerpt: 'Good posture protects your joints and muscles from unnecessary strain. Here is how to build better habits.',
+    content:
+      'Poor posture places uneven load on joints and muscles that were not designed to carry it, which over time contributes to pain, stiffness, and a higher risk of injury during everyday activities or exercise. The most common culprits are slouched sitting, a forward-leaning head position from screen use, and standing with weight shifted unevenly onto one leg.\n\nImproving posture starts with awareness — periodically checking that your ears, shoulders, and hips are stacked in a relatively straight line whether sitting or standing, and adjusting your workstation so you are not reaching forward or looking down for long stretches. Strengthening the core and upper back muscles gives your body the support it needs to maintain good alignment without constant conscious effort, since posture is ultimately a strength and endurance issue as much as a habit.\n\nSmall, consistent changes — adjusting your desk setup, taking regular movement breaks, and building core strength — go much further than trying to consciously "sit up straight" all day, which is difficult to sustain and rarely addresses the underlying muscle weakness.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
 ];
 
 const FAQS = [
