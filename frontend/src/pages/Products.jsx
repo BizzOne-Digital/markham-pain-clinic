@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import SEO from '../components/SEO.jsx'
 import PageBanner from '../components/PageBanner.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
@@ -38,11 +39,17 @@ export default function Products() {
           {products && products.length > 0 && (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map((product) => (
-                <div key={product._id} className="card p-6">
+                <Link key={product._id} to={`/products/${product.slug}`} className="card p-6 block hover:shadow-soft transition">
+                  {product.image && (
+                    <div className="rounded-xl overflow-hidden mb-4 aspect-video">
+                      <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                    </div>
+                  )}
                   <h3 className="font-serif text-lg text-textMain mb-2">{product.name}</h3>
                   {product.description && <p className="text-textSecondary text-sm mb-3">{product.description}</p>}
                   {product.price && <p className="text-gold font-semibold">{product.price}</p>}
-                </div>
+                  <span className="text-sm font-semibold text-darkCoffee mt-2 inline-block">Read More &rarr;</span>
+                </Link>
               ))}
             </div>
           )}

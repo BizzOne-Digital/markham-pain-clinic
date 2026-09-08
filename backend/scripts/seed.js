@@ -11,6 +11,7 @@ const Testimonial = require('../models/Testimonial');
 const Blog = require('../models/Blog');
 const FAQ = require('../models/FAQ');
 const Condition = require('../models/Condition');
+const Product = require('../models/Product');
 const { generateUniqueSlug } = require('../utils/slugify');
 
 const SERVICES = [
@@ -404,6 +405,213 @@ const EXTRA_CONDITION_NAMES = [
   'WSIB Injuries', 'Dance Injuries', 'Dizziness Treatment',
 ];
 
+const PRODUCTS = [
+  {
+    name: 'Braces',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop',
+    description: 'Supportive braces for the knee, ankle, wrist, elbow, and back to stabilize joints and aid recovery.',
+    intro:
+      'Braces are an important part of managing joint strain, improving movement, and supporting recovery. Whether you are dealing with an injury, ongoing discomfort, or need added stability during daily activities, the right brace can make a noticeable difference in how you move and function.',
+    whatIsIt:
+      'Braces are supportive devices designed to stabilize joints, limit harmful movement, and reduce strain on muscles and ligaments. They are commonly used for areas such as the knee, ankle, wrist, elbow, and back. These devices are made from durable yet comfortable materials that provide structured support without restricting necessary motion — some are soft and flexible, others more rigid for stronger support.',
+    keyFeatures: [
+      { title: 'Knee Braces', description: 'Used for ligament injuries, arthritis, or post-surgical support, helping maintain alignment and reduce pressure during walking or exercise.' },
+      { title: 'Ankle Braces', description: 'Provide stability for weak or injured ankles, often used after sprains or for ongoing instability.' },
+      { title: 'Wrist and Hand Braces', description: 'Helpful for repetitive strain or carpal tunnel issues, keeping the wrist in a neutral position to reduce stress.' },
+      { title: 'Back Braces', description: 'Support the lower back and improve posture, especially for strain from lifting or prolonged sitting.' },
+      { title: 'Elbow Braces', description: 'Commonly used for tendon-related discomfort, helping reduce strain during arm movements.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Recent Injury', description: 'People who have recently experienced a joint injury or feel instability or weakness in a joint.' },
+      { title: 'Returning to Activity', description: 'Anyone returning to physical activity after time off, or performing repetitive tasks that strain certain areas.' },
+      { title: 'Active Lifestyles', description: 'Those wanting added support during sports or exercise, or managing discomfort from conditions like arthritis.' },
+    ],
+    benefits: ['Improved joint stability', 'Reduced strain on injured areas', 'Enhanced confidence in movement', 'Support during recovery', 'Versatile for prevention and general support'],
+    whyChooseUs: [
+      { title: 'Professional Assessment', description: 'Our team evaluates your condition and recommends a brace suited to your situation.' },
+      { title: 'Proper Fitting', description: 'We ensure the brace fits correctly, which is essential for comfort and function.' },
+      { title: 'Quality Products', description: 'We provide reliable braces designed for durability and consistent support.' },
+      { title: 'Ongoing Support', description: 'If adjustments are needed or your condition changes, we are available to assist and guide you.' },
+    ],
+    closingText: 'If you are looking for reliable joint support, our team will help you choose the right brace based on your needs and daily routine. Contact us to explore available options and find the right fit for your lifestyle.',
+  },
+  {
+    name: 'Massager',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop',
+    description: 'Practical handheld and electronic massagers to ease muscle tension and support daily recovery.',
+    intro:
+      'A massager is a practical device designed to ease muscle tension, improve circulation, and support recovery after daily strain. Whether you spend long hours sitting, standing, or engaging in physical activity, muscle discomfort can build up over time. Using a massager regularly can help maintain muscle comfort and mobility without needing frequent clinic visits.',
+    whatIsIt:
+      'A massager is an electronic or manual device that applies targeted pressure, vibration, or percussion to muscles and soft tissues, created to mimic hands-on techniques commonly used in physiotherapy settings — through vibration, percussion, or rolling and kneading motions that loosen tight areas and encourage circulation.',
+    keyFeatures: [
+      { title: 'Adjustable Intensity Levels', description: 'Control speed and pressure, suitable for both light relaxation and deeper muscle work.' },
+      { title: 'Ergonomic Design', description: 'Comfortable grips and lightweight structures make it easy to reach the back, shoulders, and legs.' },
+      { title: 'Interchangeable Heads', description: 'Different attachments target specific muscle groups for versatile full-body use.' },
+      { title: 'Portable and Convenient', description: 'Compact designs let you use the massager at home, at work, or while travelling.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Office Workers', description: 'Sitting for extended periods can cause stiffness in the neck, shoulders, and lower back — a massager helps keep these areas relaxed.' },
+      { title: 'Active Individuals', description: 'Those who exercise regularly may experience soreness or fatigue; using a massager post-workout supports recovery.' },
+      { title: 'Daily Physical Strain', description: 'Jobs involving lifting, standing, or repetitive movement can cause ongoing muscle tension.' },
+      { title: 'Older Adults', description: 'Gentle use can help maintain circulation and reduce stiffness in commonly affected areas.' },
+    ],
+    commonUses: [
+      { title: 'Muscle Tension Reduction', description: 'Helps ease tight areas caused by stress or physical activity.' },
+      { title: 'Post-Activity Recovery', description: 'Supports muscles after exercise by promoting circulation.' },
+      { title: 'Improved Flexibility', description: 'Looser muscles can move more freely, supporting daily movement.' },
+      { title: 'Relaxation', description: 'Using a massager can help you unwind after a long day.' },
+    ],
+    benefits: ['Maintains muscle comfort between clinic visits', 'Easy to use at home or on the go', 'Supports circulation and relaxation', 'Reduces stiffness from daily habits'],
+    whyChooseUs: [
+      { title: 'Carefully Selected Products', description: 'Our massagers are chosen for quality, durability, and usability.' },
+      { title: 'In-Clinic Support', description: 'Our team can help you understand how to use the device correctly for your needs.' },
+      { title: 'Practical Advice', description: 'We help you integrate the massager into your routine in a way that complements your daily activities.' },
+    ],
+    closingText: 'If you are looking for a simple, effective way to manage muscle tension and stay active, visit us to explore our selection and find a massager that fits your needs.',
+  },
+  {
+    name: 'TENS Unit',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop',
+    description: 'Portable TENS (electrical nerve stimulation) devices for drug-free, on-demand pain relief.',
+    intro:
+      'A TENS (Transcutaneous Electrical Nerve Stimulation) unit is a small, portable device that delivers gentle electrical impulses through the skin to help manage pain. It is a popular drug-free option for people looking to reduce discomfort between clinic visits.',
+    whatIsIt:
+      'A TENS unit sends low-voltage electrical currents through electrode pads placed on the skin near the area of pain. These impulses can interrupt pain signals travelling to the brain and encourage the release of natural pain-relieving endorphins.',
+    keyFeatures: [
+      { title: 'Adjustable Settings', description: 'Control intensity, pulse rate, and mode to match your comfort level and the type of pain being treated.' },
+      { title: 'Portable and Discreet', description: 'Compact size and clip-on design allow use at home, at work, or while on the move.' },
+      { title: 'Reusable Electrode Pads', description: 'Long-lasting pads that can be repositioned for different treatment areas.' },
+      { title: 'Multiple Programs', description: 'Pre-set modes designed for different pain types, from chronic aches to acute muscle soreness.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Chronic Pain Sufferers', description: 'People managing ongoing back, neck, or joint pain who want a drug-free relief option.' },
+      { title: 'Post-Injury Recovery', description: 'Those recovering from muscle strain or minor injuries alongside their treatment plan.' },
+      { title: 'Active Individuals', description: 'Athletes or active adults managing soreness after exercise or training.' },
+    ],
+    benefits: ['Drug-free pain management', 'Convenient for use at home', 'Non-invasive and easy to apply', 'Complements ongoing physiotherapy treatment'],
+    whyChooseUs: [
+      { title: 'Guided Setup', description: 'Our team shows you correct pad placement and settings for your specific condition.' },
+      { title: 'Quality Devices', description: 'We provide reliable units built for consistent, safe use.' },
+      { title: 'Ongoing Advice', description: 'We are available to adjust recommendations as your treatment progresses.' },
+    ],
+    closingText: 'Ask our team whether a TENS unit is right for your condition, and we will help you get set up with the right device and settings.',
+  },
+  {
+    name: 'Hot and Cold Pack',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop',
+    description: 'Reusable hot and cold therapy packs to reduce swelling, ease stiffness, and soothe sore muscles.',
+    intro:
+      'Hot and cold packs are simple, reusable tools that support pain management and recovery at home. Cold therapy helps reduce swelling and numb acute pain, while heat therapy relaxes tight muscles and improves blood flow to stiff areas.',
+    whatIsIt:
+      'A hot and cold pack is a reusable gel or fabric pack that can be heated or frozen and applied directly to the skin over the area of discomfort, providing temperature-based relief for both acute and chronic conditions.',
+    keyFeatures: [
+      { title: 'Dual Purpose', description: 'The same pack can be used hot or cold depending on your needs.' },
+      { title: 'Flexible, Comfortable Fit', description: 'Moulds to the body for use on the back, shoulder, knee, or neck.' },
+      { title: 'Reusable Design', description: 'Durable materials designed for repeated freezing or heating.' },
+      { title: 'Easy to Use at Home', description: 'No special equipment needed — just a freezer or microwave.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Acute Injuries', description: 'Cold therapy helps manage swelling right after a sprain, strain, or minor injury.' },
+      { title: 'Chronic Stiffness', description: 'Heat therapy eases ongoing muscle tightness and joint stiffness.' },
+      { title: 'Post-Exercise Recovery', description: 'Helps manage soreness after physical activity or training.' },
+    ],
+    benefits: ['Reduces swelling and inflammation', 'Eases muscle stiffness and tension', 'Affordable, reusable at-home care', 'Simple to fit into daily recovery routines'],
+    whyChooseUs: [
+      { title: 'Guidance on Use', description: 'Our team advises when to use heat versus cold for your specific condition.' },
+      { title: 'Quality Materials', description: 'We provide packs designed for comfort and durability with repeated use.' },
+    ],
+    closingText: 'Not sure whether to use hot or cold for your injury? Ask our team — we will guide you toward the right approach for faster, safer recovery.',
+  },
+  {
+    name: 'Pain Relief Creams',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop',
+    description: 'Topical pain relief creams for targeted, on-the-spot muscle and joint comfort.',
+    intro:
+      'Topical pain relief creams offer targeted, on-the-spot comfort for sore muscles and stiff joints. They are a convenient addition to a treatment plan, especially for managing discomfort between clinic visits.',
+    whatIsIt:
+      'Pain relief creams are topical formulations applied directly to the skin over a painful area. They typically work through cooling, warming, or anti-inflammatory ingredients that ease surface-level discomfort and support relaxation of the underlying muscles.',
+    keyFeatures: [
+      { title: 'Fast-Acting Relief', description: 'Provides a noticeable soothing sensation shortly after application.' },
+      { title: 'Targeted Application', description: 'Applied directly to the area of discomfort for localized relief.' },
+      { title: 'Non-Invasive', description: 'A simple, drug-free option that fits easily into a daily routine.' },
+      { title: 'Portable', description: 'Easy to carry and use at home, work, or while travelling.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Muscle Soreness', description: 'People managing everyday aches from physical activity or overuse.' },
+      { title: 'Joint Stiffness', description: 'Those with stiffness in the knees, shoulders, or lower back.' },
+      { title: 'Between Treatments', description: 'Patients wanting extra comfort between physiotherapy or massage sessions.' },
+    ],
+    benefits: ['Convenient, on-the-spot relief', 'Complements other treatments well', 'Easy to apply at home', 'Non-invasive and drug-free'],
+    whyChooseUs: [
+      { title: 'Recommended Products', description: 'We select creams that align with the treatment approaches used in our clinic.' },
+      { title: 'Usage Guidance', description: 'Our team can advise on the best way to use creams alongside your treatment plan.' },
+    ],
+    closingText: 'Ask our team which pain relief cream best complements your current treatment plan and daily routine.',
+  },
+  {
+    name: 'Custom Made Orthotics',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop',
+    description: 'Custom-fitted orthotic insoles designed around your foot shape, gait, and specific condition.',
+    intro:
+      'Custom made orthotics are shoe insoles built specifically around your foot shape, gait pattern, and individual condition. Unlike generic store-bought insoles, they are designed to correct imbalances and provide targeted support exactly where you need it.',
+    whatIsIt:
+      'Custom orthotics are supportive inserts designed from a mould or scan of your feet, correcting alignment issues, redistributing pressure, and supporting the arch and heel to reduce strain on the feet, knees, hips, and lower back.',
+    keyFeatures: [
+      { title: 'Personalized Fit', description: 'Built from an assessment of your specific foot shape and gait pattern.' },
+      { title: 'Targeted Support', description: 'Provides support exactly where your feet need it most.' },
+      { title: 'Durable Materials', description: 'Designed to hold their shape and support through daily wear.' },
+      { title: 'Fits Most Footwear', description: 'Designed to be used across everyday shoes, work boots, or athletic footwear.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Foot and Heel Pain', description: 'People managing plantar fasciitis, heel pain, or general foot discomfort.' },
+      { title: 'Gait Imbalances', description: 'Those with overpronation, flat feet, or uneven walking patterns.' },
+      { title: 'Related Joint Pain', description: 'Individuals whose knee, hip, or back pain is linked to foot alignment.' },
+      { title: 'Active Lifestyles', description: 'Athletes and active adults wanting extra support during activity.' },
+    ],
+    benefits: ['Improved foot and gait alignment', 'Reduced strain on knees, hips, and back', 'Personalized fit for lasting comfort', 'Supports long-term movement health'],
+    whyChooseUs: [
+      { title: 'Professional Assessment', description: 'Our team evaluates your gait and foot structure before recommending orthotics.' },
+      { title: 'Custom Fitting Process', description: 'Orthotics are built specifically around your feet, not a generic template.' },
+      { title: 'Integrated Care', description: 'Orthotics can be combined with physiotherapy for a complete approach to alignment and pain.' },
+    ],
+    closingText: 'If foot pain or alignment issues are affecting your daily movement, our team can assess your gait and recommend custom orthotics suited to your needs.',
+  },
+  {
+    name: 'Posture Corrector Brace',
+    price: '',
+    image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop',
+    description: 'Supportive posture brace that gently pulls the shoulders back to encourage proper spinal alignment.',
+    intro:
+      'A posture corrector brace is a supportive garment worn across the shoulders and upper back to encourage proper spinal alignment. It is a simple tool for people looking to counteract the effects of long hours sitting or slouching.',
+    whatIsIt:
+      'The brace gently pulls the shoulders back and supports the upper spine, retraining the body toward a more upright, aligned posture over time while reducing strain on the neck and upper back.',
+    keyFeatures: [
+      { title: 'Adjustable Straps', description: 'Fits comfortably across a range of body sizes and can be adjusted for gentle or firmer support.' },
+      { title: 'Lightweight, Breathable Material', description: 'Designed to be worn discreetly under clothing throughout the day.' },
+      { title: 'Gradual Posture Training', description: 'Encourages muscle memory for improved posture over consistent use.' },
+      { title: 'Easy to Wear', description: 'Simple to put on and adjust without assistance.' },
+    ],
+    whoCanBenefit: [
+      { title: 'Desk Workers', description: 'People who sit for long hours and notice slouching or rounded shoulders.' },
+      { title: 'Upper Back and Neck Tension', description: 'Those experiencing tension linked to poor posture habits.' },
+      { title: 'Post-Injury Support', description: 'Individuals rebuilding postural awareness after an injury or period of inactivity.' },
+    ],
+    benefits: ['Encourages proper spinal alignment', 'Reduces neck and shoulder strain', 'Builds long-term postural awareness', 'Comfortable for daily wear'],
+    whyChooseUs: [
+      { title: 'Guided Recommendation', description: 'Our team assesses your posture before recommending the right level of support.' },
+      { title: 'Proper Fitting', description: 'We ensure the brace fits correctly for comfort and effectiveness.' },
+      { title: 'Complementary Care', description: 'Can be paired with physiotherapy and postural exercises for lasting results.' },
+    ],
+    closingText: 'If poor posture is contributing to your discomfort, our team can help you find the right posture corrector brace and pair it with exercises for lasting improvement.',
+  },
+];
+
 const seed = async () => {
   await connectDB();
 
@@ -578,6 +786,42 @@ const seed = async () => {
   }
   if (extraConditionsCreated > 0) console.log(`${extraConditionsCreated} additional conditions created`);
   else console.log('Additional conditions already exist, skipping');
+
+  let productsCreated = 0;
+  let productsUpdated = 0;
+  for (const [i, product] of PRODUCTS.entries()) {
+    const existing = await Product.findOne({ name: product.name });
+    if (existing) {
+      if (!existing.whatIsIt) {
+        existing.description = product.description;
+        existing.intro = product.intro;
+        existing.whatIsIt = product.whatIsIt;
+        existing.keyFeatures = product.keyFeatures || [];
+        existing.whoCanBenefit = product.whoCanBenefit || [];
+        existing.commonUses = product.commonUses || [];
+        existing.benefits = product.benefits || [];
+        existing.whyChooseUs = product.whyChooseUs || [];
+        existing.closingText = product.closingText;
+        if (product.image && !existing.image?.secure_url) {
+          existing.image = { secure_url: product.image, public_id: existing.image?.public_id || '' };
+        }
+        await existing.save();
+        productsUpdated += 1;
+      }
+      continue;
+    }
+    const slug = await generateUniqueSlug(Product, product.name);
+    await Product.create({
+      ...product,
+      slug,
+      image: { secure_url: product.image, public_id: '' },
+      order: i + 1,
+    });
+    productsCreated += 1;
+  }
+  if (productsCreated > 0) console.log(`${productsCreated} products created`);
+  if (productsUpdated > 0) console.log(`${productsUpdated} products updated with full content`);
+  if (productsCreated === 0 && productsUpdated === 0) console.log('Products already exist and up to date, skipping');
 
   console.log('Seeding complete');
   await mongoose.connection.close();

@@ -72,13 +72,13 @@ const CONDITION_ITEMS = [
 ]
 
 const PRODUCT_ITEMS = [
-  { label: 'Braces', to: '/products' },
-  { label: 'Massager', to: '/products' },
-  { label: 'TENS Unit', to: '/products' },
-  { label: 'Pain Relief Creams', to: '/products' },
-  { label: 'Hot and Cold Pack', to: '/products' },
-  { label: 'Custom Made Orthotics', to: '/products' },
-  { label: 'Posture Corrector Brace', to: '/products' },
+  { label: 'Braces', to: '/products/braces' },
+  { label: 'Massager', to: '/products/massager' },
+  { label: 'TENS Unit', to: '/products/tens-unit' },
+  { label: 'Pain Relief Creams', to: '/products/pain-relief-creams' },
+  { label: 'Hot and Cold Pack', to: '/products/hot-and-cold-pack' },
+  { label: 'Custom Made Orthotics', to: '/products/custom-made-orthotics' },
+  { label: 'Posture Corrector Brace', to: '/products/posture-corrector-brace' },
 ]
 
 const SIMPLE_LINKS = [
