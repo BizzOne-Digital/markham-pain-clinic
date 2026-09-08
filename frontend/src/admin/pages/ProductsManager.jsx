@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import DataTable from '../components/DataTable.jsx'
 import FormField from '../components/FormField.jsx'
+import ImageUploader from '../components/ImageUploader.jsx'
 import ConfirmDeleteModal from '../components/ConfirmDeleteModal.jsx'
 import productsApi from '../../services/productsApi'
 
@@ -11,6 +12,7 @@ export default function ProductsManager() {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
+  const [image, setImage] = useState(null)
   const [deleteTarget, setDeleteTarget] = useState(null)
   const [showForm, setShowForm] = useState(false)
 
@@ -30,6 +32,7 @@ export default function ProductsManager() {
     setName('')
     setDescription('')
     setPrice('')
+    setImage(null)
     setShowForm(true)
   }
 
@@ -38,12 +41,18 @@ export default function ProductsManager() {
     setName(item.name || '')
     setDescription(item.description || '')
     setPrice(item.price || '')
+    setImage(null)
     setShowForm(true)
   }
 
   async function handleSubmit(e) {
     e.preventDefault()
-    const payload = { name, description, price }
+    const payload = new FormData()
+    payload.append('name', name)
+    payload.append('description', description)
+    payload.append('price', price)
+    if (image) payload.append('image', image)
+
     try {
       if (editing) await productsApi.update(editing._id, payload)
       else await productsApi.create(payload)
@@ -90,6 +99,7 @@ export default function ProductsManager() {
               className="admin-input resize-none"
             />
           </div>
+          <ImageUploader label="Product Image" value={editing?.image} onChange={setImage} />
           <div className="flex gap-3">
             <button type="submit" className="admin-btn-primary">
               Save
