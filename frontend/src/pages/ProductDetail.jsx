@@ -78,11 +78,16 @@ export default function ProductDetail() {
                     key={p._id || p.slug}
                     to={`/products/${p.slug}`}
                     className={({ isActive }) =>
-                      `block px-6 py-2.5 text-sm font-semibold border-b border-white/5 last:border-0 transition ${
+                      `flex items-center gap-3 px-6 py-2.5 text-sm font-semibold border-b border-white/5 last:border-0 transition ${
                         isActive || p.slug === slug ? 'text-gold bg-white/5' : 'text-beige/90 hover:text-gold'
                       }`
                     }
                   >
+                    {p.image && (
+                      <span className="w-10 h-10 rounded-md overflow-hidden flex-shrink-0 bg-white/10">
+                        <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                      </span>
+                    )}
                     {p.name}
                   </NavLink>
                 ))}
