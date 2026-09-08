@@ -412,29 +412,49 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop',
     description: 'Supportive braces for the knee, ankle, wrist, elbow, and back to stabilize joints and aid recovery.',
     intro:
-      'Braces are an important part of managing joint strain, improving movement, and supporting recovery. Whether you are dealing with an injury, ongoing discomfort, or need added stability during daily activities, the right brace can make a noticeable difference in how you move and function.',
+      'At Markham Pain Clinic, braces are an important part of managing joint strain, improving movement, and supporting recovery. Whether you are dealing with an injury, ongoing discomfort, or need added stability during daily activities, the right brace can make a noticeable difference in how you move and function.',
     whatIsIt:
-      'Braces are supportive devices designed to stabilize joints, limit harmful movement, and reduce strain on muscles and ligaments. They are commonly used for areas such as the knee, ankle, wrist, elbow, and back. These devices are made from durable yet comfortable materials that provide structured support without restricting necessary motion — some are soft and flexible, others more rigid for stronger support.',
+      'Braces are supportive devices designed to stabilize joints, limit harmful movement, and reduce strain on muscles and ligaments. They are commonly used for areas such as the knee, ankle, wrist, elbow, and back. These devices are made from durable yet comfortable materials that provide structured support without restricting necessary motion. Depending on the condition, braces may be soft and flexible or more rigid for stronger support.',
+    howItWorks: [
+      {
+        title: 'How Braces Work',
+        description:
+          'Braces function by holding a joint in proper alignment while allowing safe movement. This helps reduce stress on injured or weakened tissues. By controlling motion, braces can prevent further strain and support natural recovery processes. They also improve body awareness by helping you maintain proper posture and movement patterns, which is especially useful during physical activity or while returning to regular routines after an injury.',
+      },
+    ],
+    conditionsSupported: ['Stabilize joints during movement', 'Reduce excessive or harmful motion', 'Support muscles and ligaments', 'Improve posture and alignment', 'Help manage swelling and strain'],
     keyFeatures: [
-      { title: 'Knee Braces', description: 'Used for ligament injuries, arthritis, or post-surgical support, helping maintain alignment and reduce pressure during walking or exercise.' },
+      { title: 'Knee Braces', description: 'Used for ligament injuries, arthritis, or post-surgical support. These braces help maintain knee alignment and reduce pressure during walking or exercise.' },
       { title: 'Ankle Braces', description: 'Provide stability for weak or injured ankles, often used after sprains or for ongoing instability.' },
-      { title: 'Wrist and Hand Braces', description: 'Helpful for repetitive strain or carpal tunnel issues, keeping the wrist in a neutral position to reduce stress.' },
-      { title: 'Back Braces', description: 'Support the lower back and improve posture, especially for strain from lifting or prolonged sitting.' },
+      { title: 'Wrist and Hand Braces', description: 'Helpful for conditions such as repetitive strain or carpal tunnel issues. They keep the wrist in a neutral position to reduce stress.' },
+      { title: 'Back Braces', description: 'Support the lower back and improve posture, especially for individuals dealing with strain from lifting or prolonged sitting.' },
       { title: 'Elbow Braces', description: 'Commonly used for tendon-related discomfort, helping reduce strain during arm movements.' },
     ],
     whoCanBenefit: [
-      { title: 'Recent Injury', description: 'People who have recently experienced a joint injury or feel instability or weakness in a joint.' },
-      { title: 'Returning to Activity', description: 'Anyone returning to physical activity after time off, or performing repetitive tasks that strain certain areas.' },
-      { title: 'Active Lifestyles', description: 'Those wanting added support during sports or exercise, or managing discomfort from conditions like arthritis.' },
+      { title: 'Recent Injury', description: 'You have recently experienced a joint injury, or feel instability or weakness in a joint.' },
+      { title: 'Returning to Activity', description: 'You are returning to physical activity after time off, or perform repetitive tasks that strain certain areas.' },
+      { title: 'Sports and Exercise', description: 'You want added support during sports or exercise, or experience discomfort from conditions like arthritis.' },
     ],
-    benefits: ['Improved joint stability', 'Reduced strain on injured areas', 'Enhanced confidence in movement', 'Support during recovery', 'Versatile for prevention and general support'],
+    safetyTips: [
+      { title: 'When to Start Using a Brace', description: 'It is important not to wait until discomfort becomes severe. Early use of a brace can help prevent worsening of a condition and support safer movement.' },
+      { title: 'Choosing the Right Brace', description: 'Selecting the correct brace is important to ensure proper support and comfort. Our recommendation is based on your condition, activity level, and goals — considering the type and location of the issue, level of support required, daily activity demands, and fit preferences.' },
+    ],
+    benefits: [
+      'Improved stability — helps keep joints secure, reducing the risk of sudden or awkward movements',
+      'Reduced strain — distributes pressure more evenly across affected areas',
+      'Enhanced confidence in movement during daily tasks and physical activities',
+      'Support during recovery while allowing controlled movement',
+      'Versatile use for injury management, prevention, and general support',
+    ],
     whyChooseUs: [
-      { title: 'Professional Assessment', description: 'Our team evaluates your condition and recommends a brace suited to your situation.' },
-      { title: 'Proper Fitting', description: 'We ensure the brace fits correctly, which is essential for comfort and function.' },
+      { title: 'Professional Assessment', description: 'Our team evaluates your condition and recommends a brace suited to your situation, rather than a generic option.' },
+      { title: 'Proper Fitting', description: 'We ensure that the brace fits correctly, which is essential for comfort and function.' },
       { title: 'Quality Products', description: 'We provide reliable braces designed for durability and consistent support.' },
       { title: 'Ongoing Support', description: 'If adjustments are needed or your condition changes, we are available to assist and guide you.' },
+      { title: 'Integrated Care Approach', description: 'Braces can be combined with other services at our clinic, helping you stay active while addressing underlying concerns.' },
     ],
-    closingText: 'If you are looking for reliable joint support, our team will help you choose the right brace based on your needs and daily routine. Contact us to explore available options and find the right fit for your lifestyle.',
+    closingText:
+      'If you are looking for reliable joint support, braces from Markham Pain Clinic can help you move with greater stability and confidence. Our team will help you choose the right option based on your needs and daily routine. Contact us today or visit our clinic to explore available braces and find the right fit for your lifestyle.',
   },
   {
     name: 'Massager',
@@ -442,34 +462,52 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop',
     description: 'Practical handheld and electronic massagers to ease muscle tension and support daily recovery.',
     intro:
-      'A massager is a practical device designed to ease muscle tension, improve circulation, and support recovery after daily strain. Whether you spend long hours sitting, standing, or engaging in physical activity, muscle discomfort can build up over time. Using a massager regularly can help maintain muscle comfort and mobility without needing frequent clinic visits.',
+      'A massager is a practical device designed to ease muscle tension, improve circulation, and support recovery after daily strain. Whether you spend long hours sitting, standing, or engaging in physical activity, muscle discomfort can build up over time. Using a massager regularly can help maintain muscle comfort and mobility without needing frequent clinic visits. At Markham Pain Clinic, we provide high-quality massagers that fit easily into your routine, helping you stay active and comfortable throughout the day.',
     whatIsIt:
-      'A massager is an electronic or manual device that applies targeted pressure, vibration, or percussion to muscles and soft tissues, created to mimic hands-on techniques commonly used in physiotherapy settings — through vibration, percussion, or rolling and kneading motions that loosen tight areas and encourage circulation.',
+      'A massager is an electronic or manual device that applies targeted pressure, vibration, or percussion to muscles and soft tissues. These devices are created to mimic hands-on techniques commonly used in physiotherapy settings.',
+    howItWorks: [
+      { title: 'Vibration', description: 'Gentle oscillations that stimulate blood flow.' },
+      { title: 'Percussion', description: 'Rapid pulses that reach deeper muscle layers.' },
+      { title: 'Rolling or Kneading', description: 'Motions that simulate hand pressure.' },
+    ],
     keyFeatures: [
-      { title: 'Adjustable Intensity Levels', description: 'Control speed and pressure, suitable for both light relaxation and deeper muscle work.' },
-      { title: 'Ergonomic Design', description: 'Comfortable grips and lightweight structures make it easy to reach the back, shoulders, and legs.' },
-      { title: 'Interchangeable Heads', description: 'Different attachments target specific muscle groups for versatile full-body use.' },
-      { title: 'Portable and Convenient', description: 'Compact designs let you use the massager at home, at work, or while travelling.' },
+      { title: 'Adjustable Intensity Levels', description: 'Most devices allow you to control speed and pressure, making them suitable for both light relaxation and deeper muscle work.' },
+      { title: 'Ergonomic Design', description: 'Comfortable grips and lightweight structures make it easy to reach different areas of the body, including the back, shoulders, and legs.' },
+      { title: 'Interchangeable Heads', description: 'Different attachments target specific muscle groups, offering versatility for full-body use.' },
+      { title: 'Portable and Convenient', description: 'Compact designs let you use the massager at home, at work, or even while travelling.' },
     ],
     whoCanBenefit: [
-      { title: 'Office Workers', description: 'Sitting for extended periods can cause stiffness in the neck, shoulders, and lower back — a massager helps keep these areas relaxed.' },
-      { title: 'Active Individuals', description: 'Those who exercise regularly may experience soreness or fatigue; using a massager post-workout supports recovery.' },
-      { title: 'Daily Physical Strain', description: 'Jobs involving lifting, standing, or repetitive movement can cause ongoing muscle tension.' },
+      { title: 'Office Workers', description: 'Sitting for extended periods can lead to stiffness in the neck, shoulders, and lower back. A massager can help keep these areas relaxed.' },
+      { title: 'Active Individuals', description: 'Those who exercise regularly may experience muscle soreness or fatigue. Using a massager post-workout can support recovery.' },
+      { title: 'Individuals with Daily Physical Strain', description: 'Jobs that involve lifting, standing, or repetitive movements can cause ongoing muscle tension.' },
       { title: 'Older Adults', description: 'Gentle use can help maintain circulation and reduce stiffness in commonly affected areas.' },
     ],
     commonUses: [
       { title: 'Muscle Tension Reduction', description: 'Helps ease tight areas caused by stress or physical activity.' },
       { title: 'Post-Activity Recovery', description: 'Supports muscles after exercise by promoting circulation.' },
-      { title: 'Improved Flexibility', description: 'Looser muscles can move more freely, supporting daily movement.' },
-      { title: 'Relaxation', description: 'Using a massager can help you unwind after a long day.' },
+      { title: 'Improved Flexibility', description: 'Looser muscles can move more freely, which supports daily movement.' },
+      { title: 'Relaxation', description: 'Using a massager can help you unwind after a long day, supporting overall comfort.' },
     ],
-    benefits: ['Maintains muscle comfort between clinic visits', 'Easy to use at home or on the go', 'Supports circulation and relaxation', 'Reduces stiffness from daily habits'],
+    safetyTips: [
+      { title: 'Start with Low Intensity', description: 'Begin with a gentle setting and gradually increase based on comfort.' },
+      { title: 'Focus on Key Areas', description: 'Target areas where you feel tightness, such as shoulders, calves, or lower back.' },
+      { title: 'Limit Session Duration', description: 'Use the device for short sessions (10–15 minutes per area) to avoid overuse.' },
+      { title: 'Avoid Sensitive Areas', description: 'Do not use directly on joints, bones, or injured regions without professional advice.' },
+    ],
+    benefits: [
+      'Helps maintain muscle comfort between clinic visits',
+      'Easy to use at home or on the go',
+      'Supports circulation and muscle relaxation',
+      'Reduces stiffness caused by daily habits',
+      'Encourages consistent muscle care',
+    ],
     whyChooseUs: [
-      { title: 'Carefully Selected Products', description: 'Our massagers are chosen for quality, durability, and usability.' },
-      { title: 'In-Clinic Support', description: 'Our team can help you understand how to use the device correctly for your needs.' },
+      { title: 'Carefully Selected Products', description: 'Our massagers are selected for quality, durability, and usability.' },
+      { title: 'In-Clinic Support', description: 'Our team can help you understand how to use the device correctly for your specific needs.' },
       { title: 'Practical Advice', description: 'We help you integrate the massager into your routine in a way that complements your daily activities.' },
     ],
-    closingText: 'If you are looking for a simple, effective way to manage muscle tension and stay active, visit us to explore our selection and find a massager that fits your needs.',
+    closingText:
+      'If you’re looking for a simple and effective way to manage muscle tension and stay active, a massager can be a valuable addition to your routine. Visit Markham Pain Clinic to explore our selection and find a device that fits your needs. Contact us today or stop by the clinic to get started with a massager that supports your daily comfort and mobility.',
   },
   {
     name: 'TENS Unit',
@@ -477,27 +515,43 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop',
     description: 'Portable TENS (electrical nerve stimulation) devices for drug-free, on-demand pain relief.',
     intro:
-      'A TENS (Transcutaneous Electrical Nerve Stimulation) unit is a small, portable device that delivers gentle electrical impulses through the skin to help manage pain. It is a popular drug-free option for people looking to reduce discomfort between clinic visits.',
+      'A Transcutaneous Electrical Nerve Stimulation (TENS) unit is a compact, battery-powered device that sends low-voltage electrical impulses through the skin to targeted areas of the body. These impulses are delivered through adhesive electrode pads placed on the skin near the area of discomfort. TENS units are widely used in clinical and home settings as a non-invasive option to manage various types of physical discomfort. At Markham Pain Clinic, we provide reliable TENS units along with clear instructions to help you use them safely and effectively.',
     whatIsIt:
       'A TENS unit sends low-voltage electrical currents through electrode pads placed on the skin near the area of pain. These impulses can interrupt pain signals travelling to the brain and encourage the release of natural pain-relieving endorphins.',
+    howItWorks: [
+      { title: 'Nerve Signal Modulation', description: 'The device sends mild electrical pulses that interact with the nervous system. These signals can reduce the transmission of discomfort signals to the brain, making the sensation more manageable during daily activities.' },
+      { title: 'Muscle Stimulation', description: 'In some settings, the electrical pulses can gently activate muscles, which may help reduce tightness and improve local circulation.' },
+      { title: 'Adjustable Settings', description: 'Most TENS units allow users to control intensity, pulse rate, and duration. This flexibility helps you find a comfortable level suited to your needs.' },
+    ],
+    conditionsSupported: ['Back and neck discomfort', 'Joint stiffness', 'Muscle soreness after physical activity', 'Sports-related strain', 'Postural tension from long hours of sitting', 'Recovery support after minor injuries'],
     keyFeatures: [
-      { title: 'Adjustable Settings', description: 'Control intensity, pulse rate, and mode to match your comfort level and the type of pain being treated.' },
-      { title: 'Portable and Discreet', description: 'Compact size and clip-on design allow use at home, at work, or while on the move.' },
-      { title: 'Reusable Electrode Pads', description: 'Long-lasting pads that can be repositioned for different treatment areas.' },
-      { title: 'Multiple Programs', description: 'Pre-set modes designed for different pain types, from chronic aches to acute muscle soreness.' },
+      { title: 'Portable and Lightweight Design', description: 'Our TENS units are easy to carry and can be used at home, work, or while travelling.' },
+      { title: 'Multiple Intensity Levels', description: 'You can adjust the strength of the electrical pulses to match your comfort level.' },
+      { title: 'Pre-Set Programs', description: 'Many units include built-in modes designed for different body areas such as the back, shoulders, and legs.' },
+      { title: 'Reusable Electrode Pads', description: 'High-quality adhesive pads ensure consistent contact with the skin and can be reused multiple times with proper care.' },
+      { title: 'Simple Controls', description: 'Clear buttons and display screens make operation straightforward, even for first-time users.' },
     ],
     whoCanBenefit: [
-      { title: 'Chronic Pain Sufferers', description: 'People managing ongoing back, neck, or joint pain who want a drug-free relief option.' },
-      { title: 'Post-Injury Recovery', description: 'Those recovering from muscle strain or minor injuries alongside their treatment plan.' },
-      { title: 'Active Individuals', description: 'Athletes or active adults managing soreness after exercise or training.' },
+      { title: 'Individuals with Ongoing Discomfort', description: 'People dealing with recurring muscle or joint issues may find TENS units helpful as part of their routine.' },
+      { title: 'Office Workers and Sedentary Lifestyles', description: 'Long hours at a desk can lead to tension in the neck, shoulders, and lower back. A TENS unit can be used during breaks to ease these areas.' },
+      { title: 'Active Individuals and Athletes', description: 'After intense workouts or sports activities, a TENS unit can support muscle recovery and relaxation.' },
+      { title: 'Older Adults', description: 'For those managing age-related stiffness, a TENS unit offers a simple and non-invasive option that can be used at home.' },
+    ],
+    safetyTips: [
+      { title: 'Placement of Pads', description: 'Electrode pads should be placed around the area of concern, not directly on joints or broken skin. Our clinic team will guide you on proper placement.' },
+      { title: 'Session Duration', description: 'Typical sessions last 15–30 minutes, depending on your comfort and needs.' },
+      { title: 'Consistency', description: 'Regular use, as advised by a physiotherapist, can help you get the most out of the device.' },
+      { title: 'When to Avoid Use', description: 'TENS units should not be used by individuals with pacemakers or certain medical conditions without professional advice. Always consult with a qualified provider before starting.' },
     ],
     benefits: ['Drug-free pain management', 'Convenient for use at home', 'Non-invasive and easy to apply', 'Complements ongoing physiotherapy treatment'],
     whyChooseUs: [
-      { title: 'Guided Setup', description: 'Our team shows you correct pad placement and settings for your specific condition.' },
-      { title: 'Quality Devices', description: 'We provide reliable units built for consistent, safe use.' },
-      { title: 'Ongoing Advice', description: 'We are available to adjust recommendations as your treatment progresses.' },
+      { title: 'Professional Support', description: 'When you purchase from our clinic, you receive clear instructions on setup, pad placement, and usage, so you start using the device correctly from day one.' },
+      { title: 'Carefully Selected Devices', description: 'We stock reliable TENS units that meet clinical standards for safety and performance.' },
+      { title: 'Ongoing Assistance', description: 'If you have questions about settings, usage, or maintenance, our team is available to help.' },
+      { title: 'Integrated Care Approach', description: 'We help you incorporate the device into a structured plan that may include physiotherapy and movement strategies.' },
     ],
-    closingText: 'Ask our team whether a TENS unit is right for your condition, and we will help you get set up with the right device and settings.',
+    closingText:
+      'If you are looking for a practical, non-invasive way to manage muscle and joint discomfort, a TENS unit can be a valuable addition to your routine. Visit Markham Pain Clinic to explore available options and get clear instructions on how to use the device effectively. Contact us or visit the clinic today to purchase your TENS unit and start managing discomfort.',
   },
   {
     name: 'Hot and Cold Pack',
@@ -505,26 +559,46 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop',
     description: 'Reusable hot and cold therapy packs to reduce swelling, ease stiffness, and soothe sore muscles.',
     intro:
-      'Hot and cold packs are simple, reusable tools that support pain management and recovery at home. Cold therapy helps reduce swelling and numb acute pain, while heat therapy relaxes tight muscles and improves blood flow to stiff areas.',
+      'Managing muscle soreness, swelling, or stiffness can be challenging, especially with a busy routine. A hot and cold pack is a simple, practical solution used in clinics and at home to help manage discomfort, reduce swelling, and support recovery after physical strain or injury. At Markham Pain Clinic, we provide high-quality hot and cold packs that are easy to use and suitable for a wide range of conditions.',
     whatIsIt:
-      'A hot and cold pack is a reusable gel or fabric pack that can be heated or frozen and applied directly to the skin over the area of discomfort, providing temperature-based relief for both acute and chronic conditions.',
+      'A hot and cold pack is a reusable therapy pack that delivers both heat and cold applications as needed. It is typically filled with a gel or material that retains temperature for extended periods. You can place the pack in a freezer for cold use, or warm it in hot water or in the microwave for heat application — a dual-purpose design that makes it a convenient addition to any home care routine.',
+    howItWorks: [
+      { title: 'Cold Therapy (Cryotherapy)', description: 'Cold application helps constrict blood vessels in the affected area. This can reduce swelling, inflammation, and discomfort, especially after an injury or physical activity — commonly used for recent injuries such as sprains or strains, swelling in joints, post-workout soreness, and minor bruising.' },
+      { title: 'Heat Therapy (Thermotherapy)', description: 'Heat application increases blood flow to the targeted area, helping relax tight muscles and reduce stiffness — often used for muscle tightness, joint stiffness, chronic aches, and tension in the neck or back.' },
+    ],
     keyFeatures: [
-      { title: 'Dual Purpose', description: 'The same pack can be used hot or cold depending on your needs.' },
-      { title: 'Flexible, Comfortable Fit', description: 'Moulds to the body for use on the back, shoulder, knee, or neck.' },
-      { title: 'Reusable Design', description: 'Durable materials designed for repeated freezing or heating.' },
-      { title: 'Easy to Use at Home', description: 'No special equipment needed — just a freezer or microwave.' },
+      { title: 'Dual Temperature Use', description: 'One pack serves both hot and cold purposes, making it versatile for different conditions.' },
+      { title: 'Flexible Design', description: 'Even when chilled, the pack remains flexible, allowing it to contour to different parts of the body, such as the knee, shoulder, or lower back.' },
+      { title: 'Reusable and Durable', description: 'The pack is built for repeated use without losing effectiveness, making it a cost-efficient option.' },
+      { title: 'Safe and Easy Application', description: 'Simple instructions make it easy to prepare the pack for either hot or cold use within minutes.' },
+      { title: 'Portable and Convenient', description: 'Lightweight and easy to carry, it can be used at home, at work, or after physical activity.' },
     ],
     whoCanBenefit: [
-      { title: 'Acute Injuries', description: 'Cold therapy helps manage swelling right after a sprain, strain, or minor injury.' },
-      { title: 'Chronic Stiffness', description: 'Heat therapy eases ongoing muscle tightness and joint stiffness.' },
-      { title: 'Post-Exercise Recovery', description: 'Helps manage soreness after physical activity or training.' },
+      { title: 'Office Workers', description: 'Suitable for those experiencing neck or back tension from long hours at a desk.' },
+      { title: 'Athletes', description: 'Helpful for managing post-exercise soreness.' },
+      { title: 'Recovering Individuals', description: 'Suitable for those recovering from minor injuries or with joint stiffness and muscle tightness.' },
+      { title: 'Seniors', description: 'A simple way to help maintain mobility.' },
+    ],
+    commonUses: [
+      { title: 'Managing Work-Related Strain', description: 'A heat application at the end of the day can help relax stiffness in the neck, shoulders, and lower back.' },
+      { title: 'Post-Workout Recovery', description: 'Using a cold pack can help reduce swelling after exercise, while heat can be used later to ease tension.' },
+      { title: 'Minor Injuries at Home', description: 'Applying cold therapy early to small sprains or bumps can help manage swelling and discomfort.' },
+      { title: 'Chronic Muscle Tightness', description: 'For ongoing stiffness, especially in colder weather, heat application can support flexibility and comfort.' },
+    ],
+    safetyTips: [
+      { title: 'For Cold Use', description: 'Place the pack in the freezer for at least 1–2 hours, wrap it in a cloth before applying it to the skin, and apply for 10–15 minutes at a time.' },
+      { title: 'For Heat Use', description: 'Warm the pack in the microwave or in hot water (follow instructions carefully), ensure it is not too hot before applying, and use for 15–20 minutes.' },
+      { title: 'General Safety', description: 'Do not apply directly to bare skin without a barrier, avoid prolonged use in one session, and consult a healthcare provider if unsure about use for specific conditions.' },
     ],
     benefits: ['Reduces swelling and inflammation', 'Eases muscle stiffness and tension', 'Affordable, reusable at-home care', 'Simple to fit into daily recovery routines'],
     whyChooseUs: [
-      { title: 'Guidance on Use', description: 'Our team advises when to use heat versus cold for your specific condition.' },
-      { title: 'Quality Materials', description: 'We provide packs designed for comfort and durability with repeated use.' },
+      { title: 'Quality You Can Trust', description: 'Our products are selected based on performance, durability, and ease of use.' },
+      { title: 'Professional Insight', description: 'Our team can guide you on when to use heat or cold based on your condition or routine.' },
+      { title: 'Convenient Access', description: 'Our clinic makes it easy to pick up your product and get quick advice in one visit.' },
+      { title: 'Support Beyond Purchase', description: 'We help you understand how to use the product effectively as part of your daily routine or recovery plan.' },
     ],
-    closingText: 'Not sure whether to use hot or cold for your injury? Ask our team — we will guide you toward the right approach for faster, safer recovery.',
+    closingText:
+      'A hot and cold pack is a practical tool for managing muscle and joint discomfort without complicated steps. Visit Markham Pain Clinic to get your hot and cold pack today — our team is ready to help you choose the right option and show you how to use it effectively.',
   },
   {
     name: 'Pain Relief Creams',
@@ -532,26 +606,46 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop',
     description: 'Topical pain relief creams for targeted, on-the-spot muscle and joint comfort.',
     intro:
-      'Topical pain relief creams offer targeted, on-the-spot comfort for sore muscles and stiff joints. They are a convenient addition to a treatment plan, especially for managing discomfort between clinic visits.',
+      'Pain relief creams are widely used for managing muscle soreness, joint discomfort, and stiffness in daily life. At Markham Pain Clinic, we provide carefully selected creams that support recovery, improve mobility, and help individuals stay active without relying only on oral options.',
     whatIsIt:
-      'Pain relief creams are topical formulations applied directly to the skin over a painful area. They typically work through cooling, warming, or anti-inflammatory ingredients that ease surface-level discomfort and support relaxation of the underlying muscles.',
+      'Pain relief creams are topical products applied directly to the skin over affected areas. They are formulated with active ingredients that interact with the skin and underlying tissues to reduce discomfort and improve circulation in the targeted region. Unlike oral products, these creams work locally — focusing on specific areas such as the neck, shoulders, back, knees, or ankles without affecting the entire body.',
+    howItWorks: [
+      { title: 'Targeted Action at the Source', description: 'When applied to the skin, the cream’s ingredients penetrate the surface and begin working on the tissues beneath. Depending on the formulation, they may create a warming or cooling sensation that helps distract from discomfort while supporting muscle relaxation.' },
+      { title: 'Common Active Ingredients', description: 'Most creams include menthol (a cooling effect), capsaicin (a warming sensation that reduces sensitivity over time), camphor (stimulates nerve endings to ease discomfort), and anti-inflammatory compounds that help reduce swelling and stiffness.' },
+      { title: 'Fast Absorption', description: 'These creams are designed to absorb quickly into the skin without leaving a heavy or greasy residue, allowing users to resume their daily routine shortly after application.' },
+    ],
     keyFeatures: [
-      { title: 'Fast-Acting Relief', description: 'Provides a noticeable soothing sensation shortly after application.' },
-      { title: 'Targeted Application', description: 'Applied directly to the area of discomfort for localized relief.' },
-      { title: 'Non-Invasive', description: 'A simple, drug-free option that fits easily into a daily routine.' },
-      { title: 'Portable', description: 'Easy to carry and use at home, work, or while travelling.' },
+      { title: 'Non-Greasy Formulation', description: 'Our creams are selected for their smooth texture and quick absorption. They do not leave stains on clothing and are easy to apply throughout the day.' },
+      { title: 'Suitable for Daily Use', description: 'They can be used as part of a regular routine, whether after physical activity, during work breaks, or before rest.' },
+      { title: 'Easy Application', description: 'The creams come in user-friendly packaging, making it simple to apply the right amount directly to the affected area.' },
+      { title: 'Versatile Use', description: 'They can be applied to the neck and shoulders, lower back, knees and joints, arms and legs.' },
     ],
     whoCanBenefit: [
-      { title: 'Muscle Soreness', description: 'People managing everyday aches from physical activity or overuse.' },
-      { title: 'Joint Stiffness', description: 'Those with stiffness in the knees, shoulders, or lower back.' },
-      { title: 'Between Treatments', description: 'Patients wanting extra comfort between physiotherapy or massage sessions.' },
+      { title: 'Individuals with Muscle Soreness', description: 'People who experience soreness after exercise, long work hours, or physical strain can benefit from topical application.' },
+      { title: 'Office Workers', description: 'Sitting for extended periods often leads to stiffness in the neck, shoulders, and lower back — these creams can be applied during breaks to ease tension.' },
+      { title: 'Active Individuals', description: 'Those involved in sports or fitness routines may use these creams to support recovery after activity.' },
+      { title: 'Older Adults', description: 'Joint stiffness and reduced mobility are common with age. Pain relief creams provide a simple way to manage these concerns.' },
     ],
-    benefits: ['Convenient, on-the-spot relief', 'Complements other treatments well', 'Easy to apply at home', 'Non-invasive and drug-free'],
+    commonUses: [
+      { title: 'After Physical Activity', description: 'Applying the cream after exercise can help relax muscles and reduce post-activity soreness.' },
+      { title: 'During Daily Routine', description: 'If discomfort builds up during the day, a small application can help maintain comfort and movement.' },
+      { title: 'Before Rest', description: 'Using the cream before bedtime may help ease tension and support a more comfortable night.' },
+    ],
+    safetyTips: [
+      { title: 'Follow Instructions', description: 'Always read the label and apply only the recommended amount.' },
+      { title: 'Avoid Sensitive Areas', description: 'Do not apply the cream to broken skin, eyes, or sensitive regions.' },
+      { title: 'Wash Hands After Use', description: 'This prevents accidental contact with sensitive areas.' },
+      { title: 'Test Before Regular Use', description: 'Apply a small amount first to check for any skin reaction.' },
+    ],
+    benefits: ['Direct application exactly where it is needed', 'Quick soothing, cooling, or warming sensation within minutes', 'Convenient — no need for water or additional steps', 'Complements physiotherapy sessions between visits'],
     whyChooseUs: [
-      { title: 'Recommended Products', description: 'We select creams that align with the treatment approaches used in our clinic.' },
-      { title: 'Usage Guidance', description: 'Our team can advise on the best way to use creams alongside your treatment plan.' },
+      { title: 'Carefully Selected Products', description: 'We stock creams that meet quality standards and are suitable for a wide range of users. Each product is chosen with patient needs in mind.' },
+      { title: 'Professional Insight', description: 'Our team understands how different conditions affect the body and can help you choose a cream that aligns with your needs and daily activities.' },
+      { title: 'Integrated Care Approach', description: 'We combine physiotherapy services with practical tools, such as pain-relief creams, to support consistent progress.' },
+      { title: 'Trusted Local Clinic', description: 'We serve individuals looking for reliable options to manage discomfort and maintain an active lifestyle.' },
     ],
-    closingText: 'Ask our team which pain relief cream best complements your current treatment plan and daily routine.',
+    closingText:
+      'Pain relief creams can play a simple yet effective role in daily care. Visit Markham Pain Clinic, speak with our team, explore available options, and find a product that supports your daily routine. Contact us today or visit the clinic to purchase your pain relief cream and take the next step toward staying active and comfortable.',
   },
   {
     name: 'Custom Made Orthotics',
@@ -559,28 +653,40 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop',
     description: 'Custom-fitted orthotic insoles designed around your foot shape, gait, and specific condition.',
     intro:
-      'Custom made orthotics are shoe insoles built specifically around your foot shape, gait pattern, and individual condition. Unlike generic store-bought insoles, they are designed to correct imbalances and provide targeted support exactly where you need it.',
+      'Custom-made orthotics are designed to support the structure of your feet and improve your movement throughout the day. At Markham Pain Clinic, these devices are created to match your unique foot shape, helping address discomfort, alignment issues, and strain that can affect your daily routine.',
     whatIsIt:
-      'Custom orthotics are supportive inserts designed from a mould or scan of your feet, correcting alignment issues, redistributing pressure, and supporting the arch and heel to reduce strain on the feet, knees, hips, and lower back.',
+      'Custom-made orthotics are inserts placed inside your shoes to support and align your feet. Unlike over-the-counter insoles, these are crafted based on a detailed assessment of your foot mechanics, posture, and walking pattern. By improving how your feet function, orthotics can also influence how your ankles, knees, hips, and lower back perform during movement.',
+    howItWorks: [
+      { title: 'Foot Assessment and Analysis', description: 'The process begins with a detailed evaluation — examining your walking pattern, checking foot posture, and identifying pressure points. Advanced scanning or casting methods are used to capture the exact shape of your feet.' },
+      { title: 'Precision Design and Fabrication', description: 'Based on the assessment, orthotics are crafted to match your specific needs, considering arch type, pressure distribution, and daily activities. Materials are selected to provide the right balance of support and flexibility.' },
+      { title: 'Ongoing Support During Use', description: 'Once placed inside your footwear, orthotics help guide your feet into a more stable position, reducing strain on muscles and joints and making everyday activities more comfortable.' },
+    ],
+    conditionsSupported: ['Plantar fasciitis', 'Flat feet or fallen arches', 'High arches', 'Heel pain', 'Shin splints', 'Knee strain related to alignment issues', 'Lower back discomfort linked to posture'],
     keyFeatures: [
-      { title: 'Personalized Fit', description: 'Built from an assessment of your specific foot shape and gait pattern.' },
-      { title: 'Targeted Support', description: 'Provides support exactly where your feet need it most.' },
-      { title: 'Durable Materials', description: 'Designed to hold their shape and support through daily wear.' },
-      { title: 'Fits Most Footwear', description: 'Designed to be used across everyday shoes, work boots, or athletic footwear.' },
+      { title: 'Individualized Fit', description: 'Each pair is created specifically for your feet, ensuring accurate support and alignment that standard insoles cannot match.' },
+      { title: 'Durable Materials', description: 'High-quality materials are used to ensure the orthotics maintain their structure over time, even with daily use.' },
+      { title: 'Versatility Across Footwear', description: 'Orthotics can be designed to fit different types of shoes, including athletic footwear, work shoes, and casual wear.' },
+      { title: 'Improved Stability', description: 'By supporting the arches and correcting imbalances, orthotics improve stability during movement.' },
     ],
     whoCanBenefit: [
-      { title: 'Foot and Heel Pain', description: 'People managing plantar fasciitis, heel pain, or general foot discomfort.' },
-      { title: 'Gait Imbalances', description: 'Those with overpronation, flat feet, or uneven walking patterns.' },
-      { title: 'Related Joint Pain', description: 'Individuals whose knee, hip, or back pain is linked to foot alignment.' },
-      { title: 'Active Lifestyles', description: 'Athletes and active adults wanting extra support during activity.' },
+      { title: 'Individuals with Foot Discomfort', description: 'People dealing with conditions such as plantar fasciitis, flat feet, or high arches often find orthotics helpful in managing strain and improving support.' },
+      { title: 'Active Individuals and Athletes', description: 'Running, sports, and other physical activities repeatedly stress the feet. Orthotics can help improve alignment and reduce the risk of overuse injuries.' },
+      { title: 'Those with Joint or Postural Concerns', description: 'Individuals experiencing knee, hip, or lower back discomfort may benefit from improved foot positioning.' },
+      { title: 'People Who Stand for Long Hours', description: 'Orthotics help distribute weight more evenly, making extended standing more manageable.' },
+    ],
+    safetyTips: [
+      { title: 'Gradual Adaptation', description: 'It may take a short period to get used to wearing orthotics. Most people begin with a few hours per day and gradually increase usage.' },
+      { title: 'Maintenance and Care', description: 'Keeping your orthotics clean and using them in appropriate footwear helps maintain their effectiveness over time.' },
     ],
     benefits: ['Improved foot and gait alignment', 'Reduced strain on knees, hips, and back', 'Personalized fit for lasting comfort', 'Supports long-term movement health'],
     whyChooseUs: [
-      { title: 'Professional Assessment', description: 'Our team evaluates your gait and foot structure before recommending orthotics.' },
-      { title: 'Custom Fitting Process', description: 'Orthotics are built specifically around your feet, not a generic template.' },
-      { title: 'Integrated Care', description: 'Orthotics can be combined with physiotherapy for a complete approach to alignment and pain.' },
+      { title: 'Thorough Assessment Process', description: 'The process begins with a detailed evaluation to ensure your orthotics are based on accurate findings rather than general assumptions.' },
+      { title: 'Integrated Approach to Care', description: 'Orthotics are often combined with other therapies available at the clinic, creating a well-rounded plan that supports your mobility and function.' },
+      { title: 'Focus on Functional Improvement', description: 'The goal is not just to provide inserts but to support your body’s overall movement, helping you stay active in daily life.' },
+      { title: 'Ongoing Support and Adjustments', description: 'Follow-up visits allow for adjustments if needed, ensuring your orthotics continue to meet your needs as your activity levels or condition change.' },
     ],
-    closingText: 'If foot pain or alignment issues are affecting your daily movement, our team can assess your gait and recommend custom orthotics suited to your needs.',
+    closingText:
+      'If foot discomfort or alignment issues are affecting your daily routine, custom-made orthotics may help improve your movement and overall comfort throughout the day. Visit Markham Pain Clinic to get started with a detailed assessment and find a solution suited to your needs. Contact our clinic today to get your custom-made orthotics and learn how they can support your everyday activities.',
   },
   {
     name: 'Posture Corrector Brace',
@@ -588,27 +694,41 @@ const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop',
     description: 'Supportive posture brace that gently pulls the shoulders back to encourage proper spinal alignment.',
     intro:
-      'A posture corrector brace is a supportive garment worn across the shoulders and upper back to encourage proper spinal alignment. It is a simple tool for people looking to counteract the effects of long hours sitting or slouching.',
+      'Maintaining proper posture is essential for daily comfort, mobility, and overall physical function. A posture corrector brace is designed to support your upper body, promote proper alignment, and reduce strain from prolonged sitting, standing, or repetitive movements. At Markham Pain Clinic, this product is selected to help individuals improve posture habits and support their everyday activities with greater ease.',
     whatIsIt:
-      'The brace gently pulls the shoulders back and supports the upper spine, retraining the body toward a more upright, aligned posture over time while reducing strain on the neck and upper back.',
+      'A posture corrector brace is a wearable support device that gently aligns the shoulders and upper spine into a more natural position. It is typically made from lightweight, breathable materials and worn around the shoulders and upper back, either over or under clothing. This brace works by applying gentle tension that encourages you to keep your shoulders back and spine aligned, building awareness of posture over time.',
+    howItWorks: [
+      { title: 'Gentle Alignment Support', description: 'The brace repositions the shoulders and upper back into a neutral alignment, reducing slouching and forward head posture — common issues linked to desk work and device use.' },
+      { title: 'Muscle Engagement', description: 'Rather than forcing a rigid posture, the brace encourages your muscles to stay active, helping strengthen postural muscles over time and support improved body mechanics.' },
+      { title: 'Daily Habit Reinforcement', description: 'Wearing the brace regularly helps train your body to recognize proper posture. As awareness increases, you naturally begin to sit and stand with improved alignment.' },
+    ],
     keyFeatures: [
-      { title: 'Adjustable Straps', description: 'Fits comfortably across a range of body sizes and can be adjusted for gentle or firmer support.' },
-      { title: 'Lightweight, Breathable Material', description: 'Designed to be worn discreetly under clothing throughout the day.' },
-      { title: 'Gradual Posture Training', description: 'Encourages muscle memory for improved posture over consistent use.' },
-      { title: 'Easy to Wear', description: 'Simple to put on and adjust without assistance.' },
+      { title: 'Adjustable Fit', description: 'The brace features adjustable straps to ensure a secure, comfortable fit for various body types.' },
+      { title: 'Lightweight and Breathable Material', description: 'Designed for daily wear, the material allows airflow and minimizes discomfort during extended use.' },
+      { title: 'Discreet Design', description: 'It can be worn under clothing, making it suitable for use at work, home, or while on the go.' },
+      { title: 'Easy to Use', description: 'Simple fastening mechanisms make it easy to put on and remove without assistance.' },
+      { title: 'Durable Construction', description: 'Built to withstand regular use, the brace maintains its structure and support over time.' },
     ],
     whoCanBenefit: [
-      { title: 'Desk Workers', description: 'People who sit for long hours and notice slouching or rounded shoulders.' },
-      { title: 'Upper Back and Neck Tension', description: 'Those experiencing tension linked to poor posture habits.' },
-      { title: 'Post-Injury Support', description: 'Individuals rebuilding postural awareness after an injury or period of inactivity.' },
+      { title: 'Office Workers and Students', description: 'Long hours at a desk can lead to rounded shoulders and upper back strain. This brace helps counteract those effects by promoting upright positioning.' },
+      { title: 'Individuals with Neck and Upper Back Strain', description: 'Poor posture often contributes to discomfort in the neck, shoulders, and upper spine. This product helps reduce stress in these areas.' },
+      { title: 'Active Individuals', description: 'Proper posture plays a key role in improving movement efficiency and preventing injury, whether you exercise regularly or engage in physical work.' },
+      { title: 'People Recovering from Postural Imbalances', description: 'This brace can support gradual correction alongside professional care if you’ve developed poor posture habits over time.' },
     ],
-    benefits: ['Encourages proper spinal alignment', 'Reduces neck and shoulder strain', 'Builds long-term postural awareness', 'Comfortable for daily wear'],
+    safetyTips: [
+      { title: 'Start Gradually', description: 'Begin by wearing the brace for short periods, such as 20–30 minutes per day, and gradually increase usage as your body adapts.' },
+      { title: 'Combine with Movement', description: 'Incorporate stretching and strengthening exercises to support posture improvement.' },
+      { title: 'Avoid Overdependence', description: 'The goal is to build natural posture control, so balance usage with active muscle engagement.' },
+    ],
+    benefits: ['Improved spinal alignment, reducing strain on joints and muscles', 'Reduced muscle fatigue from even weight distribution', 'Enhanced confidence from standing and sitting upright', 'Support for everyday activities — work, walking, or relaxing'],
     whyChooseUs: [
-      { title: 'Guided Recommendation', description: 'Our team assesses your posture before recommending the right level of support.' },
-      { title: 'Proper Fitting', description: 'We ensure the brace fits correctly for comfort and effectiveness.' },
-      { title: 'Complementary Care', description: 'Can be paired with physiotherapy and postural exercises for lasting results.' },
+      { title: 'Professional Assessment', description: 'Our team evaluates your posture and movement patterns to help you select the right brace.' },
+      { title: 'Quality You Can Rely On', description: 'We provide products that meet high standards for comfort, durability, and functionality.' },
+      { title: 'Ongoing Support', description: 'If you have questions about usage or fit, our clinic is available to assist you.' },
+      { title: 'Integrated Care Approach', description: 'The brace can complement other services available at our clinic, helping you work toward improved posture and function.' },
     ],
-    closingText: 'If poor posture is contributing to your discomfort, our team can help you find the right posture corrector brace and pair it with exercises for lasting improvement.',
+    closingText:
+      'A posture corrector brace can be a practical addition to your daily routine, helping you stay aligned, reduce strain, and build healthier posture habits over time. Visit Markham Pain Clinic to explore our posture corrector brace and find the right fit for your needs. Contact our clinic today or stop by to speak with our team and take the first step toward improving your posture.',
   },
 ];
 
@@ -792,13 +912,18 @@ const seed = async () => {
   for (const [i, product] of PRODUCTS.entries()) {
     const existing = await Product.findOne({ name: product.name });
     if (existing) {
+      // Only backfill when the detail content is still missing — avoids
+      // clobbering any edits made later through the admin Products manager.
       if (!existing.whatIsIt) {
         existing.description = product.description;
         existing.intro = product.intro;
         existing.whatIsIt = product.whatIsIt;
+        existing.howItWorks = product.howItWorks || [];
         existing.keyFeatures = product.keyFeatures || [];
         existing.whoCanBenefit = product.whoCanBenefit || [];
         existing.commonUses = product.commonUses || [];
+        existing.conditionsSupported = product.conditionsSupported || [];
+        existing.safetyTips = product.safetyTips || [];
         existing.benefits = product.benefits || [];
         existing.whyChooseUs = product.whyChooseUs || [];
         existing.closingText = product.closingText;

@@ -24,9 +24,12 @@ const productSchema = new mongoose.Schema(
     // Detail page content
     intro: { type: String, trim: true },
     whatIsIt: { type: String, trim: true },
+    howItWorks: { type: [detailBlockSchema], default: [] },
     keyFeatures: { type: [detailBlockSchema], default: [] },
     whoCanBenefit: { type: [detailBlockSchema], default: [] },
     commonUses: { type: [detailBlockSchema], default: [] },
+    conditionsSupported: { type: [String], default: [] },
+    safetyTips: { type: [detailBlockSchema], default: [] },
     benefits: { type: [String], default: [] },
     whyChooseUs: { type: [detailBlockSchema], default: [] },
     closingText: { type: String, trim: true },

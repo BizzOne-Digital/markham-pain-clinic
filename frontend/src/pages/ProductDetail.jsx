@@ -116,6 +116,33 @@ export default function ProductDetail() {
               </div>
             )}
 
+            {product.howItWorks?.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">How It Works</h2>
+                <div className="space-y-5">
+                  {product.howItWorks.map((h) => (
+                    <div key={h.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{h.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{h.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {product.conditionsSupported?.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Uses</h2>
+                <div className="flex flex-wrap gap-3">
+                  {product.conditionsSupported.map((c) => (
+                    <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {product.keyFeatures?.length > 0 && (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Key Features</h2>
@@ -152,6 +179,20 @@ export default function ProductDetail() {
                     <div key={u.title}>
                       <h3 className="font-heading font-bold text-textMain mb-1">{u.title}</h3>
                       <p className="text-textSecondary text-sm leading-relaxed">{u.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {product.safetyTips?.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">How to Use Safely</h2>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {product.safetyTips.map((s) => (
+                    <div key={s.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{s.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{s.description}</p>
                     </div>
                   ))}
                 </div>
