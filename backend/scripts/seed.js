@@ -178,6 +178,117 @@ const BLOGS = [
   },
 ];
 
+const EXTRA_BLOGS = [
+  {
+    title: 'Tech Neck Tips for Desk Workers',
+    categories: ['Posture'],
+    excerpt: 'Long hours at a screen can quietly overload your neck and shoulders. Here is how to spot it early and fix it.',
+    content:
+      '"Tech neck" describes the strain that builds up in the neck and upper back from hours spent looking down at a phone or leaning toward a monitor. Over time, this posture shortens the muscles at the front of the neck and overstretches the ones at the back, leading to stiffness, headaches, and reduced mobility.\n\nSimple changes make a real difference: raise your screen to eye level, keep your ears roughly over your shoulders rather than jutting forward, and take a movement break every 30-45 minutes. Chin tucks and shoulder blade squeezes done a few times a day can help reset posture between stretches of sitting.\n\nIf stiffness or headaches persist despite these adjustments, a physiotherapy assessment can identify exactly which muscles are tight, which are weak, and build a targeted plan — rather than guessing at generic desk stretches.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Rotator Cuff Injury Care: What You Need to Know',
+    categories: ['Sports Injuries'],
+    excerpt: 'Shoulder pain that lingers could be a rotator cuff issue. Here is how it is assessed and treated.',
+    content:
+      'The rotator cuff is a group of four muscles and tendons that stabilize the shoulder joint and allow it to lift, rotate, and reach overhead. Injuries range from minor irritation caused by repetitive overhead movement to partial or full tears, and symptoms often include a dull ache, weakness when lifting the arm, or pain that disturbs sleep.\n\nA thorough assessment looks at range of motion, strength testing, and the specific movements that trigger pain to narrow down which part of the cuff is affected. Most rotator cuff injuries respond well to a structured, progressive exercise program that restores strength and stability without aggravating the tendon further, supported by manual therapy to ease surrounding tension.\n\nIgnoring shoulder pain often leads to compensation patterns in the neck and upper back, so earlier assessment generally means a shorter road to recovery.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Physiotherapy for Knee Pain: What an Assessment Can Explore',
+    categories: ['Physiotherapy'],
+    excerpt: 'Knee pain has many possible causes. A proper assessment narrows down what is actually going on.',
+    content:
+      'Knee pain can come from the joint itself, the surrounding muscles, or even alignment issues starting at the hip or foot. A physiotherapy assessment typically begins with understanding when the pain started, what movements make it worse, and any history of injury, followed by hands-on testing of the joint\'s range of motion, stability, and the strength of the muscles that support it.\n\nCommon findings include weakness in the muscles around the hip and thigh, tightness in the surrounding soft tissue, or movement patterns that place uneven load on the knee during walking, squatting, or stairs. Rather than treating the knee in isolation, an effective plan usually addresses the whole kinetic chain — strengthening supporting muscles, improving flexibility, and correcting movement habits that contribute to the strain.\n\nA clear assessment gives you an honest picture of what is driving your pain, so treatment is built around your actual findings rather than guesswork.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Chiropractic Assessment for Shoulder Pain: What to Expect',
+    categories: ['Chiropractic Care'],
+    excerpt: 'Not sure what happens during a chiropractic shoulder assessment? Here is a walkthrough of the process.',
+    content:
+      'Shoulder pain can be linked to the shoulder joint itself, but it can also stem from restrictions in the neck or upper spine that refer pain outward. A chiropractic assessment for shoulder pain typically starts with a discussion of your symptoms and daily activities, followed by an examination of posture, spinal alignment, and the mobility of the neck, upper back, and shoulder joint together.\n\nSpecific orthopedic tests help identify whether the pain is coming from the joint, surrounding soft tissue, or a nerve-related source higher up the spine. Based on these findings, treatment may involve gentle spinal or joint adjustments, soft tissue work, and guided mobility exercises aimed at restoring normal movement patterns.\n\nBecause the shoulder and spine work closely together, addressing both areas — rather than the shoulder alone — often leads to more complete and lasting relief.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'What to Expect at Your First RMT Appointment',
+    categories: ['Massage Therapy'],
+    excerpt: 'First time seeing a registered massage therapist? Here is what your first visit usually involves.',
+    content:
+      'Your first registered massage therapy (RMT) appointment typically starts with a short health history intake, covering current symptoms, past injuries, and any areas of concern. This helps your therapist understand your goals for the session, whether that is relaxation, pain relief, or recovery support alongside another treatment.\n\nDuring the assessment, your RMT may check posture, muscle tension, and range of motion in the affected area before beginning hands-on treatment. Techniques vary based on your needs — from lighter relaxation strokes to firmer, targeted work on specific tight or restricted areas — and you are always in control of pressure and comfort throughout the session.\n\nAfter treatment, your therapist will usually share simple self-care tips, such as stretches or hydration reminders, and may recommend a treatment frequency based on your goals. Many patients combine RMT with physiotherapy or chiropractic care for a more complete recovery plan.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Low Back Pain: What a Physiotherapy Assessment Can Help You Understand',
+    categories: ['Physiotherapy'],
+    excerpt: 'Low back pain is common, but the cause is different for everyone. Here is how an assessment gets to the root of it.',
+    content:
+      'Low back pain is one of the most common reasons people seek physiotherapy, but the underlying cause varies widely — from muscle strain and joint stiffness to disc-related issues or nerve irritation. A thorough assessment examines your posture, spinal movement, and the strength and flexibility of the muscles supporting your lower back, along with questions about your daily habits, work setup, and activity level.\n\nSpecific movement and strength tests help determine whether your pain centralizes or worsens with certain positions, which gives valuable clues about the source of the problem and which exercises will help versus aggravate it. From there, a treatment plan is built around your specific findings — often combining manual therapy for immediate relief with a progressive exercise program for long-term strength and stability.\n\nUnderstanding what is actually driving your back pain, rather than treating it generically, is often the difference between short-term relief and lasting improvement.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Recognizing Sciatica Symptoms',
+    categories: ['Chronic Pain'],
+    excerpt: 'Sciatica can show up in surprising ways beyond just back pain. Here is what to watch for.',
+    content:
+      'Sciatica refers to pain that travels along the path of the sciatic nerve, which runs from the lower back through the hip and down the back of each leg. Common symptoms include a sharp or burning pain radiating from the lower back or buttock down the leg, along with numbness, tingling, or weakness that can extend as far as the foot.\n\nSymptoms are often worsened by prolonged sitting, bending forward, or certain movements, and may come and go depending on posture or activity. Because sciatica is a symptom rather than a diagnosis on its own, an assessment aims to identify the underlying cause — commonly a disc issue, muscle tightness (such as in the piriformis), or joint irritation placing pressure on the nerve.\n\nMost cases respond well to conservative treatment, including targeted exercises, manual therapy, and posture adjustments, especially when addressed early rather than left to become chronic.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Physiotherapy and RMT: How the Two Work Well Together',
+    categories: ['Physiotherapy'],
+    excerpt: 'Physiotherapy and massage therapy are often more effective as a team than on their own.',
+    content:
+      'Physiotherapy and registered massage therapy (RMT) approach recovery from different but complementary angles. Physiotherapy typically focuses on restoring strength, mobility, and function through targeted exercise and manual techniques, while RMT works on releasing muscle tension, improving circulation, and easing tightness that can restrict movement and slow progress.\n\nCombining the two often accelerates recovery: massage therapy can loosen tight, guarded muscles before a physiotherapy session, making stretches and strengthening exercises more effective and comfortable. In turn, physiotherapy helps ensure that the relief gained from massage translates into lasting improvements in strength and movement patterns, rather than temporary comfort alone.\n\nFor conditions involving both muscular tightness and functional limitations — such as chronic neck and shoulder tension from desk work, or recovery from a soft tissue injury — a coordinated plan between both disciplines often produces better, longer-lasting results than either treatment alone.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Stiff Neck? Simple Ergonomic Fixes That Actually Help',
+    categories: ['Posture'],
+    excerpt: 'A stiff neck is often a sign your workspace setup needs adjusting. Here are practical fixes.',
+    content:
+      'A persistently stiff neck is frequently linked to workspace setup rather than a single injury. Monitors positioned too low, keyboards placed too far away, and chairs without proper back support all encourage the head-forward, shoulders-rounded posture that leads to chronic tightness.\n\nA few practical adjustments can make a noticeable difference: position your monitor so the top of the screen is at or just below eye level, keep your elbows close to your body at roughly a 90-degree angle while typing, and ensure your chair supports the natural curve of your lower back so you are not compensating with your neck and shoulders. Standing up and moving for a minute or two every half hour also helps prevent muscles from locking into one position for too long.\n\nIf neck stiffness continues despite these changes, it is worth having it assessed — a persistent problem often points to an underlying muscle imbalance or joint restriction that ergonomic adjustments alone will not fully resolve.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: '7 Mistakes to Avoid When Choosing a Strength Restoration Program',
+    categories: ['Sports Injuries'],
+    excerpt: 'Rebuilding strength after an injury takes more than generic exercises. Avoid these common mistakes.',
+    content:
+      'Rebuilding strength after an injury or period of inactivity is easy to get wrong if the program is not tailored to your specific situation. Common mistakes include progressing too quickly before tissues are ready, following a generic plan that ignores your actual weaknesses, and skipping a proper assessment that identifies which muscles need the most attention.\n\nOther pitfalls include focusing only on the injured area while ignoring supporting muscle groups, neglecting mobility work alongside strengthening, and stopping the program as soon as pain subsides rather than completing the full course needed to prevent re-injury. Inconsistent effort — doing exercises sporadically rather than following a structured schedule — also significantly slows results.\n\nA well-designed strength restoration program is built around your specific assessment findings, progresses gradually based on how your body responds, and continues until function is fully restored, not just until pain disappears.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'What Should You Ask When You Meet Your Therapist for the First Time?',
+    categories: ['Physiotherapy'],
+    excerpt: 'A good first appointment is a two-way conversation. Here are the questions worth asking.',
+    content:
+      'Your first meeting with a physiotherapist, chiropractor, or massage therapist is a chance to understand not just your condition, but the plan for addressing it. Useful questions include: what is likely causing my symptoms, what does the assessment show, and how does the proposed treatment plan target that specific cause rather than just the symptoms?\n\nIt is also worth asking how many sessions are typically needed for a condition like yours, what progress should look like along the way, and what you can do at home between appointments to support your recovery. If exercises are prescribed, ask why each one is included — understanding the purpose behind a plan makes it much easier to stay consistent with it.\n\nA good therapist will welcome these questions and explain their reasoning clearly. Coming prepared with a few of your own helps you get more value from every appointment and stay actively involved in your own recovery.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: '7 Mistakes to Avoid When Choosing a Physiotherapy Clinic',
+    categories: ['Physiotherapy'],
+    excerpt: 'Convenient hours matter, but they should not be the only factor in choosing where to get treated.',
+    content:
+      'Convenient hours and locations matter, but choosing a physiotherapy clinic based on availability alone can lead to disappointing results. A common mistake is skipping research into the clinic\'s assessment process — a rushed, five-minute evaluation rarely uncovers the real cause of a problem, no matter how convenient the appointment time was to book.\n\nOther mistakes include choosing a clinic without checking whether treatment plans are personalized or templated, not asking whether the same therapist will see you consistently for continuity of care, and overlooking how the clinic tracks and communicates your progress over time. It is also worth being cautious of any clinic promising a fixed number of sessions before even assessing your condition — recovery timelines should be based on findings, not a one-size-fits-all package.\n\nThe best fit is a clinic that combines accessibility with a genuine, individualized assessment and treatment approach — convenience should support good care, not replace it.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+];
+
 const FAQS = [
   { question: 'Do I need a referral to book an appointment?', answer: 'No referral is required. You can book directly with us, though a referral from your doctor is welcome if you have one.', order: 1 },
   { question: 'What should I expect at my first appointment?', answer: 'Your first visit includes a thorough assessment of your condition, medical history review, and the start of a personalized treatment plan.', order: 2 },
@@ -876,6 +987,17 @@ const seed = async () => {
   } else {
     console.log('Blog posts already exist, skipping');
   }
+
+  let extraBlogsCreated = 0;
+  for (const post of EXTRA_BLOGS) {
+    const existing = await Blog.findOne({ title: post.title });
+    if (existing) continue;
+    const slug = await generateUniqueSlug(Blog, post.title);
+    await Blog.create({ ...post, slug, publishedAt: new Date() });
+    extraBlogsCreated += 1;
+  }
+  if (extraBlogsCreated > 0) console.log(`${extraBlogsCreated} additional blog posts created`);
+  else console.log('Additional blog posts already exist, skipping');
 
   const existingFaqs = await FAQ.countDocuments();
   if (existingFaqs === 0) {
