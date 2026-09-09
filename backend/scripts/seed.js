@@ -325,6 +325,189 @@ const EXTRA_BLOGS = [
   },
 ];
 
+const EXTRA_BLOGS_2 = [
+  {
+    title: '7 Questions to Ask Before Choosing Multidisciplinary Rehab Care',
+    categories: ['Physiotherapy'],
+    excerpt: 'Combining physiotherapy, chiropractic, and massage can speed up recovery — if the team actually coordinates.',
+    content:
+      'Multidisciplinary rehab care brings together professionals such as physiotherapists, chiropractors, and massage therapists to address different aspects of a condition at once. Before committing, it is worth asking whether these providers actually communicate with each other about your progress, or whether you are simply booking separate appointments with no shared plan.\n\nOther useful questions include how your treatment plan will be sequenced between disciplines, who is responsible for tracking your overall progress, and how the team decides when a particular therapy is no longer needed. Clarity on cost and insurance coverage across multiple providers is also worth confirming upfront.\n\nWhen genuinely coordinated, multidisciplinary care can be more effective than any single approach alone — but only when there is real communication behind the scenes, not just multiple bookings under one roof.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Direct Billing and Insurance Claims: What to Ask Your Clinic',
+    categories: ['Physiotherapy'],
+    excerpt: 'Direct billing can save you time and upfront cost — but the details vary between clinics and providers.',
+    content:
+      'Direct billing allows a clinic to submit your claim straight to your insurance provider, so you are not paying out of pocket and waiting for reimbursement. Before booking, it is worth confirming which insurance providers the clinic bills directly, and what happens if your plan has an annual maximum that is close to being reached.\n\nIt also helps to ask whether the clinic will estimate your remaining coverage before treatment starts, so there are no surprises, and how they handle situations where a claim is partially declined. Some plans require a doctor\'s referral for reimbursement even if a referral is not required to book the appointment itself, so confirming this in advance avoids delays.\n\nA clinic that is upfront about these details before your first visit makes for a much smoother experience than sorting it out after treatment has already started.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Home Mobility Exercises to Start Today',
+    categories: ['Physiotherapy'],
+    excerpt: 'You do not need equipment to start improving mobility — a few simple exercises go a long way.',
+    content:
+      'Improving mobility at home does not require special equipment, just a few minutes of consistent effort each day. Gentle exercises such as cat-cow stretches for spinal mobility, standing hip circles, and controlled ankle rotations help maintain range of motion in joints that stiffen from long periods of sitting or inactivity.\n\nWorld\'s greatest stretch — a lunging position combined with a rotational reach — is a favorite among physiotherapists because it opens up the hips, spine, and shoulders in one movement. Wall slides, where you slide your arms up and down a wall while keeping contact at the wrist and elbow, help restore shoulder mobility that is often lost from desk work.\n\nThese exercises are meant to complement, not replace, a proper assessment if you are dealing with pain rather than general stiffness — but as a daily mobility habit, they are a safe and effective starting point for most people.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Movement Rehabilitation Programs Explained',
+    categories: ['Physiotherapy'],
+    excerpt: 'Movement rehabilitation goes beyond isolated exercises to retrain how your body moves as a whole.',
+    content:
+      'Movement rehabilitation focuses on retraining functional patterns — squatting, reaching, walking, twisting — rather than isolating a single muscle or joint. The idea is that pain or injury often disrupts how different parts of the body coordinate together, and lasting recovery depends on restoring that coordination, not just building strength in one spot.\n\nA typical program starts with an assessment of how you move during everyday tasks, identifying compensations that may be placing extra strain on certain areas. From there, exercises progress from basic control and stability through to more complex, functional movements that mirror the activities you actually need to perform, whether that is lifting groceries, playing a sport, or simply walking without discomfort.\n\nBecause this approach treats the body as an interconnected system, it often uncovers and addresses root causes that a narrower, symptom-focused approach might miss entirely.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'How Balance Rehabilitation Exercises Progress from Beginner to Advanced',
+    categories: ['Physiotherapy'],
+    excerpt: 'Balance training builds gradually — here is how a program typically advances over time.',
+    content:
+      'Balance rehabilitation starts by establishing a safe baseline, often with simple exercises like standing with feet together, weight shifting side to side, or single-leg stands near a wall or chair for support. These early exercises help identify specific weaknesses and build confidence before progressing further.\n\nAs stability improves, exercises introduce reduced visual input (such as standing with eyes closed briefly) or unstable surfaces like foam pads, which challenge the body\'s balance systems more directly. More advanced stages add dynamic movement — walking heel-to-toe, stepping over obstacles, or combining balance with a secondary task like catching a ball — to simulate the unpredictable demands of everyday life.\n\nProgression should always be guided by how well each stage is tolerated rather than a fixed timeline, since balance training that advances too quickly can undermine both safety and confidence.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Top Sports Injuries We See in Clinic',
+    categories: ['Sports Injuries'],
+    excerpt: 'From ankle sprains to tennis elbow, here are the sports injuries physiotherapists treat most often.',
+    content:
+      'Ankle sprains are among the most common sports injuries, typically occurring when the foot rolls inward during a change of direction or landing. Knee injuries, including ligament sprains and meniscus irritation, are frequent in sports involving pivoting or sudden stops, such as soccer or basketball.\n\nTennis and golfer\'s elbow — tendon irritation from repetitive gripping or swinging motions — show up not just in racquet sports but in many activities involving repeated forearm movement. Hamstring strains are common in sports requiring sprinting, often from insufficient warm-up or muscle imbalance, while shoulder injuries frequently affect athletes in overhead sports like swimming, volleyball, and baseball.\n\nWhat these injuries share is that early, proper assessment and a structured rehab plan generally lead to a faster and more complete return to sport than resting alone or returning to activity too soon.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'How to Relieve Chronic Lower Back Pain',
+    categories: ['Chronic Pain'],
+    excerpt: 'Chronic low back pain calls for a different approach than short-term flare-ups. Here is what actually helps.',
+    content:
+      'Chronic lower back pain — pain lasting more than three months — often behaves differently from an acute strain, and treating it the same way rarely works. Where acute pain typically responds to rest and gentle movement, chronic pain usually improves more with graded activity: gradually increasing movement and load in a way the body can tolerate, rather than avoiding activity out of fear of aggravating it.\n\nStrengthening the core and hip muscles that support the spine, combined with manual therapy to manage stiffness, forms the backbone of most treatment plans. Addressing contributing factors such as prolonged sitting, poor sleep, and stress is equally important, since chronic pain is influenced by more than just the physical structures involved.\n\nA personalized, gradually progressive plan — built around your specific triggers and tolerance — tends to produce far better long-term results than generic rest-and-wait advice.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'What Does Soft Tissue Release Recovery Look Like?',
+    categories: ['Physiotherapy'],
+    excerpt: 'Soft tissue release can bring quick relief, but knowing what to expect afterward helps you get the most from it.',
+    content:
+      'Soft tissue release combines tension and stretch to target tight, shortened muscles, and most people notice an immediate improvement in flexibility and reduced tightness right after treatment. It is common to feel mild soreness in the treated area for a day or so afterward, similar to the feeling after a deep stretch or workout.\n\nStaying hydrated and doing light movement in the following days helps the tissue settle into its improved range rather than tightening back up. For best results, soft tissue release is usually paired with a home stretching routine that reinforces the length gained during treatment, since a single session addresses the immediate restriction but ongoing habits determine whether the improvement lasts.\n\nMost people see progressive improvement over a series of sessions, especially when the underlying cause of the tightness — such as posture or repetitive movement — is addressed alongside the hands-on treatment.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Acupuncture for Pain Relief: When It May Help',
+    categories: ['Acupuncture'],
+    excerpt: 'Acupuncture is not a fit for every condition, but for the right cases it can be a valuable addition to treatment.',
+    content:
+      'Acupuncture tends to be most helpful for conditions involving muscle tension, chronic pain, and certain types of headaches, where fine needles placed at specific points help stimulate the nervous system and encourage the release of natural pain-relieving chemicals. It is often used alongside other treatments like physiotherapy or massage rather than as a stand-alone solution.\n\nPeople who have not found full relief through movement-based treatment alone, or who are looking for a drug-free option to manage flare-ups, are often good candidates to discuss acupuncture with their care provider. It is generally well tolerated, with most people describing the sensation as mild pressure rather than pain.\n\nAs with any treatment, results vary between individuals, and a qualified provider will assess whether your specific condition is likely to respond before recommending it as part of your plan.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Cupping Therapy Benefits Explained',
+    categories: ['Physiotherapy'],
+    excerpt: 'Cupping uses suction rather than pressure to release muscle tension — here is how it works and who it helps.',
+    content:
+      'Cupping therapy uses suction cups placed on the skin to lift the underlying soft tissue, which increases blood flow to the area and helps release deep muscle tension in a way that differs from traditional massage pressure. It is commonly used for chronic tightness in the back, shoulders, and neck, particularly for muscles that have not responded fully to other manual techniques.\n\nMany people find cupping helpful as a complement to massage or physiotherapy, since the lifting action reaches tissue layers that pressure-based techniques may not access as directly. Mild, temporary marks on the skin are a normal and expected result of the suction and typically fade within a week or two.\n\nCupping works best as part of a broader treatment plan rather than a stand-alone fix, particularly when tightness stems from posture or repetitive movement that also needs to be addressed.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Manual Therapy Techniques and When They Help',
+    categories: ['Physiotherapy'],
+    excerpt: 'Manual therapy covers a range of hands-on techniques, each suited to different problems.',
+    content:
+      'Manual therapy is an umbrella term covering several hands-on techniques, including joint mobilization to restore movement in a stiff joint, soft tissue massage to release tight muscles, and manipulation to address more significant joint restrictions. Each technique targets a different type of restriction, so an assessment is used to determine which approach — or combination — fits your specific presentation.\n\nJoint mobilization tends to help with stiffness following injury or prolonged immobility, while soft tissue techniques are more suited to muscle tightness and tension from overuse or posture. More targeted manipulation is generally reserved for specific joint restrictions identified through careful testing.\n\nManual therapy is most effective when paired with active exercise, since hands-on treatment addresses the immediate restriction while exercise builds the strength and control needed to prevent it from returning.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Understanding Myofascial Release for Tightness',
+    categories: ['Physiotherapy'],
+    excerpt: 'Myofascial release targets the connective tissue that surrounds muscles — often overlooked in typical treatment.',
+    content:
+      'Fascia is the connective tissue that wraps around muscles, and when it becomes tight or restricted, it can limit movement and contribute to pain even when the muscle itself is not the primary problem. Myofascial release uses slow, sustained pressure — rather than the rhythmic strokes of traditional massage — to gradually ease these restrictions.\n\nBecause fascia forms a connected network throughout the body, tightness in one area can sometimes contribute to symptoms elsewhere, which is why treatment may address a broader region than just the site of pain. Sessions are typically gentle and held for longer periods compared to other manual techniques, allowing the tissue time to respond and release.\n\nMyofascial release is often recommended for chronic, widespread tightness or pain that has not responded fully to more localized treatment approaches.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Vestibular Therapy for Dizziness and Balance',
+    categories: ['Physiotherapy'],
+    excerpt: 'Persistent dizziness is often treatable with the right exercises — here is how vestibular therapy works.',
+    content:
+      'Vestibular therapy is a specialized form of rehabilitation aimed at retraining the brain and inner ear to work together more effectively, addressing dizziness, vertigo, and balance issues at their source rather than just managing symptoms. It typically begins with an assessment to identify the specific type of vestibular problem, since different causes call for different exercise approaches.\n\nTreatment often includes gaze stabilization exercises, which train the eyes to remain steady during head movement, along with balance retraining exercises that gradually challenge stability in a controlled, progressive way. Habituation exercises — repeating movements that trigger mild dizziness in a controlled setting — help the brain adapt and reduce symptoms over time.\n\nMany people see meaningful improvement within several weeks of consistent vestibular therapy, particularly when the program is tailored to their specific type of balance or dizziness issue rather than following a generic exercise list.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Massage Therapy for Recovery, Explained',
+    categories: ['Massage Therapy'],
+    excerpt: 'Massage therapy plays a specific role in recovery, distinct from relaxation-focused treatments.',
+    content:
+      'When used for recovery rather than pure relaxation, massage therapy focuses on specific goals: reducing muscle tension that restricts movement, improving circulation to support healing, and addressing scar tissue or adhesions following injury or surgery. Techniques and pressure are adjusted based on the stage of recovery and how the tissue is responding to treatment.\n\nIn the early stages of recovery, gentler techniques help manage swelling and discomfort without overloading healing tissue, while later stages may use deeper, more targeted work to address lingering tightness or restricted movement. Recovery-focused massage is often coordinated with physiotherapy, so that the flexibility and reduced tension gained through massage translate into functional strength gains through exercise.\n\nUnlike a purely relaxation-oriented massage, recovery-focused treatment is typically part of a broader plan with specific goals and a course of sessions rather than a single one-off visit.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Chiropractic Care and Posture Correction',
+    categories: ['Chiropractic Care'],
+    excerpt: 'Posture-related discomfort often responds well to a combination of adjustments and postural retraining.',
+    content:
+      'Poor posture places uneven, sustained stress on the spine and surrounding muscles, and over time this can contribute to joint restrictions that chiropractic adjustments are well suited to address. An assessment typically examines spinal alignment, the mobility of individual segments, and which postural habits are driving the strain, such as prolonged sitting or screen use.\n\nAdjustments help restore normal joint movement and reduce the compensations the body makes around a restricted area, but lasting posture improvement usually also requires strengthening the muscles that support proper alignment and building awareness of daily habits that contribute to poor posture. Ergonomic changes to a workstation or daily routine often complement in-clinic care.\n\nCombining chiropractic care with postural exercises tends to produce more lasting results than adjustments alone, since it addresses both the immediate restriction and the underlying habits that caused it.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Is the McKenzie Method Right for Your Back Pain?',
+    categories: ['Physiotherapy'],
+    excerpt: 'The McKenzie Method uses movement testing to find what actually relieves your specific back pain.',
+    content:
+      'The McKenzie Method is a structured approach to assessing and treating spinal pain that relies on repeated movement testing to identify a "directional preference" — a specific movement or position that reduces or centralizes pain, moving it away from the limbs and toward the spine. This is particularly useful for disc-related back and neck pain, where certain positions can either worsen or relieve symptoms considerably.\n\nOnce a directional preference is identified, a home exercise program built around that specific movement becomes the primary tool for managing and reducing pain, putting a significant degree of control directly in the patient\'s hands. Unlike passive treatments, the McKenzie approach emphasizes patient education and self-management as a core part of recovery.\n\nNot every type of back pain responds to this method, which is why a proper assessment is needed first to confirm whether a directional preference exists before building a program around it.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'What Rehabilitation Wellness Programs Include',
+    categories: ['Physiotherapy'],
+    excerpt: 'Rehabilitation wellness programs go beyond treating an injury to building long-term resilience.',
+    content:
+      'Rehabilitation wellness programs extend beyond treating a specific injury, aiming to build overall strength, mobility, and resilience so the body is less likely to develop new problems down the line. These programs typically combine ongoing exercise progression, education about movement and posture, and periodic reassessment to adjust the plan as goals and fitness levels change.\n\nUnlike a short course of treatment focused on resolving one issue, a wellness program is usually longer-term and designed to fit into a person\'s regular routine, whether that means a few sessions a week at a clinic or a structured home program with periodic check-ins. Many programs also address lifestyle factors like activity levels, sleep, and stress that influence physical recovery and long-term health.\n\nThis approach suits people who have completed initial treatment for an injury and want to maintain their progress, as well as those simply looking to build a stronger, more resilient body proactively.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Understanding Your Physiotherapy Insurance Coverage',
+    categories: ['Physiotherapy'],
+    excerpt: 'Knowing your coverage details before you book can save confusion and unexpected costs later.',
+    content:
+      'Extended health plans vary widely in how they cover physiotherapy, so it is worth checking a few key details before your first appointment: your annual maximum for physiotherapy specifically, whether a doctor\'s referral is required for reimbursement, and whether your plan covers a percentage of each visit or a flat amount per session.\n\nSome plans also distinguish between different types of providers, so coverage for a registered physiotherapist may differ from coverage for massage therapy or chiropractic care under the same overall plan. It is also useful to ask your clinic whether they can verify your coverage electronically before treatment starts, which avoids surprises when the claim is submitted.\n\nKeeping track of how much of your annual maximum you have used throughout the year helps you plan ongoing treatment and avoid an unexpected gap in coverage partway through a course of care.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Avoiding Common Mistakes in Follow-Up Care After Physiotherapy',
+    categories: ['Physiotherapy'],
+    excerpt: 'What you do between and after appointments matters just as much as the sessions themselves.',
+    content:
+      'One of the most common mistakes after physiotherapy is stopping home exercises as soon as pain improves, rather than completing the full program needed to build lasting strength and prevent recurrence. Pain relief is often the first sign of progress, not the final goal, and stopping too early is a leading reason symptoms return.\n\nOther common mistakes include skipping follow-up appointments meant to progress the exercise plan, returning to high-demand activities too quickly without a gradual buildup, and not communicating clearly with your therapist when something feels off, which can delay necessary adjustments to your plan. Inconsistent effort with home exercises — doing them sporadically rather than as prescribed — also significantly slows progress.\n\nStaying engaged with the full course of care, including the parts that happen outside the clinic, is often what separates a full, lasting recovery from a partial one that resurfaces later.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+  {
+    title: 'Physiotherapist, Chiropractor, or RMT: Who Should You See?',
+    categories: ['Physiotherapy'],
+    excerpt: 'These three professions often overlap, but each brings a different focus to your care.',
+    content:
+      'Physiotherapists focus on restoring movement and function through exercise-based rehabilitation and manual therapy, making them well suited to injuries, post-surgical recovery, and conditions affecting how the body moves. Chiropractors specialize in the diagnosis and treatment of the musculoskeletal system, particularly the spine, often using joint adjustments to address alignment and mobility issues.\n\nRegistered massage therapists (RMTs) focus specifically on soft tissue — muscles, tendons, and fascia — using hands-on techniques to relieve tension, improve circulation, and support relaxation and recovery. In practice, these professions frequently overlap and work well together: a physiotherapist might address strength and movement patterns while an RMT manages surrounding muscle tension, or a chiropractor addresses joint restriction that is limiting a physiotherapy exercise program.\n\nRather than choosing one over the others, many patients get the best results from a coordinated combination based on what their specific condition actually needs.',
+    featuredImage: { secure_url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1200&auto=format&fit=crop', public_id: '' },
+    status: 'published',
+  },
+];
+
 const FAQS = [
   { question: 'Do I need a referral to book an appointment?', answer: 'No referral is required. You can book directly with us, though a referral from your doctor is welcome if you have one.', order: 1 },
   { question: 'What should I expect at my first appointment?', answer: 'Your first visit includes a thorough assessment of your condition, medical history review, and the start of a personalized treatment plan.', order: 2 },
@@ -1034,6 +1217,17 @@ const seed = async () => {
   }
   if (extraBlogsCreated > 0) console.log(`${extraBlogsCreated} additional blog posts created`);
   else console.log('Additional blog posts already exist, skipping');
+
+  let extraBlogs2Created = 0;
+  for (const post of EXTRA_BLOGS_2) {
+    const existing = await Blog.findOne({ title: post.title });
+    if (existing) continue;
+    const slug = await generateUniqueSlug(Blog, post.title);
+    await Blog.create({ ...post, slug, publishedAt: new Date() });
+    extraBlogs2Created += 1;
+  }
+  if (extraBlogs2Created > 0) console.log(`${extraBlogs2Created} more blog posts created`);
+  else console.log('Second batch of blog posts already exist, skipping');
 
   const existingFaqs = await FAQ.countDocuments();
   if (existingFaqs === 0) {
