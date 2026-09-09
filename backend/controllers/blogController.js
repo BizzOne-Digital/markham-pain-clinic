@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Blog = require('../models/Blog');
 const asyncHandler = require('../utils/asyncHandler');
 const { ApiError, success } = require('../utils/apiResponse');
@@ -13,7 +14,10 @@ const getBlogs = asyncHandler(async (req, res) => {
 });
 
 const getBlogBySlug = asyncHandler(async (req, res) => {
-  const blog = await Blog.findOne({ slug: req.params.slug });
+  const { slug } = req.params;
+  const blog = mongoose.Types.ObjectId.isValid(slug)
+    ? await Blog.findById(slug)
+    : await Blog.findOne({ slug });
   if (!blog) throw new ApiError(404, 'Blog not found');
   return success(res, 200, blog);
 });
