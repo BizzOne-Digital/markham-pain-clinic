@@ -4,7 +4,7 @@ import SectionLabel from '../components/SectionLabel.jsx'
 import Button from '../components/Button.jsx'
 import QuickQueryForm from '../components/QuickQueryForm.jsx'
 
-const POINTS = ['Evidence-based treatments', 'One-on-one personalized care', 'Focused on long-term results']
+const POINTS = ['Workplace injuries', 'Chronic pain conditions', 'Motor vehicle accident injuries', 'Mobility and functional limitations']
 
 export default function AboutPreview() {
   return (
@@ -12,16 +12,16 @@ export default function AboutPreview() {
       <div className="container-app grid lg:grid-cols-2 gap-14 items-center">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <SectionLabel>About Us</SectionLabel>
-          <h2 className="section-heading mb-5">
-            Compassionate Care. <span className="gold-italic">Proven Results.</span>
-          </h2>
+          <h2 className="section-heading mb-5">About Markham Pain Clinic</h2>
           <p className="text-textSecondary leading-relaxed mb-6">
-            At Markham Pain Clinic, we believe recovery is more than treating symptoms — it&apos;s
-            about understanding the whole person. Our multidisciplinary team combines evidence-based
-            techniques with genuine, one-on-one attention to help you move better, feel stronger and
-            live pain-free.
+            At Markham Pain Clinic, we support recovery, movement, and long-term health through
+            focused, evidence-based care. Our clinic brings together physiotherapy, chiropractic
+            care, massage therapy, and other rehabilitation services under one roof, so your
+            treatment plan can address the full picture rather than a single symptom. Every plan is
+            built around you — your condition, your goals, and the pace that works for your life.
           </p>
-          <ul className="space-y-3 mb-8">
+          <p className="font-heading font-bold text-textMain mb-4">Conditions We Treat:</p>
+          <ul className="grid sm:grid-cols-2 gap-3 mb-8">
             {POINTS.map((point) => (
               <li key={point} className="flex items-center gap-3 text-textMain font-medium">
                 <span className="w-6 h-6 rounded-full bg-gold/15 text-gold flex items-center justify-center flex-shrink-0">
