@@ -54,8 +54,11 @@ export default function ConditionsGrid() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <div className="p-5 text-center">
-              <p className="font-serif text-textMain">{condition.name}</p>
+            <div className="p-5">
+              <p className="font-serif text-textMain text-center mb-1">{condition.name}</p>
+              {condition.description && (
+                <p className="text-textSecondary text-xs leading-relaxed text-center line-clamp-3">{condition.description}</p>
+              )}
             </div>
           </Link>
         ))}

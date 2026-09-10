@@ -735,6 +735,38 @@ const EXTRA_CONDITION_NAMES = [
   'WSIB Injuries', 'Dance Injuries', 'Dizziness Treatment',
 ];
 
+const CONDITION_DESCRIPTIONS = {
+  'Back Pain': 'One of the most common complaints we see, ranging from a dull daily ache to sharp pain that limits bending, lifting, and sitting.',
+  'Neck Pain': 'Stiffness or discomfort in the neck that often builds up from posture, stress, or an old injury and affects sleep and daily focus.',
+  'Shoulder Pain': 'Pain or restricted movement in the shoulder that can make reaching overhead, lifting, or sleeping on that side difficult.',
+  'Knee Pain': 'Discomfort, swelling, or instability in the knee that can interfere with walking, stairs, and staying active.',
+  'Sports Injuries': 'Strains, sprains, and overuse injuries from training or competition that need a structured plan to heal and prevent recurrence.',
+  'Muscle Strains': 'Overstretched or torn muscle fibres, often from lifting, sudden movement, or overexertion, causing pain and reduced strength.',
+  'Joint Pain': 'Aching, stiffness, or swelling in one or more joints that can limit range of motion and make daily movement uncomfortable.',
+  'Sciatica': 'Radiating pain, tingling, or numbness that travels from the lower back through the hip and down the leg along the sciatic nerve.',
+  'Postural Issues': 'Rounded shoulders, forward head posture, or spinal misalignment that build up from daily habits and contribute to chronic tension.',
+  'Chronic Pain': 'Ongoing pain lasting three months or longer that affects daily function, mood, and quality of life if left unmanaged.',
+  'Mobility Problems': 'Reduced ability to move freely or safely, whether from injury, aging, or a medical condition affecting balance and strength.',
+  'Workplace Injuries': 'Strains, repetitive stress injuries, and accidents that happen on the job and require a structured return-to-work plan.',
+  'Vertigo': 'A spinning or unsteady sensation that can disrupt balance and make everyday activities feel unsafe.',
+  'Wrist Pain': 'Discomfort, stiffness, or weakness in the wrist that can affect typing, lifting, gripping, and other daily hand movements.',
+  'Headaches': 'Recurring head pain, often linked to tension in the neck and shoulders, that can interfere with focus and daily routine.',
+  'Balance Disorder': 'Difficulty maintaining stability while standing or walking, increasing the risk of falls and reducing movement confidence.',
+  'Fibromyalgia Treatment': 'Widespread muscle pain, fatigue, and tenderness that benefits from a carefully paced, whole-body treatment approach.',
+  'Hip Pain': 'Discomfort in or around the hip joint that can affect walking, sitting, and sleeping comfortably.',
+  'Hand Pain': 'Pain, stiffness, or reduced grip strength in the hand that can make fine motor tasks and daily activities more difficult.',
+  'Elbow Pain': 'Discomfort around the elbow, often from repetitive motion or strain, that can limit lifting, gripping, and arm movement.',
+  'Gait Disorders': 'Changes in walking pattern caused by pain, weakness, or neurological factors that affect balance and mobility.',
+  'Arthritis Treatment': 'Joint stiffness, swelling, and pain from arthritis that respond well to a combination of movement therapy and manual care.',
+  'Motor Vehicle Accident Injuries': 'Whiplash, soft tissue injuries, and joint strain resulting from a vehicle collision, often needing a phased recovery plan.',
+  'Foot Pain': 'Discomfort in the foot or heel that can affect standing, walking, and overall mobility throughout the day.',
+  'Ankle Pain': 'Pain, swelling, or instability in the ankle, often following a sprain or repetitive strain, that affects walking and balance.',
+  'Concussions': 'A mild traumatic brain injury from a blow or jolt to the head that requires careful, gradual rehabilitation.',
+  'WSIB Injuries': 'Work-related injuries covered under WSIB that require documented assessment and a structured recovery and return-to-work plan.',
+  'Dance Injuries': 'Strains, sprains, and overuse injuries specific to the flexibility and repetitive demands placed on a dancer\'s body.',
+  'Dizziness Treatment': 'A lightheaded or off-balance feeling that can stem from the inner ear, neck, or other causes and often responds well to targeted therapy.',
+};
+
 const PRODUCTS = [
   {
     name: 'Braces',
@@ -1241,7 +1273,7 @@ const seed = async () => {
   if (existingConditions === 0) {
     for (const [i, name] of CONDITIONS.entries()) {
       const slug = await generateUniqueSlug(Condition, name);
-      await Condition.create({ name, slug, order: i + 1 });
+      await Condition.create({ name, slug, description: CONDITION_DESCRIPTIONS[name] || '', order: i + 1 });
     }
     console.log(`${CONDITIONS.length} conditions created`);
   } else {
@@ -1253,11 +1285,22 @@ const seed = async () => {
     const existing = await Condition.findOne({ name });
     if (existing) continue;
     const slug = await generateUniqueSlug(Condition, name);
-    await Condition.create({ name, slug, order: CONDITIONS.length + i + 1 });
+    await Condition.create({ name, slug, description: CONDITION_DESCRIPTIONS[name] || '', order: CONDITIONS.length + i + 1 });
     extraConditionsCreated += 1;
   }
   if (extraConditionsCreated > 0) console.log(`${extraConditionsCreated} additional conditions created`);
   else console.log('Additional conditions already exist, skipping');
+
+  let conditionDescriptionsBackfilled = 0;
+  for (const [name, description] of Object.entries(CONDITION_DESCRIPTIONS)) {
+    const existing = await Condition.findOne({ name });
+    if (existing && !existing.description) {
+      existing.description = description;
+      await existing.save();
+      conditionDescriptionsBackfilled += 1;
+    }
+  }
+  if (conditionDescriptionsBackfilled > 0) console.log(`${conditionDescriptionsBackfilled} condition descriptions backfilled`);
 
   let productsCreated = 0;
   let productsUpdated = 0;
