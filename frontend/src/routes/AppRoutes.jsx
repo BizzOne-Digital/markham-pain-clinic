@@ -15,6 +15,7 @@ import BlogDetail from '../pages/BlogDetail.jsx'
 import FAQ from '../pages/FAQ.jsx'
 import Contact from '../pages/Contact.jsx'
 import Conditions from '../pages/Conditions.jsx'
+import ConditionDetail from '../pages/ConditionDetail.jsx'
 import Products from '../pages/Products.jsx'
 import ProductDetail from '../pages/ProductDetail.jsx'
 import SocialService from '../pages/SocialService.jsx'
@@ -53,6 +54,7 @@ export default function AppRoutes() {
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/conditions" element={<Conditions />} />
+        <Route path="/conditions/:slug" element={<ConditionDetail />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:slug" element={<ProductDetail />} />
         <Route path="/social-service" element={<SocialService />} />

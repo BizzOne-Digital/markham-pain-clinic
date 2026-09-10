@@ -43,7 +43,7 @@ export default function ConditionsGrid() {
         {conditions.map((condition, i) => (
           <Link
             key={condition._id || condition.name}
-            to="/services"
+            to={condition.slug ? `/conditions/${condition.slug}` : '/conditions'}
             className="group flex-shrink-0 w-56 snap-start rounded-2xl bg-lightBeige border border-beige/70 hover:border-gold/50 hover:shadow-card transition-all overflow-hidden"
           >
             <div className="h-36 overflow-hidden">

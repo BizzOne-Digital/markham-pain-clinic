@@ -34,7 +34,7 @@ export default function Conditions() {
           {conditions.map((condition) => (
             <Link
               key={condition._id || condition.name}
-              to="/contact"
+              to={condition.slug ? `/conditions/${condition.slug}` : '/contact'}
               className="rounded-xl bg-lightBeige border border-beige/70 hover:border-gold/50 hover:shadow-card transition-all p-5 text-center"
             >
               <p className="font-medium text-textMain text-sm">{condition.name}</p>

@@ -767,6 +767,391 @@ const CONDITION_DESCRIPTIONS = {
   'Dizziness Treatment': 'A lightheaded or off-balance feeling that can stem from the inner ear, neck, or other causes and often responds well to targeted therapy.',
 };
 
+const CONDITION_DETAILS = {
+  'Back Pain': {
+    intro: 'Back pain is one of the most common reasons people seek care, ranging from a mild daily ache to sharp pain that limits bending, lifting, or sitting for long periods.',
+    whatIsIt: 'Back pain refers to discomfort anywhere along the spine, from the neck down to the lower back, and can involve the muscles, joints, discs, or nerves in that region.',
+    symptoms: ['Dull or sharp pain in the lower or upper back', 'Stiffness that is worse in the morning', 'Pain that radiates into the hip or leg', 'Muscle tightness or spasm'],
+    causes: ['Poor posture from prolonged sitting', 'Heavy or improper lifting', 'Muscle strain from sudden movement', 'Degenerative changes over time'],
+    treatmentApproach: 'Treatment typically combines manual therapy to relieve immediate tension with a progressive exercise program that strengthens the core and back muscles supporting the spine.',
+    benefits: ['Reduced pain and stiffness', 'Improved core and back strength', 'Better posture and body mechanics', 'Lower risk of recurrence'],
+    practicalTips: ['Keep moving rather than staying still for long periods', 'Use proper lifting technique, bending at the knees', 'Take regular breaks from sitting'],
+    whenToSeekHelp: 'If back pain persists beyond a few days, radiates down a leg, or is accompanied by numbness or weakness, it is worth having it assessed.',
+    whyChooseUs: [
+      { title: 'Thorough Assessment', description: 'We identify the specific structures contributing to your pain rather than treating it generically.' },
+      { title: 'Personalized Plan', description: 'Your treatment plan is built around your findings, lifestyle, and goals.' },
+    ],
+  },
+  'Neck Pain': {
+    intro: 'Neck pain is a common issue that can affect daily activities, work performance, and overall comfort, often building up gradually rather than from a single injury.',
+    whatIsIt: 'Neck pain involves discomfort, stiffness, or restricted movement in the cervical spine, frequently linked to posture, muscle tension, or joint irritation.',
+    symptoms: ['Stiffness when turning the head', 'Dull ache at the base of the skull', 'Tension spreading into the shoulders', 'Headaches linked to neck tightness'],
+    causes: ['Prolonged screen or desk work', 'Poor sleeping posture', 'Whiplash or sudden strain', 'Stress-related muscle tension'],
+    treatmentApproach: 'Care usually combines manual therapy to ease tight muscles and joints with targeted exercises that restore mobility and correct posture over time.',
+    benefits: ['Reduced neck stiffness and tension', 'Improved range of motion', 'Fewer tension headaches', 'Better posture habits'],
+    practicalTips: ['Position screens at eye level', 'Take movement breaks every 30-45 minutes', 'Practice gentle neck stretches daily'],
+    whenToSeekHelp: 'Persistent neck pain, especially with tingling or weakness in the arms, is worth having assessed rather than waiting for it to resolve on its own.',
+    whyChooseUs: [
+      { title: 'Posture-Focused Assessment', description: 'We look at your workstation and daily habits, not just the neck itself.' },
+      { title: 'Hands-On and Active Care', description: 'We combine manual therapy with exercises for lasting results.' },
+    ],
+  },
+  'Shoulder Pain': {
+    intro: 'Shoulder pain can interfere with even simple daily activities, such as reaching overhead, lifting objects, or getting a full night\'s sleep.',
+    whatIsIt: 'Shoulder pain can originate from the joint itself, the surrounding rotator cuff muscles, or referred tension from the neck and upper back.',
+    symptoms: ['Pain when lifting the arm overhead', 'Weakness when carrying objects', 'Discomfort that disturbs sleep', 'Clicking or catching sensations'],
+    causes: ['Repetitive overhead movement', 'Rotator cuff strain or irritation', 'Poor posture affecting shoulder mechanics', 'Previous injury or dislocation'],
+    treatmentApproach: 'Assessment identifies which structures are involved, followed by a progressive strengthening and mobility program supported by hands-on therapy.',
+    benefits: ['Restored shoulder strength and stability', 'Improved overhead range of motion', 'Reduced night-time discomfort', 'Lower risk of re-injury'],
+    practicalTips: ['Avoid repetitive overhead strain when the shoulder is irritated', 'Support the arm while sleeping on the affected side', 'Warm up before shoulder-intensive activity'],
+    whenToSeekHelp: 'Persistent weakness, an inability to lift the arm, or pain that does not settle within a couple of weeks warrants an assessment.',
+    whyChooseUs: [
+      { title: 'Detailed Shoulder Testing', description: 'We identify exactly which structures are contributing to your symptoms.' },
+      { title: 'Progressive Rehab', description: 'Programs are built to restore full function, not just reduce pain.' },
+    ],
+  },
+  'Knee Pain': {
+    intro: 'Knee pain can interfere with daily movement, limit activity levels, and make even simple tasks like walking or climbing stairs difficult.',
+    whatIsIt: 'Knee pain can stem from the joint itself, the surrounding muscles, or alignment issues starting at the hip or foot.',
+    symptoms: ['Pain with stairs or squatting', 'Swelling around the joint', 'A feeling of instability', 'Stiffness after sitting'],
+    causes: ['Muscle weakness around the hip and thigh', 'Overuse from sports or repetitive movement', 'Ligament or meniscus strain', 'Alignment issues affecting knee load'],
+    treatmentApproach: 'Care focuses on the whole kinetic chain — strengthening supporting muscles, improving flexibility, and correcting movement habits that place uneven load on the knee.',
+    benefits: ['Reduced pain during daily movement', 'Improved strength and stability', 'Better movement mechanics', 'Increased confidence with stairs and activity'],
+    practicalTips: ['Strengthen the muscles around the hip and thigh', 'Avoid sudden increases in activity level', 'Use supportive footwear'],
+    whenToSeekHelp: 'Swelling, locking, or an inability to bear weight on the knee should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Whole-Leg Assessment', description: 'We look beyond the knee to the hip and foot for the full picture.' },
+      { title: 'Function-Focused Plans', description: 'Programs are designed to get you back to walking, stairs, and activity confidently.' },
+    ],
+  },
+  'Sports Injuries': {
+    intro: 'Sports injuries range from minor strains to more significant ligament or muscle damage, and a structured recovery plan makes a real difference in getting back to activity safely.',
+    whatIsIt: 'Sports injuries cover a wide range of conditions resulting from training, competition, or sudden movement, including sprains, strains, and overuse injuries.',
+    symptoms: ['Sudden pain during activity', 'Swelling or bruising', 'Reduced range of motion', 'Weakness in the affected area'],
+    causes: ['Sudden changes in direction or speed', 'Insufficient warm-up', 'Overuse without adequate recovery', 'Muscle imbalances'],
+    treatmentApproach: 'Recovery progresses from managing pain and swelling through restoring range of motion, to strengthening and sport-specific retraining before a full return to play.',
+    benefits: ['Faster, safer return to sport', 'Reduced risk of re-injury', 'Restored strength and confidence', 'Sport-specific conditioning'],
+    practicalTips: ['Warm up properly before activity', 'Do not rush back before strength is restored', 'Address muscle imbalances proactively'],
+    whenToSeekHelp: 'Significant swelling, an inability to bear weight, or pain that does not improve within a few days should be assessed.',
+    whyChooseUs: [
+      { title: 'Sport-Specific Rehab', description: 'Programs are tailored to the specific demands of your sport.' },
+      { title: 'Return-to-Play Testing', description: 'We confirm readiness before clearing a return to competition.' },
+    ],
+  },
+  'Muscle Strains': {
+    intro: 'Muscle strains happen when fibers are overstretched or torn, often from lifting, sudden movement, or overexertion.',
+    whatIsIt: 'A muscle strain is an injury to muscle fibers or the tendon attaching muscle to bone, ranging from mild overstretching to a partial or full tear.',
+    symptoms: ['Sudden, sharp pain during activity', 'Swelling or bruising', 'Weakness in the muscle', 'Pain with stretching or contracting the muscle'],
+    causes: ['Lifting without proper technique', 'Sudden acceleration or deceleration', 'Inadequate warm-up', 'Muscle fatigue'],
+    treatmentApproach: 'Early care focuses on protecting the muscle while managing pain and swelling, followed by a gradual return to stretching and strengthening.',
+    benefits: ['Faster, more complete healing', 'Restored strength and flexibility', 'Reduced risk of re-straining the muscle'],
+    practicalTips: ['Rest the muscle in the first 24-48 hours', 'Apply cold therapy to manage swelling', 'Reintroduce movement gradually'],
+    whenToSeekHelp: 'A strain that does not improve within a week, or one accompanied by significant swelling or an inability to use the muscle, should be assessed.',
+    whyChooseUs: [
+      { title: 'Staged Recovery Plans', description: 'We guide you through each phase of healing at the right pace.' },
+    ],
+  },
+  'Joint Pain': {
+    intro: 'Joint pain can affect one or more joints and range from mild stiffness to pain that limits daily movement.',
+    whatIsIt: 'Joint pain refers to discomfort, stiffness, or swelling in a joint, which can stem from injury, overuse, or underlying joint conditions.',
+    symptoms: ['Stiffness, especially after rest', 'Swelling around the joint', 'Reduced range of motion', 'Pain with weight-bearing or movement'],
+    causes: ['Overuse or repetitive strain', 'Previous injury', 'Muscle weakness around the joint', 'Age-related joint changes'],
+    treatmentApproach: 'Assessment identifies the source of joint irritation, followed by manual therapy and a strengthening program to support the joint and reduce strain.',
+    benefits: ['Reduced joint stiffness and pain', 'Improved mobility', 'Better joint support from surrounding muscles'],
+    practicalTips: ['Keep joints moving with gentle daily activity', 'Strengthen the muscles supporting the joint', 'Avoid prolonged static positions'],
+    whenToSeekHelp: 'Persistent swelling, warmth, or joint pain that limits daily function should be assessed.',
+    whyChooseUs: [
+      { title: 'Joint-Specific Assessment', description: 'We identify what is driving the irritation in your specific joint.' },
+    ],
+  },
+  'Sciatica': {
+    intro: 'Sciatica refers to pain that travels along the sciatic nerve, from the lower back through the hip and down the leg.',
+    whatIsIt: 'Sciatica is a symptom caused by irritation or compression of the sciatic nerve, commonly from a disc issue, muscle tightness, or joint irritation in the lower back.',
+    symptoms: ['Sharp or burning pain down the leg', 'Numbness or tingling', 'Weakness in the leg or foot', 'Pain worsened by sitting or bending forward'],
+    causes: ['Disc herniation or bulge', 'Piriformis muscle tightness', 'Spinal joint irritation', 'Prolonged sitting'],
+    treatmentApproach: 'Treatment identifies the underlying cause of nerve irritation and combines manual therapy with targeted exercises to relieve pressure and restore movement.',
+    benefits: ['Reduced radiating pain and numbness', 'Improved mobility', 'Long-term relief when the root cause is addressed'],
+    practicalTips: ['Avoid prolonged sitting', 'Practice gentle movement rather than complete rest', 'Maintain good posture when bending or lifting'],
+    whenToSeekHelp: 'Sciatica accompanied by significant leg weakness or loss of bladder/bowel control needs urgent medical attention.',
+    whyChooseUs: [
+      { title: 'Root-Cause Assessment', description: 'We identify what is actually compressing the nerve rather than treating symptoms alone.' },
+    ],
+  },
+  'Postural Issues': {
+    intro: 'Postural issues build up gradually from daily habits and can contribute to chronic tension, discomfort, and reduced movement efficiency.',
+    whatIsIt: 'Postural issues refer to imbalances in alignment, such as rounded shoulders or a forward head position, that place uneven strain on muscles and joints.',
+    symptoms: ['Rounded shoulders or forward head posture', 'Chronic neck or upper back tension', 'Fatigue from maintaining position', 'Reduced flexibility'],
+    causes: ['Prolonged sitting or screen use', 'Weak core and postural muscles', 'Habitual movement patterns', 'Lack of movement variety'],
+    treatmentApproach: 'Correction combines postural awareness training with targeted strengthening of the muscles that support proper alignment.',
+    benefits: ['Reduced chronic tension', 'Improved alignment and appearance', 'Lower risk of related pain conditions'],
+    practicalTips: ['Adjust workstation ergonomics', 'Take regular movement breaks', 'Strengthen core and upper back muscles'],
+    whenToSeekHelp: 'If postural habits are contributing to ongoing pain, an assessment can identify the specific muscle imbalances involved.',
+    whyChooseUs: [
+      { title: 'Practical Ergonomic Guidance', description: 'We help you apply changes that fit your actual daily routine.' },
+    ],
+  },
+  'Chronic Pain': {
+    intro: 'Living with chronic pain can affect every part of your daily life, from work and sleep to movement and mood.',
+    whatIsIt: 'Chronic pain is pain lasting three months or longer, which can stem from an original injury, an underlying condition, or causes that are not always clearly identifiable.',
+    symptoms: ['Persistent pain lasting months', 'Fatigue and disrupted sleep', 'Reduced tolerance for activity', 'Mood changes linked to ongoing discomfort'],
+    causes: ['A past injury that did not fully resolve', 'Underlying conditions such as arthritis', 'Nervous system sensitization over time', 'Lifestyle and stress factors'],
+    treatmentApproach: 'Management combines gradual, graded activity with manual therapy, education, and lifestyle strategies rather than relying on a single treatment alone.',
+    benefits: ['Improved daily function', 'Reduced reliance on passive treatments', 'Better sleep and mood', 'Long-term self-management skills'],
+    practicalTips: ['Build activity gradually rather than avoiding movement', 'Prioritize consistent sleep habits', 'Manage stress alongside physical symptoms'],
+    whenToSeekHelp: 'If chronic pain is limiting daily activities or quality of life, a comprehensive assessment can help build a sustainable management plan.',
+    whyChooseUs: [
+      { title: 'Whole-Person Approach', description: 'We address the physical, functional, and lifestyle factors behind chronic pain together.' },
+    ],
+  },
+  'Mobility Problems': {
+    intro: 'Reduced mobility can affect confidence and independence in daily activities, whether from injury, aging, or an underlying condition.',
+    whatIsIt: 'Mobility problems refer to a reduced ability to move freely and safely, affecting walking, balance, or overall physical function.',
+    symptoms: ['Difficulty walking or standing for periods', 'Reduced balance or coordination', 'Stiffness limiting movement', 'Increased fall risk'],
+    causes: ['Muscle weakness', 'Joint stiffness', 'Neurological factors', 'Prolonged inactivity'],
+    treatmentApproach: 'A structured program builds strength, balance, and functional movement gradually, tailored to current ability and goals.',
+    benefits: ['Improved walking ability and balance', 'Greater independence in daily tasks', 'Reduced fall risk'],
+    practicalTips: ['Stay as active as safely possible', 'Use supportive footwear', 'Address balance concerns early'],
+    whenToSeekHelp: 'A noticeable decline in mobility or increased falls should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Functional Goal Setting', description: 'Programs are built around the specific daily tasks that matter to you.' },
+    ],
+  },
+  'Workplace Injuries': {
+    intro: 'Workplace injuries can disrupt daily routines, limit movement, and make even simple tasks challenging.',
+    whatIsIt: 'Workplace injuries include strains, repetitive stress injuries, and accidents that occur on the job, often requiring documented assessment and a structured recovery plan.',
+    symptoms: ['Pain related to specific job tasks', 'Repetitive strain symptoms', 'Reduced ability to perform work duties', 'Swelling or bruising from an acute incident'],
+    causes: ['Repetitive movements', 'Improper lifting technique', 'Workplace accidents', 'Poor ergonomic setup'],
+    treatmentApproach: 'Care combines injury-specific treatment with functional testing and job-specific conditioning to support a safe, confident return to work.',
+    benefits: ['Safe, structured return to work', 'Reduced re-injury risk', 'Improved job-specific strength and endurance'],
+    practicalTips: ['Report workplace injuries early', 'Follow proper lifting and ergonomic guidance', 'Complete the full rehab program before full duties resume'],
+    whenToSeekHelp: 'Any workplace injury affecting your ability to perform your job should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Return-to-Work Planning', description: 'We build functional testing and job-specific conditioning into your recovery plan.' },
+    ],
+  },
+  'Vertigo': {
+    intro: 'Vertigo can feel unsettling and disruptive, often making even simple daily activities difficult.',
+    whatIsIt: 'Vertigo is a false sensation of spinning or movement, often linked to the inner ear\'s balance system.',
+    symptoms: ['A spinning or whirling sensation', 'Nausea', 'Unsteadiness when standing or walking', 'Symptoms triggered by head movement'],
+    causes: ['Inner ear disorders', 'Positional changes triggering crystal displacement', 'Neck-related dysfunction', 'Migraines'],
+    treatmentApproach: 'Treatment often includes specific repositioning techniques and vestibular exercises that retrain the brain and inner ear to work together.',
+    benefits: ['Reduced frequency and intensity of episodes', 'Improved balance and confidence', 'Better tolerance of head movement'],
+    practicalTips: ['Move slowly when changing position', 'Avoid sudden head movements during episodes', 'Stay hydrated'],
+    whenToSeekHelp: 'Vertigo accompanied by severe headache, vision changes, or slurred speech needs urgent medical attention.',
+    whyChooseUs: [
+      { title: 'Vestibular Assessment', description: 'We identify the specific type of vertigo to guide the right treatment approach.' },
+    ],
+  },
+  'Wrist Pain': {
+    intro: 'Wrist pain can interfere with even the simplest daily tasks, from typing and lifting objects to driving and exercising.',
+    whatIsIt: 'Wrist pain can stem from the joint, tendons, or nerves passing through the wrist, often related to repetitive movement or strain.',
+    symptoms: ['Pain with gripping or lifting', 'Swelling around the wrist', 'Numbness or tingling in the hand', 'Reduced grip strength'],
+    causes: ['Repetitive strain from typing or gripping', 'Sudden impact or fall', 'Nerve compression', 'Overuse in sports or manual work'],
+    treatmentApproach: 'Care combines rest and manual therapy for acute irritation with a strengthening and mobility program to restore function.',
+    benefits: ['Reduced pain and improved grip strength', 'Better wrist mobility', 'Lower risk of recurrence'],
+    practicalTips: ['Take breaks from repetitive wrist movements', 'Use ergonomic tools when typing', 'Strengthen forearm muscles'],
+    whenToSeekHelp: 'Significant swelling, deformity, or an inability to move the wrist after an injury should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Detailed Hand and Wrist Assessment', description: 'We identify which structures are involved before building your plan.' },
+    ],
+  },
+  'Headaches': {
+    intro: 'Headaches can interfere with work, sleep, and everyday activities, and many people deal with recurring headaches without fully knowing the cause.',
+    whatIsIt: 'Headaches vary widely in cause, and many are linked to tension in the neck and upper back muscles rather than the head itself.',
+    symptoms: ['Dull, pressing pain around the head', 'Tension at the base of the skull', 'Pain worsened by neck movement', 'Sensitivity to light or noise'],
+    causes: ['Neck and upper back tension', 'Poor posture', 'Stress', 'Prolonged screen time'],
+    treatmentApproach: 'Assessment looks at the neck and posture alongside headache patterns, with treatment combining manual therapy and postural correction.',
+    benefits: ['Reduced headache frequency and intensity', 'Improved neck mobility', 'Better posture and habits'],
+    practicalTips: ['Take regular breaks from screens', 'Stay hydrated', 'Address neck tension proactively'],
+    whenToSeekHelp: 'Sudden, severe headaches or those accompanied by vision changes or confusion need urgent medical attention.',
+    whyChooseUs: [
+      { title: 'Neck-Focused Assessment', description: 'We examine whether neck tension is contributing to your headache pattern.' },
+    ],
+  },
+  'Balance Disorder': {
+    intro: 'Balance plays a vital role in everyday life, from simple movements like walking to more complex activities such as exercising or climbing stairs.',
+    whatIsIt: 'A balance disorder is difficulty maintaining stability while standing or moving, often linked to the inner ear, vision, or muscle strength.',
+    symptoms: ['Unsteadiness while standing or walking', 'A feeling of swaying or tipping', 'Increased fall risk', 'Difficulty on uneven surfaces'],
+    causes: ['Inner ear dysfunction', 'Muscle weakness', 'Neurological factors', 'Reduced sensory feedback from the feet'],
+    treatmentApproach: 'A progressive balance training program builds stability gradually, often paired with strength work and, when needed, vestibular exercises.',
+    benefits: ['Improved stability and confidence', 'Reduced fall risk', 'Better performance in daily activities'],
+    practicalTips: ['Remove trip hazards at home', 'Practice balance exercises regularly', 'Use supportive footwear'],
+    whenToSeekHelp: 'Frequent falls or a sudden change in balance should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Progressive Balance Programs', description: 'We build training that safely challenges and improves your balance over time.' },
+    ],
+  },
+  'Fibromyalgia Treatment': {
+    intro: 'Fibromyalgia is a complex condition that affects how the body processes pain signals, leading to widespread discomfort, fatigue, and sensitivity.',
+    whatIsIt: 'Fibromyalgia is a chronic condition characterized by widespread musculoskeletal pain, often accompanied by fatigue and sleep disturbances.',
+    symptoms: ['Widespread muscle pain and tenderness', 'Persistent fatigue', 'Sleep disturbances', 'Cognitive difficulties ("fibro fog")'],
+    causes: ['Not fully understood, likely involving nervous system sensitization', 'Often triggered or worsened by stress', 'May follow an illness or injury'],
+    treatmentApproach: 'Management uses a carefully paced, whole-body approach combining gentle movement, manual therapy, and education on activity pacing.',
+    benefits: ['Improved daily function', 'Better sleep and energy levels', 'Reduced pain sensitivity over time'],
+    practicalTips: ['Pace activity to avoid flare-ups', 'Prioritize consistent, gentle movement', 'Support good sleep habits'],
+    whenToSeekHelp: 'If symptoms are significantly affecting daily life, a tailored assessment can help build a sustainable management plan.',
+    whyChooseUs: [
+      { title: 'Gentle, Paced Approach', description: 'Programs are built to respect your current capacity while gradually building tolerance.' },
+    ],
+  },
+  'Hip Pain': {
+    intro: 'Hip pain can affect how you walk, sit, or even sleep, and often builds up gradually from repetitive strain or joint changes.',
+    whatIsIt: 'Hip pain can originate from the joint itself, surrounding muscles, or be referred from the lower back.',
+    symptoms: ['Pain with walking or standing', 'Stiffness after sitting', 'Discomfort lying on the affected side', 'Reduced range of motion'],
+    causes: ['Muscle imbalances around the hip', 'Joint degeneration', 'Overuse from repetitive activity', 'Referred pain from the lower back'],
+    treatmentApproach: 'Assessment identifies the source of hip pain, followed by manual therapy and a strengthening program targeting the hip and surrounding muscles.',
+    benefits: ['Reduced pain with walking and daily movement', 'Improved hip strength and mobility', 'Better sleep comfort'],
+    practicalTips: ['Avoid prolonged sitting without breaks', 'Strengthen hip and core muscles', 'Use supportive footwear'],
+    whenToSeekHelp: 'Sudden, severe hip pain or an inability to bear weight should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Hip and Lower Back Assessment', description: 'We check whether pain is originating locally or referred from the spine.' },
+    ],
+  },
+  'Hand Pain': {
+    intro: 'Hand pain can make even simple daily tasks feel difficult, from typing and writing to lifting objects or gripping tools.',
+    whatIsIt: 'Hand pain can involve the joints, tendons, or nerves of the hand, often related to repetitive use or underlying joint conditions.',
+    symptoms: ['Pain with gripping or fine motor tasks', 'Stiffness in the fingers', 'Numbness or tingling', 'Reduced grip strength'],
+    causes: ['Repetitive hand movements', 'Nerve compression', 'Joint conditions', 'Overuse from manual work'],
+    treatmentApproach: 'Care combines manual therapy for the hand and wrist with targeted exercises to restore strength and fine motor function.',
+    benefits: ['Improved grip strength and dexterity', 'Reduced pain with daily tasks', 'Better hand function overall'],
+    practicalTips: ['Take breaks from repetitive hand tasks', 'Use ergonomic grips on tools', 'Perform gentle hand stretches'],
+    whenToSeekHelp: 'Persistent numbness, weakness, or worsening pain should be assessed.',
+    whyChooseUs: [
+      { title: 'Fine Motor Function Focus', description: 'We tailor rehab to restore the specific tasks that matter to you.' },
+    ],
+  },
+  'Elbow Pain': {
+    intro: 'Elbow pain can make everyday movements like lifting, gripping, or even typing feel difficult.',
+    whatIsIt: 'Elbow pain often involves the tendons around the joint, commonly related to repetitive gripping or forearm movement.',
+    symptoms: ['Pain on the inner or outer elbow', 'Discomfort with gripping', 'Weakness in the forearm', 'Pain that worsens with repetitive use'],
+    causes: ['Repetitive gripping or forearm rotation', 'Sports involving racquet or throwing motions', 'Manual work involving tool use', 'Sudden strain'],
+    treatmentApproach: 'Treatment addresses tendon irritation through manual therapy and a progressive loading program to rebuild tendon strength.',
+    benefits: ['Reduced elbow pain with gripping', 'Improved forearm strength', 'Lower risk of recurrence'],
+    practicalTips: ['Modify grip technique during repetitive tasks', 'Rest from aggravating activities initially', 'Gradually reload the tendon with guided exercise'],
+    whenToSeekHelp: 'Persistent or worsening elbow pain despite rest should be assessed.',
+    whyChooseUs: [
+      { title: 'Tendon-Specific Rehab', description: 'We use progressive loading protocols proven to support tendon recovery.' },
+    ],
+  },
+  'Gait Disorders': {
+    intro: 'Walking is something most people take for granted until it becomes difficult, whether from pain, weakness, or a neurological factor.',
+    whatIsIt: 'A gait disorder is a change in normal walking pattern, which can affect balance, efficiency, and safety.',
+    symptoms: ['Uneven or asymmetrical walking pattern', 'Reduced walking speed', 'Increased fall risk', 'Fatigue with walking'],
+    causes: ['Muscle weakness', 'Joint pain affecting movement', 'Neurological conditions', 'Balance impairment'],
+    treatmentApproach: 'Gait retraining combines strength work, balance training, and specific walking pattern correction tailored to the underlying cause.',
+    benefits: ['Improved walking pattern and efficiency', 'Reduced fall risk', 'Greater confidence with mobility'],
+    practicalTips: ['Use supportive, well-fitted footwear', 'Address underlying pain or weakness early', 'Practice guided walking exercises'],
+    whenToSeekHelp: 'A noticeable change in walking pattern should be assessed to identify the underlying cause.',
+    whyChooseUs: [
+      { title: 'Gait Analysis', description: 'We assess your walking pattern in detail to guide targeted correction.' },
+    ],
+  },
+  'Arthritis Treatment': {
+    intro: 'Arthritis is a common condition that affects joints, leading to stiffness, discomfort, and reduced movement.',
+    whatIsIt: 'Arthritis refers to inflammation or degeneration of one or more joints, causing pain, stiffness, and swelling.',
+    symptoms: ['Joint stiffness, especially in the morning', 'Swelling around affected joints', 'Reduced range of motion', 'Pain with movement'],
+    causes: ['Age-related joint wear', 'Previous joint injury', 'Inflammatory conditions', 'Repetitive joint stress'],
+    treatmentApproach: 'Management combines movement therapy to maintain joint mobility with manual care and strengthening to support affected joints.',
+    benefits: ['Reduced stiffness and pain', 'Improved joint mobility', 'Better long-term joint function'],
+    practicalTips: ['Stay active with joint-friendly movement', 'Maintain a healthy weight to reduce joint load', 'Use heat for morning stiffness'],
+    whenToSeekHelp: 'Increasing joint pain, swelling, or reduced function should be assessed for an appropriate management plan.',
+    whyChooseUs: [
+      { title: 'Joint-Friendly Exercise Programs', description: 'We build movement plans that protect joints while maintaining function.' },
+    ],
+  },
+  'Motor Vehicle Accident Injuries': {
+    intro: 'Motor vehicle accident injuries can disrupt daily life in both immediate and long-lasting ways, even after seemingly minor collisions.',
+    whatIsIt: 'These injuries include whiplash, soft tissue damage, and joint strain resulting from the sudden forces involved in a vehicle collision.',
+    symptoms: ['Neck and back stiffness', 'Headaches', 'Reduced range of motion', 'Delayed onset of pain after the accident'],
+    causes: ['Sudden impact during a collision', 'Whiplash from rapid head movement', 'Muscle guarding following trauma'],
+    treatmentApproach: 'A phased recovery plan addresses acute pain and swelling first, followed by progressive mobility and strengthening work.',
+    benefits: ['Reduced pain and stiffness', 'Restored range of motion', 'Documented recovery progress for insurance purposes'],
+    practicalTips: ['Seek assessment even if symptoms seem mild initially', 'Follow a structured, paced recovery plan', 'Avoid returning to full activity too quickly'],
+    whenToSeekHelp: 'Any pain, stiffness, or discomfort following a motor vehicle accident should be assessed, even if symptoms appear delayed.',
+    whyChooseUs: [
+      { title: 'Structured Documentation', description: 'We support your recovery with clear assessment and progress tracking.' },
+    ],
+  },
+  'Foot Pain': {
+    intro: 'Foot pain can interfere with daily routines, limit mobility, and affect overall comfort throughout the day.',
+    whatIsIt: 'Foot pain can involve the heel, arch, or forefoot, often related to alignment, footwear, or repetitive strain.',
+    symptoms: ['Pain with standing or walking', 'Heel or arch discomfort', 'Swelling in the foot', 'Pain that worsens throughout the day'],
+    causes: ['Poor footwear support', 'Overuse from standing or walking', 'Foot alignment issues', 'Plantar fascia strain'],
+    treatmentApproach: 'Treatment addresses the specific source of foot pain through manual therapy, targeted exercise, and guidance on footwear or support.',
+    benefits: ['Reduced foot pain with standing and walking', 'Improved foot mechanics', 'Greater daily comfort'],
+    practicalTips: ['Wear supportive, well-fitted footwear', 'Stretch the calf and foot regularly', 'Avoid prolonged standing on hard surfaces'],
+    whenToSeekHelp: 'Persistent foot pain affecting daily mobility should be assessed.',
+    whyChooseUs: [
+      { title: 'Gait and Footwear Guidance', description: 'We assess how you walk and stand to identify the source of strain.' },
+    ],
+  },
+  'Ankle Pain': {
+    intro: 'Ankle pain can affect your ability to move comfortably, whether you\'re walking, running, or simply standing for extended periods.',
+    whatIsIt: 'Ankle pain often follows a sprain or repetitive strain, affecting the ligaments, joint, or surrounding muscles.',
+    symptoms: ['Swelling around the ankle', 'Pain with walking or weight-bearing', 'A feeling of instability', 'Stiffness after rest'],
+    causes: ['Ligament sprain from rolling the ankle', 'Repetitive strain from activity', 'Previous ankle injuries', 'Poor footwear support'],
+    treatmentApproach: 'Recovery progresses from managing swelling and protecting the joint through to restoring strength, balance, and full movement.',
+    benefits: ['Reduced pain and swelling', 'Improved ankle stability', 'Lower risk of repeat sprains'],
+    practicalTips: ['Support the ankle during initial recovery', 'Work on balance exercises to prevent re-injury', 'Choose supportive footwear'],
+    whenToSeekHelp: 'An inability to bear weight or significant swelling after an ankle injury should be assessed promptly.',
+    whyChooseUs: [
+      { title: 'Balance and Stability Focus', description: 'We rebuild ankle stability to reduce the risk of repeat sprains.' },
+    ],
+  },
+  'Concussions': {
+    intro: 'Concussions are a form of mild traumatic brain injury that occurs when a sudden impact or jolt affects how the brain functions.',
+    whatIsIt: 'A concussion temporarily disrupts normal brain function, often causing symptoms like headache, dizziness, and difficulty concentrating.',
+    symptoms: ['Headache', 'Dizziness or balance problems', 'Difficulty concentrating', 'Sensitivity to light or noise'],
+    causes: ['A blow or jolt to the head', 'Sports-related impact', 'Falls or motor vehicle accidents'],
+    treatmentApproach: 'Recovery follows a careful, gradual rehabilitation process, often including vestibular and neck-focused therapy alongside symptom-guided activity progression.',
+    benefits: ['Reduced symptom duration', 'Safe, guided return to activity', 'Improved balance and concentration'],
+    practicalTips: ['Rest initially, then reintroduce activity gradually', 'Avoid activities that significantly worsen symptoms', 'Follow a structured return-to-activity plan'],
+    whenToSeekHelp: 'Any suspected concussion should be assessed promptly, especially with worsening symptoms or loss of consciousness.',
+    whyChooseUs: [
+      { title: 'Structured Return-to-Activity Programs', description: 'We guide gradual, symptom-monitored progression back to normal activity.' },
+    ],
+  },
+  'WSIB Injuries': {
+    intro: 'Workplace injuries covered under WSIB can disrupt daily routines, limit movement, and make even simple tasks challenging.',
+    whatIsIt: 'WSIB injuries are work-related injuries that require documented assessment and a structured recovery and return-to-work plan.',
+    symptoms: ['Pain related to a specific workplace incident or repetitive task', 'Reduced ability to perform job duties', 'Swelling or restricted movement'],
+    causes: ['Workplace accidents', 'Repetitive strain from job tasks', 'Improper lifting or ergonomics'],
+    treatmentApproach: 'Care includes thorough documentation, injury-specific treatment, and functional testing to support a safe, structured return to work.',
+    benefits: ['Clear documentation for your claim', 'Structured, supported recovery', 'Safe return-to-work planning'],
+    practicalTips: ['Report the injury and seek assessment promptly', 'Keep records of your treatment progress', 'Follow the recommended recovery timeline'],
+    whenToSeekHelp: 'Any workplace injury should be assessed as soon as possible to support both recovery and your claim.',
+    whyChooseUs: [
+      { title: 'WSIB-Familiar Process', description: 'We understand the documentation and return-to-work planning these claims require.' },
+    ],
+  },
+  'Dance Injuries': {
+    intro: 'Dance places unique demands on the body, combining strength, flexibility, and precision, which can lead to specific overuse or acute injuries.',
+    whatIsIt: 'Dance injuries include strains, sprains, and overuse injuries specific to the flexibility and repetitive demands placed on a dancer\'s body.',
+    symptoms: ['Pain during specific dance movements', 'Reduced flexibility or turnout', 'Swelling in feet, ankles, or hips', 'Fatigue-related technique changes'],
+    causes: ['Repetitive high-demand movements', 'Inadequate warm-up', 'Overtraining without recovery', 'Technique-related strain'],
+    treatmentApproach: 'Rehabilitation addresses the injury while maintaining dance-specific flexibility and strength, progressing back to full technique safely.',
+    benefits: ['Safe return to full dance training', 'Maintained flexibility and technique', 'Reduced risk of recurring injury'],
+    practicalTips: ['Warm up thoroughly before training', 'Balance training intensity with recovery time', 'Address technique-related strain early'],
+    whenToSeekHelp: 'Persistent pain affecting technique or training should be assessed by someone familiar with dance-specific demands.',
+    whyChooseUs: [
+      { title: 'Dance-Informed Rehab', description: 'We understand the flexibility and strength demands specific to dance.' },
+    ],
+  },
+  'Dizziness Treatment': {
+    intro: 'Dizziness can interfere with everyday activities, making simple movements like walking, turning your head, or even standing feel unsettling.',
+    whatIsIt: 'Dizziness is a broad term covering sensations of lightheadedness, unsteadiness, or imbalance, often linked to the inner ear, neck, or other systems.',
+    symptoms: ['Lightheadedness or unsteadiness', 'Difficulty with quick head movements', 'A feeling of floating or swaying', 'Nausea in some cases'],
+    causes: ['Inner ear dysfunction', 'Neck-related dysfunction', 'Blood pressure changes', 'Anxiety or stress'],
+    treatmentApproach: 'Assessment identifies the likely source of dizziness, with treatment often including vestibular exercises and neck-focused therapy.',
+    benefits: ['Reduced frequency of dizzy spells', 'Improved confidence in movement', 'Better overall balance'],
+    practicalTips: ['Move slowly when changing position', 'Stay hydrated', 'Avoid triggers that worsen symptoms when possible'],
+    whenToSeekHelp: 'Dizziness accompanied by chest pain, severe headache, or fainting needs urgent medical attention.',
+    whyChooseUs: [
+      { title: 'Multi-System Assessment', description: 'We look at the inner ear, neck, and balance systems together to find the cause.' },
+    ],
+  },
+};
+
 const PRODUCTS = [
   {
     name: 'Braces',
@@ -1301,6 +1686,25 @@ const seed = async () => {
     }
   }
   if (conditionDescriptionsBackfilled > 0) console.log(`${conditionDescriptionsBackfilled} condition descriptions backfilled`);
+
+  let conditionDetailsBackfilled = 0;
+  for (const [name, details] of Object.entries(CONDITION_DETAILS)) {
+    const existing = await Condition.findOne({ name });
+    if (existing && !existing.whatIsIt) {
+      existing.intro = details.intro || '';
+      existing.whatIsIt = details.whatIsIt || '';
+      existing.symptoms = details.symptoms || [];
+      existing.causes = details.causes || [];
+      existing.treatmentApproach = details.treatmentApproach || '';
+      existing.benefits = details.benefits || [];
+      existing.practicalTips = details.practicalTips || [];
+      existing.whenToSeekHelp = details.whenToSeekHelp || '';
+      existing.whyChooseUs = details.whyChooseUs || [];
+      await existing.save();
+      conditionDetailsBackfilled += 1;
+    }
+  }
+  if (conditionDetailsBackfilled > 0) console.log(`${conditionDetailsBackfilled} condition detail pages backfilled`);
 
   let productsCreated = 0;
   let productsUpdated = 0;

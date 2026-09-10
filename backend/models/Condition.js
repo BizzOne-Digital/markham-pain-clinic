@@ -1,5 +1,13 @@
 const mongoose = require('mongoose');
 
+const detailBlockSchema = new mongoose.Schema(
+  {
+    title: { type: String, trim: true },
+    description: { type: String, trim: true },
+  },
+  { _id: false }
+);
+
 const conditionSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
@@ -12,6 +20,17 @@ const conditionSchema = new mongoose.Schema(
     },
     order: { type: Number, default: 0 },
     status: { type: String, enum: ['active', 'inactive'], default: 'active' },
+
+    // Detail page content
+    intro: { type: String, trim: true },
+    whatIsIt: { type: String, trim: true },
+    symptoms: { type: [String], default: [] },
+    causes: { type: [String], default: [] },
+    treatmentApproach: { type: String, trim: true },
+    benefits: { type: [String], default: [] },
+    practicalTips: { type: [String], default: [] },
+    whenToSeekHelp: { type: String, trim: true },
+    whyChooseUs: { type: [detailBlockSchema], default: [] },
   },
   { timestamps: true }
 );

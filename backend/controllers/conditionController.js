@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Condition = require('../models/Condition');
 const asyncHandler = require('../utils/asyncHandler');
 const { ApiError, success } = require('../utils/apiResponse');
@@ -11,7 +12,10 @@ const getConditions = asyncHandler(async (req, res) => {
 });
 
 const getConditionBySlug = asyncHandler(async (req, res) => {
-  const condition = await Condition.findOne({ slug: req.params.slug });
+  const { slug } = req.params;
+  const condition = mongoose.Types.ObjectId.isValid(slug)
+    ? await Condition.findById(slug)
+    : await Condition.findOne({ slug });
   if (!condition) throw new ApiError(404, 'Condition not found');
   return success(res, 200, condition);
 });
