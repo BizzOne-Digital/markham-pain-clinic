@@ -27,8 +27,8 @@ export default function TestimonialsSection() {
     <section className="section-padding bg-beige/40">
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <SectionLabel>Testimonials</SectionLabel>
-          <h2 className="section-heading">What Our Patients Say</h2>
+          <SectionLabel>Social Proof</SectionLabel>
+          <h2 className="section-heading">Excellence Reflected in Feedback</h2>
         </div>
         <TestimonialSlider testimonials={testimonials} />
       </div>

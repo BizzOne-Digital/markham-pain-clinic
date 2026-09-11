@@ -28,10 +28,10 @@ export default function TeamPreview() {
     <section className="section-padding bg-white">
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <SectionLabel>Our Team</SectionLabel>
-          <h2 className="section-heading mb-6">Your Trusted Therapy Professionals</h2>
+          <SectionLabel>Care Professionals</SectionLabel>
+          <h2 className="section-heading mb-6">Your Trusted Care Professionals</h2>
           <Button to="/team" variant="secondary">
-            OUR ALL MEMBERS
+            OUR ALL STAFFS
           </Button>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">

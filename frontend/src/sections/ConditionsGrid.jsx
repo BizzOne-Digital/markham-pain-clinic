@@ -28,8 +28,8 @@ export default function ConditionsGrid() {
     <section className="section-padding bg-white overflow-hidden">
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <SectionLabel>Conditions We Treat</SectionLabel>
-          <h2 className="section-heading">Comprehensive Care for Every Condition</h2>
+          <SectionLabel>Comprehensive Care</SectionLabel>
+          <h2 className="section-heading">Conditions We Treat</h2>
         </div>
       </div>
 

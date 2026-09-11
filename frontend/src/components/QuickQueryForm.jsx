@@ -40,7 +40,7 @@ export default function QuickQueryForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-soft p-6 sm:p-8 space-y-4">
-      <h3 className="font-serif text-lg text-textMain text-center mb-2">Have a Query? Fill Up the Form.</h3>
+      <h3 className="font-serif text-lg text-textMain text-center mb-2">Have a Query? Fill out the form.</h3>
       <input
         name="fullName"
         placeholder="Enter your full name"

@@ -12,13 +12,12 @@ export default function InsuranceBilling() {
   return (
     <section className="py-14 bg-white border-y border-beige/70 overflow-hidden">
       <div className="container-app text-center mb-8">
-        <SectionLabel>Direct Billing</SectionLabel>
+        <SectionLabel>Billing Convenience</SectionLabel>
         <h2 className="font-heading font-bold text-2xl sm:text-3xl text-textMain">
-          Direct Billing with Major Insurance Providers
+          Direct Billing with Major Insurance Companies
         </h2>
         <p className="text-textSecondary text-sm mt-3 max-w-xl mx-auto">
-          We handle the claims process on your behalf with most major insurance providers, so your
-          visit is as convenient as possible.
+          Direct billing is offered to most major insurance providers.
         </p>
       </div>
 

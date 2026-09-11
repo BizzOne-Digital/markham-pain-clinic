@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Button from '../components/Button.jsx'
 import TrustFeaturesBar from './TrustFeaturesBar.jsx'
+import { CLINIC_INFO } from '../utils/placeholderData'
 
 export default function Hero() {
   return (
@@ -28,20 +29,23 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <p className="font-heading font-semibold text-white text-lg sm:text-xl [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
-            Welcome to Markham Pain Clinic
+            YOUR PATH TO
           </p>
           <h1 className="font-heading font-bold text-[2.75rem] sm:text-6xl lg:text-[5.5rem] leading-[1.02] text-white mt-2 [text-shadow:0_2px_16px_rgba(0,0,0,0.55)]">
-            Evidence-Based Pain Relief.
+            Comfortable Movement
           </h1>
           <p className="italic text-gold font-serif text-3xl sm:text-4xl lg:text-5xl mt-2 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
-            Restoring Life.
+            Starts Here
           </p>
           <p className="text-beige/90 text-base sm:text-lg mt-6 max-w-md leading-relaxed">
-            Advanced, personalized and non-surgical treatment solutions designed to help you move
-            better, feel stronger and live with less pain.
+            Hero messaging rotates between recovery, strength and everyday ease, with prominent phone and
+            appointment actions.
           </p>
           <div className="flex flex-wrap items-center gap-4 mt-8">
-            <Button to="/contact">BOOK APPOINTMENT</Button>
+            <Button href={`tel:${CLINIC_INFO.phone.replace(/\s/g, '')}`} variant="outline-light">
+              Call Us
+            </Button>
+            <Button to="/contact">Book Appointment</Button>
           </div>
         </motion.div>
       </div>

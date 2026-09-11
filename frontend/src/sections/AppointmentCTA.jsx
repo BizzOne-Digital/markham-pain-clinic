@@ -20,12 +20,12 @@ export default function AppointmentCTA() {
         transition={{ duration: 0.6 }}
         className="relative container-app text-center text-white max-w-2xl mx-auto"
       >
-        <h2 className="font-heading font-bold text-3xl sm:text-4xl mb-4">Ready to Start Feeling Better?</h2>
+        <h2 className="font-heading font-bold text-3xl sm:text-4xl mb-4">Move toward a healthier, more active life</h2>
         <p className="text-beige/90 mb-8 leading-relaxed">
-          Take the first step toward better mobility, reduced pain and improved quality of life.
+          The closing message invites visitors to connect with the clinic and start their care journey.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button to="/contact">BOOK AN APPOINTMENT</Button>
+          <Button to="/contact">Book An Appointment</Button>
           <Button href={`tel:${CLINIC_INFO.phone.replace(/\s/g, '')}`} variant="outline-light">
             CALL {CLINIC_INFO.phone}
           </Button>

@@ -5,25 +5,25 @@ const STEPS = [
   {
     num: '01',
     title: 'Make an Appointment',
-    text: 'Call, email or book online — our team will schedule your first visit quickly.',
+    text: 'Visitors are directed to the online booking action or clinic contact channels to arrange a visit.',
     image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800&auto=format&fit=crop',
   },
   {
     num: '02',
     title: 'Get a Consultation',
-    text: 'We assess your condition, discuss your goals and design a personalized treatment plan.',
+    text: 'The clinic begins with an assessment, discussion of concerns and review of relevant history.',
     image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800&auto=format&fit=crop',
   },
   {
     num: '03',
-    title: 'Meet Your Therapist',
-    text: 'Work one-on-one with an experienced clinician dedicated to your recovery.',
+    title: 'Meet Our Therapist',
+    text: 'Sessions focus on practical techniques, movement support and a plan built around the patient needs.',
     image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop',
   },
   {
     num: '04',
-    title: 'Begin Your Therapy',
-    text: 'Start evidence-based treatment and track your progress toward lasting relief.',
+    title: 'Follow-Up',
+    text: 'Progress is tracked and the care plan is adjusted as needed to support continued improvement.',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop',
   },
 ]
@@ -40,8 +40,8 @@ export default function TreatmentJourney() {
       </div>
       <div className="container-app relative">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <SectionLabel>The Process</SectionLabel>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white">Your Journey to Feeling Better</h2>
+          <SectionLabel>Care Process</SectionLabel>
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white">Your Journey With Us</h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
