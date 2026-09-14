@@ -9,25 +9,21 @@ function getSteps(phone) {
       num: '01',
       title: 'Make an Appointment',
       text: `Click "Book An Appointment," contact us at ${phone}, or email us to schedule your visit.`,
-      image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800&auto=format&fit=crop',
     },
     {
       num: '02',
       title: 'Get A Consultation',
       text: 'We begin with a detailed assessment, listening to your concerns, reviewing your medical history, and performing any necessary examinations to understand your situation fully.',
-      image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800&auto=format&fit=crop',
     },
     {
       num: '03',
       title: 'Meet Our Therapist',
       text: 'Sessions focus on practical techniques to improve movement, address challenges, and build confidence in everyday activities.',
-      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop',
     },
     {
       num: '04',
       title: 'Follow-Up',
       text: 'We track your progress and adjust your plan as needed to ensure steady improvement and support your ongoing recovery.',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop',
     },
   ]
 }
@@ -63,17 +59,6 @@ export default function TreatmentJourney() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-white rounded-2xl overflow-hidden shadow-soft"
             >
-              <div className="h-40 overflow-hidden bg-beige">
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
-              </div>
               <div className="p-6 text-center">
                 <h3 className="font-serif text-lg text-textMain mb-2">{step.title}</h3>
                 <p className="text-textSecondary text-sm leading-relaxed mb-4">{step.text}</p>
