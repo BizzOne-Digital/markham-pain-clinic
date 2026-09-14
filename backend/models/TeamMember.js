@@ -5,6 +5,8 @@ const teamMemberSchema = new mongoose.Schema(
     name: { type: String, required: true, trim: true },
     slug: { type: String, required: true, unique: true, lowercase: true, index: true },
     designation: { type: String, required: true, trim: true },
+    seniorTitle: { type: String, trim: true, default: '' },
+    yearsExperience: { type: Number, default: null },
     specialization: { type: String, trim: true, default: '' },
     bio: { type: String, trim: true },
     qualifications: [{ type: String, trim: true }],
