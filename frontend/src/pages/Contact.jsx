@@ -6,7 +6,13 @@ import SectionLabel from '../components/SectionLabel.jsx'
 import enquiriesApi from '../services/enquiriesApi'
 import { CLINIC_INFO } from '../utils/placeholderData'
 
-const SERVICE_OPTIONS = ['Physiotherapy', 'Acupuncture & Dry Needling', 'Chronic Pain Management', 'Sports Injury Rehabilitation', 'Manual Therapy', 'Other']
+const SERVICE_OPTIONS = [
+  'Physiotherapy', 'Chiropractic Care', 'Massage Therapy', 'Acupuncture', 'Manual Therapy',
+  'Cupping Therapy', 'Dry Needling', 'Spinal Manipulation/Adjustment', 'Electrotherapeutic Modalities',
+  'Vestibular Therapy', 'Return to Work/Play', 'Myofascial Release', 'Therapeutic Exercise',
+  'Trigger Point Release', 'Dancer Rehabilitation', 'Psychological Services', 'Deep Tissue Massage',
+  'Relaxation Method',
+]
 const CONTACT_METHODS = ['Phone', 'Email']
 
 const initialForm = {
@@ -61,10 +67,10 @@ export default function Contact() {
       <section className="section-padding bg-white">
         <div className="container-app text-center max-w-2xl mx-auto mb-14">
           <SectionLabel>Contact Us</SectionLabel>
-          <h1 className="section-heading mb-4">Get in Touch with Our Team</h1>
+          <h1 className="section-heading mb-4">Contact Remarkable Physiotherapy in Markham</h1>
           <p className="text-textSecondary leading-relaxed">
-            Our team of experienced physiotherapists provides personalized care to help you recover
-            from injuries and improve your overall physical health.
+            Whatever you're going through, you don't have to face it alone. Reach out to us—we're
+            here to help, and your information is always kept safe and confidential.
           </p>
         </div>
 
