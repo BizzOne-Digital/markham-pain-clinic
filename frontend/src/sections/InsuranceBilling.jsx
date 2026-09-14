@@ -17,7 +17,8 @@ export default function InsuranceBilling() {
           Direct Billing with Major Insurance Companies
         </h2>
         <p className="text-textSecondary text-sm mt-3 max-w-xl mx-auto">
-          Direct billing is offered to most major insurance providers.
+          We offer direct billing to most major insurance providers to make your care more accessible
+          and stress-free.
         </p>
       </div>
 

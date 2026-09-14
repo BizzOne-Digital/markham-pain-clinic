@@ -4,7 +4,7 @@ import SectionLabel from '../components/SectionLabel.jsx'
 import Button from '../components/Button.jsx'
 import QuickQueryForm from '../components/QuickQueryForm.jsx'
 
-const POINTS = ['Workplace injuries', 'Chronic pain conditions', 'Motor vehicle accident injuries', 'Mobility & functional limitations']
+const POINTS = ['Workplace injuries', 'Chronic pain conditions', 'Motor vehicle accident injuries', 'Mobility and functional limitations']
 
 export default function AboutPreview() {
   return (
@@ -14,10 +14,12 @@ export default function AboutPreview() {
           <SectionLabel>About Us</SectionLabel>
           <h2 className="section-heading mb-5">About Markham Pain Clinic</h2>
           <p className="text-textSecondary leading-relaxed mb-6">
-            The section positions the clinic as a multidisciplinary care provider supporting recovery,
-            movement and overall health through physiotherapy, chiropractic, massage and
-            mental-health services. It emphasizes individualized, evidence-informed care and a calm
-            supportive environment.
+            At Markham Pain Clinic, we support recovery, movement, and overall health through
+            focused care. Our clinic provides physiotherapy, chiropractic care, massage therapy, and
+            mental health support. We address both physical concerns and emotional well-being to help
+            you move forward with confidence. Using evidence-based methods, our team creates
+            structured care plans suited to each individual. We aim to create a calm, supportive
+            space where you feel heard and cared for at every stage.
           </p>
           <p className="font-heading font-bold text-textMain mb-4">Conditions We Treat:</p>
           <ul className="grid sm:grid-cols-2 gap-3 mb-8">

@@ -1,34 +1,39 @@
 import { motion } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel.jsx'
+import Button from '../components/Button.jsx'
+import { CLINIC_INFO } from '../utils/placeholderData'
 
-const STEPS = [
-  {
-    num: '01',
-    title: 'Make an Appointment',
-    text: 'Visitors are directed to the online booking action or clinic contact channels to arrange a visit.',
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    num: '02',
-    title: 'Get a Consultation',
-    text: 'The clinic begins with an assessment, discussion of concerns and review of relevant history.',
-    image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    num: '03',
-    title: 'Meet Our Therapist',
-    text: 'Sessions focus on practical techniques, movement support and a plan built around the patient needs.',
-    image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    num: '04',
-    title: 'Follow-Up',
-    text: 'Progress is tracked and the care plan is adjusted as needed to support continued improvement.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop',
-  },
-]
+function getSteps(phone) {
+  return [
+    {
+      num: '01',
+      title: 'Make an Appointment',
+      text: `Click "Book An Appointment," contact us at ${phone}, or email us to schedule your visit.`,
+      image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800&auto=format&fit=crop',
+    },
+    {
+      num: '02',
+      title: 'Get A Consultation',
+      text: 'We begin with a detailed assessment, listening to your concerns, reviewing your medical history, and performing any necessary examinations to understand your situation fully.',
+      image: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=800&auto=format&fit=crop',
+    },
+    {
+      num: '03',
+      title: 'Meet Our Therapist',
+      text: 'Sessions focus on practical techniques to improve movement, address challenges, and build confidence in everyday activities.',
+      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop',
+    },
+    {
+      num: '04',
+      title: 'Follow-Up',
+      text: 'We track your progress and adjust your plan as needed to ensure steady improvement and support your ongoing recovery.',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop',
+    },
+  ]
+}
 
 export default function TreatmentJourney() {
+  const STEPS = getSteps(CLINIC_INFO.phone)
   return (
     <section className="section-padding bg-darkCoffee relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-10">
@@ -41,7 +46,11 @@ export default function TreatmentJourney() {
       <div className="container-app relative">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <SectionLabel>Care Process</SectionLabel>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white">Your Journey With Us</h2>
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mb-4">Your Journey With Us</h2>
+          <p className="text-beige/90 leading-relaxed">
+            We aim to make your physiotherapy journey clear and straightforward. Each consultation is
+            structured to understand your needs and support your progress step by step.
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -69,11 +78,15 @@ export default function TreatmentJourney() {
                 <h3 className="font-serif text-lg text-textMain mb-2">{step.title}</h3>
                 <p className="text-textSecondary text-sm leading-relaxed mb-4">{step.text}</p>
                 <span className="inline-block font-serif text-gold text-sm tracking-widest">
-                  STEP {step.num}
+                  Step {step.num}
                 </span>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Button to="/contact">BOOK AN APPOINTMENT</Button>
         </div>
       </div>
     </section>

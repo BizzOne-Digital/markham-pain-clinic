@@ -157,11 +157,49 @@ export const PLACEHOLDER_FAQS = [
 ]
 
 export const PLACEHOLDER_CONDITIONS = [
-  'WSIB Injuries', 'Motor Vehicle Accident Injuries', 'Fibromyalgia Treatment', 'Dizziness Treatment',
-  'Chronic Pain', 'Balance Disorder', 'Hand Pain', 'Elbow Pain', 'Ankle Pain', 'Dance Injuries',
-  'Hip Pain', 'Sciatica Pain', 'Headaches', 'Vertigo', 'Concussions', 'Gait Disorders',
-  'Arthritis Treatment', 'Wrist Pain', 'Shoulder Pain', 'Foot Pain', 'Knee Pain', 'Neck Pain', 'Back Pain',
-].map((name, i) => ({ _id: `c${i}`, name }))
+  { name: 'WSIB Injuries' },
+  {
+    name: 'Motor Vehicle Accident Injuries',
+    description: 'Motor vehicle accident injuries can disrupt daily life in both immediate and long-lasting ways.',
+  },
+  {
+    name: 'Fibromyalgia Treatment',
+    description:
+      'Fibromyalgia is a complex condition that affects how the body processes pain signals, leading to widespread discomfort.',
+  },
+  {
+    name: 'Dizziness Treatment',
+    description: 'Dizziness can interfere with everyday activities, making simple movements like walking, turning your head, or even standing up feel unsteady.',
+  },
+  {
+    name: 'Chronic Pain',
+    description: 'Living with chronic pain can affect every part of your daily life, from work and sleep to movement and mood.',
+  },
+  {
+    name: 'Balance Disorder',
+    description: 'Balance plays a vital role in everyday life, from simple movements like walking to more complex activities such as exercising.',
+  },
+  {
+    name: 'Hand Pain',
+    description: 'Hand pain can make even simple daily tasks feel difficult. From typing and writing to lifting objects or gripping tools, discomfort can get in the way.',
+  },
+  { name: 'Elbow Pain' },
+  { name: 'Ankle Pain' },
+  { name: 'Dance Injuries' },
+  { name: 'Hip Pain' },
+  { name: 'Sciatica Pain' },
+  { name: 'Headaches' },
+  { name: 'Vertigo' },
+  { name: 'Concussions' },
+  { name: 'Gait Disorders' },
+  { name: 'Arthritis Treatment' },
+  { name: 'Wrist Pain' },
+  { name: 'Shoulder Pain' },
+  { name: 'Foot Pain' },
+  { name: 'Knee Pain' },
+  { name: 'Neck Pain' },
+  { name: 'Back Pain' },
+].map((c, i) => ({ _id: `c${i}`, ...c }))
 
 export const PLACEHOLDER_STATS = [
   { _id: 's1', label: 'Patients Helped', value: 5000, suffix: '+' },

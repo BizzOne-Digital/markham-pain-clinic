@@ -28,8 +28,9 @@ export default function Footer() {
             Markham <span className="text-gold italic font-serif">Pain Clinic</span>
           </h3>
           <p className="text-sm text-beige/70 leading-relaxed">
-            Evidence-based, personalized pain management and physiotherapy care dedicated to restoring
-            movement and improving quality of life.
+            We are dedicated to helping you achieve a healthier, more active life. Connect with us
+            today to start your journey. Your health is our focus, and we provide attentive,
+            professional care every step of the way.
           </p>
         </div>
 

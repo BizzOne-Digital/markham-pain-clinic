@@ -6,9 +6,18 @@ const SERVICE_OPTIONS = ['Physiotherapy', 'Acupuncture & Dry Needling', 'Chronic
 
 const initialForm = { fullName: '', email: '', phone: '', serviceInterested: '', message: '', consent: true }
 
+function randomCaptcha() {
+  const a = Math.floor(Math.random() * 8) + 2
+  const b = Math.floor(Math.random() * 8) + 2
+  return { a, b, answer: String(a * b) }
+}
+
 export default function QuickQueryForm() {
   const [form, setForm] = useState(initialForm)
   const [status, setStatus] = useState('idle')
+  const [captcha, setCaptcha] = useState(randomCaptcha)
+  const [captchaInput, setCaptchaInput] = useState('')
+  const [captchaError, setCaptchaError] = useState(false)
 
   function handleChange(e) {
     const { name, value } = e.target
@@ -18,11 +27,20 @@ export default function QuickQueryForm() {
   async function handleSubmit(e) {
     e.preventDefault()
     if (!form.fullName.trim() || !form.email.trim() || !form.message.trim()) return
+    if (captchaInput.trim() !== captcha.answer) {
+      setCaptchaError(true)
+      setCaptcha(randomCaptcha())
+      setCaptchaInput('')
+      return
+    }
+    setCaptchaError(false)
     setStatus('submitting')
     try {
       await enquiriesApi.create(form)
       setStatus('success')
       setForm(initialForm)
+      setCaptcha(randomCaptcha())
+      setCaptchaInput('')
     } catch {
       setStatus('error')
     }
@@ -82,9 +100,23 @@ export default function QuickQueryForm() {
         className="admin-input resize-none"
         required
       />
+      <div>
+        <label className="text-textMain text-xs font-semibold mb-1 block">
+          Captcha: What is {captcha.a} × {captcha.b}?
+        </label>
+        <input
+          name="captchaInput"
+          placeholder="Type your answer"
+          value={captchaInput}
+          onChange={(e) => setCaptchaInput(e.target.value)}
+          className="admin-input"
+          required
+        />
+        {captchaError && <p className="text-red-500 text-xs mt-1">Incorrect answer. Please try again.</p>}
+      </div>
       {status === 'error' && <p className="text-red-500 text-xs">Something went wrong. Please try again.</p>}
       <button type="submit" disabled={status === 'submitting'} className="btn-primary w-full justify-center">
-        {status === 'submitting' ? 'Sending...' : 'SUBMIT'}
+        {status === 'submitting' ? 'Sending...' : 'BOOK NOW'}
       </button>
     </form>
   )

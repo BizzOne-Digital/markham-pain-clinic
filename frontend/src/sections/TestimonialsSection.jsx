@@ -28,7 +28,11 @@ export default function TestimonialsSection() {
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <SectionLabel>Social Proof</SectionLabel>
-          <h2 className="section-heading">Excellence Reflected in Feedback</h2>
+          <h2 className="section-heading mb-4">Excellence Reflected in Feedback</h2>
+          <p className="text-textSecondary leading-relaxed">
+            See what our patients say about their journey and how our care has helped them move with
+            confidence.
+          </p>
         </div>
         <TestimonialSlider testimonials={testimonials} />
       </div>

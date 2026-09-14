@@ -29,7 +29,11 @@ export default function ConditionsGrid() {
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <SectionLabel>Comprehensive Care</SectionLabel>
-          <h2 className="section-heading">Conditions We Treat</h2>
+          <h2 className="section-heading mb-4">Comprehensive Care for Every Condition</h2>
+          <p className="text-textSecondary leading-relaxed">
+            Whether you are dealing with everyday aches or more serious issues, our care is designed
+            to help you move better, feel better, and stay active in your daily routine.
+          </p>
         </div>
       </div>
 
@@ -57,8 +61,9 @@ export default function ConditionsGrid() {
             <div className="p-5">
               <p className="font-serif text-textMain text-center mb-1">{condition.name}</p>
               {condition.description && (
-                <p className="text-textSecondary text-xs leading-relaxed text-center line-clamp-3">{condition.description}</p>
+                <p className="text-textSecondary text-xs leading-relaxed text-center line-clamp-3 mb-2">{condition.description}</p>
               )}
+              <p className="text-gold text-xs font-semibold text-center">Read More</p>
             </div>
           </Link>
         ))}

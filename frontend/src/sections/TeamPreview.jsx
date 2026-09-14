@@ -29,7 +29,11 @@ export default function TeamPreview() {
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <SectionLabel>Care Professionals</SectionLabel>
-          <h2 className="section-heading mb-6">Your Trusted Care Professionals</h2>
+          <h2 className="section-heading mb-4">Your Trusted Care Professionals</h2>
+          <p className="text-textSecondary leading-relaxed mb-6">
+            Our team of experienced therapists provides personalized care to help you recover from
+            injuries and improve your overall physical health.
+          </p>
           <Button to="/team" variant="secondary">
             OUR ALL STAFFS
           </Button>
