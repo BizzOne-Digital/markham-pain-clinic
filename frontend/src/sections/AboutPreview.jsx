@@ -12,9 +12,9 @@ export default function AboutPreview() {
       <div className="container-app grid lg:grid-cols-2 gap-14 items-center">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <SectionLabel>About Us</SectionLabel>
-          <h2 className="section-heading mb-5">About Markham Pain Clinic</h2>
+          <h2 className="section-heading mb-5">About Remarkable Physiotherapy</h2>
           <p className="text-textSecondary leading-relaxed mb-6">
-            At Markham Pain Clinic, we support recovery, movement, and overall health through
+            At Remarkable Physiotherapy, we support recovery, movement, and overall health through
             focused care. Our clinic provides physiotherapy, chiropractic care, massage therapy, and
             mental health support. We address both physical concerns and emotional well-being to help
             you move forward with confidence. Using evidence-based methods, our team creates

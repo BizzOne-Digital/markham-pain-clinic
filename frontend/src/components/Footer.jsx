@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="container-app py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <h3 className="font-serif text-xl text-white mb-3">
-            Markham <span className="text-gold italic font-serif">Pain Clinic</span>
+            Remarkable <span className="text-gold italic font-serif">Physiotherapy</span>
           </h3>
           <p className="text-sm text-beige/70 leading-relaxed">
             We are dedicated to helping you achieve a healthier, more active life. Connect with us
@@ -91,7 +91,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-app py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-beige/60">
-          <p>© {year} Markham Pain Clinic. All rights reserved.</p>
+          <p>© {year} Remarkable Physiotherapy. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <Link to="/privacy-policy" className="hover:text-gold transition">
               Privacy Policy

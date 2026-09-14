@@ -28,7 +28,7 @@ export default function Products() {
 
   return (
     <>
-      <SEO title="Products" description="Wellness products and take-home care items available at Markham Pain Clinic." />
+      <SEO title="Products" description="Wellness products and take-home care items available at Remarkable Physiotherapy." />
       <PageBanner title="Products" crumb="Products" />
       <section className="section-padding bg-white">
         <div className="container-app">

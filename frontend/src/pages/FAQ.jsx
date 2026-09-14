@@ -27,7 +27,7 @@ export default function FAQ() {
 
   return (
     <>
-      <SEO title="FAQ" description="Answers to common questions about appointments, treatments and what to expect at Markham Pain Clinic." />
+      <SEO title="FAQ" description="Answers to common questions about appointments, treatments and what to expect at Remarkable Physiotherapy." />
       <PageBanner title="Frequently Asked Questions" crumb="FAQ" />
       <section className="section-padding bg-ivory">
         <div className="container-app max-w-3xl">

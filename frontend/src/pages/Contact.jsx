@@ -55,7 +55,7 @@ export default function Contact() {
 
   return (
     <>
-      <SEO title="Contact Us" description="Get in touch with Markham Pain Clinic to book an appointment or ask a question." />
+      <SEO title="Contact Us" description="Get in touch with Remarkable Physiotherapy to book an appointment or ask a question." />
       <PageBanner title="Contact Us" crumb="Contact" />
 
       <section className="section-padding bg-white">
@@ -160,7 +160,7 @@ export default function Contact() {
 
                 <label className="flex items-start gap-3 text-sm text-beige/80">
                   <input type="checkbox" name="consent" checked={form.consent} onChange={handleChange} className="mt-1" />
-                  I consent to Markham Pain Clinic contacting me regarding my enquiry.
+                  I consent to Remarkable Physiotherapy contacting me regarding my enquiry.
                 </label>
                 {errors.consent && <p className="text-red-300 text-xs -mt-3">{errors.consent}</p>}
 

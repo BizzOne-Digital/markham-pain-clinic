@@ -31,7 +31,7 @@ export default function BlogPreviewSection() {
           <SectionLabel>Latest News & Updates</SectionLabel>
           <h2 className="section-heading mb-4">Latest News and Updates</h2>
           <p className="text-textSecondary leading-relaxed">
-            Stay informed about the latest news and updates from Markham Pain Clinic. Our team of
+            Stay informed about the latest news and updates from Remarkable Physiotherapy. Our team of
             experienced therapists provides personalized care to help you recover from injuries and
             improve your overall physical health.
           </p>

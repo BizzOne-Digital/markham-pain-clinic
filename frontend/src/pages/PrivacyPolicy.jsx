@@ -3,12 +3,12 @@ import SEO from '../components/SEO.jsx'
 export default function PrivacyPolicy() {
   return (
     <>
-      <SEO title="Privacy Policy" description="Markham Pain Clinic privacy policy." />
+      <SEO title="Privacy Policy" description="Remarkable Physiotherapy privacy policy." />
       <section className="section-padding bg-white">
         <div className="container-app max-w-3xl">
           <h1 className="section-heading mb-6">Privacy Policy</h1>
           <p className="text-textSecondary leading-relaxed mb-4">
-            This Privacy Policy describes how Markham Pain Clinic collects, uses, and protects
+            This Privacy Policy describes how Remarkable Physiotherapy collects, uses, and protects
             personal information submitted through this website. Content to be finalized with the
             clinic&apos;s legal/compliance requirements.
           </p>

@@ -27,7 +27,7 @@ export default function SocialService() {
 
   return (
     <>
-      <SEO title="Social Service" description="Community and social service initiatives supported by Markham Pain Clinic." />
+      <SEO title="Social Service" description="Community and social service initiatives supported by Remarkable Physiotherapy." />
       <PageBanner title="Social Service" crumb="Social Service" />
       <section className="section-padding bg-white">
         <div className="container-app">

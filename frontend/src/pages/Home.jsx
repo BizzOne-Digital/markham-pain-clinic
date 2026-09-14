@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <SEO
         title="Home"
-        description="Markham Pain Clinic offers evidence-based, personalized physiotherapy, acupuncture, and pain management to help you recover and live pain-free."
+        description="Remarkable Physiotherapy offers evidence-based, personalized physiotherapy, acupuncture, and pain management to help you recover and live pain-free."
       />
       <Hero />
       <div className="pt-20 sm:pt-24">

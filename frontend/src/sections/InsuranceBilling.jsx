@@ -1,9 +1,18 @@
 import SectionLabel from '../components/SectionLabel.jsx'
 
 const INSURERS = [
-  'Canada Life', 'Desjardins Insurance', 'Sun Life', 'Manulife', 'Equitable Life',
-  'Beneva', 'Green Shield Canada', 'Chambers of Commerce Group', 'Union Benefits',
-  'Coughlin & Associates', 'D.A. Townley', 'Cowan Insurance',
+  { name: 'Canada Life', logo: '/insurance-logos/Canada-Life.png' },
+  { name: 'Desjardins Insurance', logo: '/insurance-logos/Desjardins-Insurance.png' },
+  { name: 'Beneva', logo: '/insurance-logos/Beneva.png' },
+  { name: 'BPA', logo: '/insurance-logos/BPA_logo.png' },
+  { name: 'Canadian Construction Workers Union', logo: '/insurance-logos/Canadian-Construction-Workers-Union-C.C.W.U.png' },
+  { name: 'Chambers of Commerce Group', logo: '/insurance-logos/Chambers-of-Commerce-Johnston-Group.png' },
+  { name: 'CINUP', logo: '/insurance-logos/CINUP-Johnston-Group.png' },
+  { name: 'ClaimSecure', logo: '/insurance-logos/ClaimSecure.png' },
+  { name: 'Coughlin & Associates', logo: '/insurance-logos/Coughlin-Associates-Ltd.png' },
+  { name: 'Cowan / Express Scripts Canada', logo: '/insurance-logos/Cowan-Express-Scripts-Canada.png' },
+  { name: 'D.A. Townley', logo: '/insurance-logos/D.A.-Townley.png' },
+  { name: 'ABC Logo Package', logo: '/insurance-logos/ABC-Logo-Package.webp' },
 ]
 
 export default function InsuranceBilling() {
@@ -25,14 +34,19 @@ export default function InsuranceBilling() {
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10" />
-        <div className="flex gap-10 w-max animate-marquee">
-          {loop.map((name, i) => (
-            <span
-              key={`${name}-${i}`}
-              className="flex-shrink-0 text-sm sm:text-base font-serif text-textSecondary/70 border border-beige rounded-full px-6 py-3 whitespace-nowrap"
+        <div className="flex gap-10 w-max animate-marquee items-center">
+          {loop.map((insurer, i) => (
+            <div
+              key={`${insurer.name}-${i}`}
+              className="flex-shrink-0 h-16 w-40 flex items-center justify-center border border-beige rounded-xl px-4 bg-white"
             >
-              {name}
-            </span>
+              <img
+                src={insurer.logo}
+                alt={insurer.name}
+                loading="lazy"
+                className="max-h-10 max-w-full object-contain"
+              />
+            </div>
           ))}
         </div>
       </div>
