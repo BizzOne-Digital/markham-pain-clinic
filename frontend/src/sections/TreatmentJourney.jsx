@@ -77,7 +77,7 @@ export default function TreatmentJourney() {
               <div className="p-6 text-center">
                 <h3 className="font-serif text-lg text-textMain mb-2">{step.title}</h3>
                 <p className="text-textSecondary text-sm leading-relaxed mb-4">{step.text}</p>
-                <span className="inline-block font-serif text-gold text-sm tracking-widest">
+                <span className="block font-heading font-extrabold text-4xl text-gray-300 leading-none">
                   Step {step.num}
                 </span>
               </div>
