@@ -21,9 +21,7 @@ export default function Home() {
         description="Remarkable Physiotherapy offers evidence-based, personalized physiotherapy, acupuncture, and pain management to help you recover and live pain-free."
       />
       <Hero />
-      <div className="pt-20 sm:pt-24">
-        <ServicesPreview />
-      </div>
+      <ServicesPreview />
       <StatisticsBar />
       <AboutPreview />
       <ConditionsGrid />
