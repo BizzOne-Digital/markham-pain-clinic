@@ -28,9 +28,16 @@ export default function FAQ() {
   return (
     <>
       <SEO title="FAQ" description="Answers to common questions about appointments, treatments and what to expect at Remarkable Physiotherapy." />
-      <PageBanner title="Frequently Asked Questions" crumb="FAQ" />
+      <PageBanner title="FAQ's" crumb="FAQ's" />
       <section className="section-padding bg-ivory">
         <div className="container-app max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="section-heading mb-3">Helpful Questions &amp; Answers</h2>
+            <p className="text-textSecondary leading-relaxed">
+              Here are answers to common concerns to help you feel confident about starting therapy and
+              your journey to improved movement and strength.
+            </p>
+          </div>
           <Accordion items={faqs} />
         </div>
       </section>
