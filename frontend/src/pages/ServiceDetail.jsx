@@ -118,7 +118,7 @@ export default function ServiceDetail() {
             )}
 
             <h2 className="font-heading font-bold text-2xl text-textMain mb-4">What is {service.name}?</h2>
-            <p className="text-textSecondary leading-relaxed mb-8">{service.shortDescription}</p>
+            <p className="text-textSecondary leading-relaxed mb-8">{service.whatIsIt || service.shortDescription}</p>
 
             {service.howItWorks?.length > 0 && (
               <div className="mb-8">

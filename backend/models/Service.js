@@ -14,6 +14,7 @@ const serviceSchema = new mongoose.Schema(
     slug: { type: String, required: true, unique: true, lowercase: true, index: true },
     shortDescription: { type: String, trim: true },
     description: { type: String, trim: true },
+    whatIsIt: { type: String, trim: true },
     icon: { type: String, trim: true },
     image: {
       secure_url: { type: String, default: '' },
