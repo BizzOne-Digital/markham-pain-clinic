@@ -137,7 +137,7 @@ export default function ProductDetail() {
 
             {product.conditionsSupported?.length > 0 && (
               <div className="mb-8">
-                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Uses</h2>
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Conditions Supported</h2>
                 <div className="flex flex-wrap gap-3">
                   {product.conditionsSupported.map((c) => (
                     <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">

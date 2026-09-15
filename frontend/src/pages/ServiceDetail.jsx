@@ -120,6 +120,20 @@ export default function ServiceDetail() {
             <h2 className="font-heading font-bold text-2xl text-textMain mb-4">What is {service.name}?</h2>
             <p className="text-textSecondary leading-relaxed mb-8">{service.shortDescription}</p>
 
+            {service.howItWorks?.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">How It Works</h2>
+                <div className="space-y-5">
+                  {service.howItWorks.map((h) => (
+                    <div key={h.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{h.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{h.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {service.benefits?.length > 0 && (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">
@@ -174,6 +188,26 @@ export default function ServiceDetail() {
                     </li>
                   ))}
                 </ol>
+              </div>
+            )}
+
+            {service.whyChooseUs?.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Why Choose Remarkable Physiotherapy</h2>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {service.whyChooseUs.map((w) => (
+                    <div key={w.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{w.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{w.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {service.closingText && (
+              <div className="bg-beige/40 rounded-2xl p-6 mt-4">
+                <p className="text-textMain leading-relaxed">{service.closingText}</p>
               </div>
             )}
           </article>

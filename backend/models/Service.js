@@ -1,5 +1,13 @@
 const mongoose = require('mongoose');
 
+const detailBlockSchema = new mongoose.Schema(
+  {
+    title: { type: String, trim: true },
+    description: { type: String, trim: true },
+  },
+  { _id: false }
+);
+
 const serviceSchema = new mongoose.Schema(
   {
     title: { type: String, required: true, trim: true },
@@ -15,6 +23,9 @@ const serviceSchema = new mongoose.Schema(
     whoCanBenefit: [{ type: String, trim: true }],
     conditionsTreated: [{ type: String, trim: true }],
     treatmentProcess: [{ type: String, trim: true }],
+    howItWorks: { type: [detailBlockSchema], default: [] },
+    whyChooseUs: { type: [detailBlockSchema], default: [] },
+    closingText: { type: String, trim: true },
     status: { type: String, enum: ['active', 'inactive'], default: 'active' },
     order: { type: Number, default: 0 },
   },
