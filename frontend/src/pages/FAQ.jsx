@@ -25,9 +25,24 @@ export default function FAQ() {
     }
   }, [])
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  }
+
   return (
     <>
-      <SEO title="FAQ" description="Answers to common questions about appointments, treatments and what to expect at Markham Pain Clinic." />
+      <SEO
+        title="FAQ"
+        description="Answers to common questions about appointments, treatments and what to expect at Markham Pain Clinic."
+        path="/faq"
+        jsonLd={faqJsonLd}
+      />
       <PageBanner title="FAQ's" crumb="FAQ's" />
       <section className="section-padding bg-ivory">
         <div className="container-app max-w-3xl">

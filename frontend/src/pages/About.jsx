@@ -21,6 +21,7 @@ export default function About() {
       <SEO
         title="About Us"
         description="Learn about Markham Pain Clinic's mission, values, and commitment to evidence-based, patient-centered pain management."
+        path="/about"
       />
       <PageBanner title="About Us" crumb="About Us" />
 

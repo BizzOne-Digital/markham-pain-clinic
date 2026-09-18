@@ -19,6 +19,7 @@ export default function Home() {
       <SEO
         title="Home"
         description="Markham Pain Clinic offers evidence-based, personalized physiotherapy, acupuncture, and pain management to help you recover and live pain-free."
+        path="/"
       />
       <Hero />
       <ServicesPreview />

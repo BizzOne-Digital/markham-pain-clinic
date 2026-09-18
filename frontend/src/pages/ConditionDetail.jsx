@@ -61,9 +61,21 @@ export default function ConditionDetail() {
     )
   }
 
+  const conditionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalCondition',
+    name: condition.name,
+    description: condition.whatIsIt || condition.intro || condition.description,
+  }
+
   return (
     <>
-      <SEO title={condition.name} description={condition.description} />
+      <SEO
+        title={condition.name}
+        description={condition.intro || condition.description}
+        path={`/conditions/${slug}`}
+        jsonLd={conditionJsonLd}
+      />
 
       <section className="section-padding bg-white">
         <div className="container-app grid lg:grid-cols-[280px_1fr] gap-10">

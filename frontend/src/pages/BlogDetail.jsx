@@ -63,9 +63,26 @@ export default function BlogDetail() {
 
   const related = otherPosts.filter((p) => p.slug !== slug).slice(0, 4)
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.createdAt,
+    author: { '@type': 'Organization', name: 'Markham Pain Clinic' },
+    publisher: { '@type': 'Organization', name: 'Markham Pain Clinic' },
+    image: post.featuredImage,
+  }
+
   return (
     <>
-      <SEO title={post.title} description={post.excerpt} />
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${slug}`}
+        image={post.featuredImage}
+        jsonLd={articleJsonLd}
+      />
       <article className="section-padding bg-white">
         <div className="container-app grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">

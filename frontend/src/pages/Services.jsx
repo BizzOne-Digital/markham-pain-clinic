@@ -9,6 +9,7 @@ export default function Services() {
       <SEO
         title="Our Services"
         description="Explore Markham Pain Clinic's full range of services including physiotherapy, acupuncture, chronic pain management, sports injury rehab, and manual therapy."
+        path="/services"
       />
       <PageBanner title="Our Services" crumb="Services" />
       <ServicesPreview />

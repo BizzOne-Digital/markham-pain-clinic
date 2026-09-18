@@ -69,9 +69,23 @@ export default function ServiceDetail() {
     )
   }
 
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalTherapy',
+    name: service.name,
+    description: service.whatIsIt || service.description || service.shortDescription,
+    provider: { '@type': 'MedicalClinic', name: 'Markham Pain Clinic', url: 'https://www.markhampain.com' },
+  }
+
   return (
     <>
-      <SEO title={service.name} description={service.shortDescription} />
+      <SEO
+        title={service.name}
+        description={service.shortDescription}
+        path={`/services/${slug}`}
+        image={service.image}
+        jsonLd={serviceJsonLd}
+      />
 
       <section className="section-padding bg-white">
         <div className="container-app grid lg:grid-cols-[280px_1fr] gap-10">

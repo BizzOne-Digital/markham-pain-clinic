@@ -61,7 +61,7 @@ export default function Contact() {
 
   return (
     <>
-      <SEO title="Contact Us" description="Get in touch with Markham Pain Clinic to book an appointment or ask a question." />
+      <SEO title="Contact Us" description="Get in touch with Markham Pain Clinic to book an appointment or ask a question." path="/contact" />
       <PageBanner title="Contact Us" crumb="Contact" />
 
       <section className="section-padding bg-white">

@@ -33,6 +33,7 @@ export default function Team() {
       <SEO
         title="Our Team"
         description="Meet the licensed physiotherapists, acupuncturists, and pain specialists at Markham Pain Clinic."
+        path="/team"
       />
       <PageBanner title="Our Team" crumb="Our Team" />
       <section className="section-padding bg-white">
