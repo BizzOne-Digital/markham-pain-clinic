@@ -57,12 +57,12 @@ export default function TreatmentJourney() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-soft"
+              className="bg-white rounded-2xl overflow-hidden shadow-soft h-full flex flex-col"
             >
-              <div className="p-6 text-center">
+              <div className="p-6 text-center flex flex-col flex-1">
                 <h3 className="font-serif text-lg text-textMain mb-2">{step.title}</h3>
                 <p className="text-textSecondary text-sm leading-relaxed mb-4">{step.text}</p>
-                <span className="block font-heading font-extrabold text-4xl text-gray-300 leading-none">
+                <span className="block font-heading font-extrabold text-4xl text-gray-300 leading-none mt-auto">
                   Step {step.num}
                 </span>
               </div>
