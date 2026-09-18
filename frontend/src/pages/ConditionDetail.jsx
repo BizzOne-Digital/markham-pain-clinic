@@ -110,36 +110,77 @@ export default function ConditionDetail() {
               </div>
             )}
 
-            {condition.symptoms?.length > 0 && (
+            {condition.symptomsDetails?.length > 0 ? (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Symptoms</h2>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {condition.symptoms.map((s) => (
-                    <li key={s} className="flex items-center gap-2 text-textMain text-sm">
-                      <FiCheckCircle className="text-gold flex-shrink-0" /> {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {condition.causes?.length > 0 && (
-              <div className="mb-8">
-                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Causes</h2>
-                <div className="flex flex-wrap gap-3">
-                  {condition.causes.map((c) => (
-                    <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">
-                      {c}
-                    </span>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {condition.symptomsDetails.map((s) => (
+                    <div key={s.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{s.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{s.description}</p>
+                    </div>
                   ))}
                 </div>
               </div>
+            ) : (
+              condition.symptoms?.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Symptoms</h2>
+                  <ul className="grid sm:grid-cols-2 gap-3">
+                    {condition.symptoms.map((s) => (
+                      <li key={s} className="flex items-center gap-2 text-textMain text-sm">
+                        <FiCheckCircle className="text-gold flex-shrink-0" /> {s}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            )}
+
+            {condition.causesDetails?.length > 0 ? (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Causes</h2>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {condition.causesDetails.map((c) => (
+                    <div key={c.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{c.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{c.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              condition.causes?.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Common Causes</h2>
+                  <div className="flex flex-wrap gap-3">
+                    {condition.causes.map((c) => (
+                      <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )
             )}
 
             {condition.treatmentApproach && (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">How We Help</h2>
                 <p className="text-textSecondary leading-relaxed">{condition.treatmentApproach}</p>
+              </div>
+            )}
+
+            {condition.treatmentDetails?.length > 0 && (
+              <div className="mb-8">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {condition.treatmentDetails.map((t) => (
+                    <div key={t.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{t.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{t.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
@@ -156,17 +197,31 @@ export default function ConditionDetail() {
               </div>
             )}
 
-            {condition.practicalTips?.length > 0 && (
+            {condition.practicalTipsDetails?.length > 0 ? (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Practical Tips</h2>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {condition.practicalTips.map((t) => (
-                    <li key={t} className="flex items-center gap-2 text-textMain text-sm">
-                      <FiCheckCircle className="text-gold flex-shrink-0" /> {t}
-                    </li>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {condition.practicalTipsDetails.map((t) => (
+                    <div key={t.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{t.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{t.description}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
+            ) : (
+              condition.practicalTips?.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Practical Tips</h2>
+                  <ul className="grid sm:grid-cols-2 gap-3">
+                    {condition.practicalTips.map((t) => (
+                      <li key={t} className="flex items-center gap-2 text-textMain text-sm">
+                        <FiCheckCircle className="text-gold flex-shrink-0" /> {t}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
             )}
 
             {condition.whyChooseUs?.length > 0 && (
