@@ -12,7 +12,7 @@ export default function TeamCard({ member, index = 0 }) {
     >
       <Link to={`/team/${member.slug}`} className="block">
         <div className="flex items-center gap-4">
-          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden flex-shrink-0 border-2 border-gold/40">
+          <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden flex-shrink-0 border-2 border-gold/40">
             <img src={member.photo} alt={member.name} loading="lazy" className="w-full h-full object-cover" />
           </div>
           <div>
