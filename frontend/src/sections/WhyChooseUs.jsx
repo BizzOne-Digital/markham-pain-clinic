@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
       <div className="container-app">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <SectionLabel>Why Choose Us</SectionLabel>
-          <h2 className="section-heading">Why Patients Choose Remarkable Physiotherapy</h2>
+          <h2 className="section-heading">Why Patients Choose Markham Pain Clinic</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {FEATURES.map(({ icon: Icon, title, text }, i) => (

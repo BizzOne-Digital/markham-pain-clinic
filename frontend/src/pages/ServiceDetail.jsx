@@ -240,7 +240,7 @@ export default function ServiceDetail() {
 
             {service.whyChooseUs?.length > 0 && (
               <div className="mb-8">
-                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Why Choose Remarkable Physiotherapy</h2>
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Why Choose Markham Pain Clinic</h2>
                 <div className="grid sm:grid-cols-2 gap-5">
                   {service.whyChooseUs.map((w) => (
                     <div key={w.title}>

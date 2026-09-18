@@ -32,7 +32,7 @@ export default function Testimonials() {
     <>
       <SEO
         title="Testimonials"
-        description="Read real patient testimonials about their pain relief and recovery experience at Remarkable Physiotherapy."
+        description="Read real patient testimonials about their pain relief and recovery experience at Markham Pain Clinic."
       />
       <PageBanner title="Testimonials" crumb="Testimonials" />
       <section className="section-padding bg-white">

@@ -13,7 +13,7 @@ export const PLACEHOLDER_SERVICES = [
   {
     name: 'Physiotherapy',
     shortDescription: 'Movement, strength and recovery support.',
-    description: 'Living with discomfort, stiffness, or limited movement can affect every part of your routine. At Remarkable Physiotherapy, the focus is on helping you move with ease, restore strength, and return to the activities that matter to you.',
+    description: 'Living with discomfort, stiffness, or limited movement can affect every part of your routine. At Markham Pain Clinic, the focus is on helping you move with ease, restore strength, and return to the activities that matter to you.',
   },
   {
     name: 'Chiropractic Care',
@@ -323,7 +323,7 @@ export const PLACEHOLDER_TESTIMONIALS = [
   {
     _id: 'r1',
     name: 'Amanda K.',
-    testimonial: 'After months of chronic back pain, the team at Remarkable Physiotherapy finally gave me a plan that worked. I am pain-free and back to my morning runs.',
+    testimonial: 'After months of chronic back pain, the team at Markham Pain Clinic finally gave me a plan that worked. I am pain-free and back to my morning runs.',
     rating: 5,
     serviceCategory: 'Physiotherapy',
   },
@@ -457,5 +457,5 @@ export const CLINIC_INFO = {
   instagramUrl: 'https://instagram.com/Markhampainclinic',
   address: '8 Shadlock St #1, Markham, ON L3S 3K9, Canada',
   hours: 'Open 7 Days a Week',
-  businessName: 'Remarkable Physiotherapy',
+  businessName: 'Markham Pain Clinic',
 }

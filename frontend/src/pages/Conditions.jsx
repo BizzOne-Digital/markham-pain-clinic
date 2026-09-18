@@ -27,7 +27,7 @@ export default function Conditions() {
 
   return (
     <>
-      <SEO title="Conditions Treated" description="Conditions treated at Remarkable Physiotherapy including back pain, sports injuries, sciatica and more." />
+      <SEO title="Conditions Treated" description="Conditions treated at Markham Pain Clinic including back pain, sports injuries, sciatica and more." />
       <PageBanner title="Conditions We Treat" crumb="Conditions Treated" />
       <section className="section-padding bg-white">
         <div className="container-app grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

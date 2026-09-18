@@ -20,7 +20,7 @@ export default function About() {
     <>
       <SEO
         title="About Us"
-        description="Learn about Remarkable Physiotherapy's mission, values, and commitment to evidence-based, patient-centered pain management."
+        description="Learn about Markham Pain Clinic's mission, values, and commitment to evidence-based, patient-centered pain management."
       />
       <PageBanner title="About Us" crumb="About Us" />
 
@@ -30,10 +30,10 @@ export default function About() {
       <section className="section-padding bg-ivory">
         <div className="container-app grid lg:grid-cols-2 gap-14 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <SectionLabel>About Remarkable Physiotherapy</SectionLabel>
+            <SectionLabel>About Markham Pain Clinic</SectionLabel>
             <h2 className="section-heading mb-5">About Us</h2>
             <p className="text-textSecondary leading-relaxed mb-4">
-              At Remarkable Physiotherapy, we focus on delivering a high standard of care built around
+              At Markham Pain Clinic, we focus on delivering a high standard of care built around
               each individual&apos;s needs. Every person who walks through our doors has a different
               story, and we take the time to understand your condition, goals, and lifestyle before
               planning your care.
@@ -62,7 +62,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="rounded-2xl overflow-hidden shadow-soft aspect-[4/5]"
           >
-            <img src="/clinic-reception.jpg" alt="Remarkable Physiotherapy clinic" className="w-full h-full object-cover" />
+            <img src="/clinic-reception.jpg" alt="Markham Pain Clinic clinic" className="w-full h-full object-cover" />
           </motion.div>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function About() {
             <SectionLabel>Why Choose Us</SectionLabel>
             <h2 className="section-heading mb-5">Many Solutions Under One Roof</h2>
             <p className="text-textSecondary leading-relaxed mb-4">
-              At Remarkable Physiotherapy, a wide range of services is available in one location,
+              At Markham Pain Clinic, a wide range of services is available in one location,
               including physiotherapy, chiropractic care, massage therapy, laser therapy, shockwave
               therapy, and acupuncture. This allows for a well-rounded approach to care without the
               need to visit multiple providers. The team focuses on understanding your needs and using

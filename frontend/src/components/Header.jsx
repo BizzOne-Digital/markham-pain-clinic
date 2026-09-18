@@ -112,7 +112,7 @@ export default function Header() {
       >
         <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           <NavLink to="/" className="font-serif text-lg sm:text-xl text-white font-semibold tracking-tight flex-shrink-0 whitespace-nowrap">
-            Remarkable <span className="text-gold italic">Physiotherapy</span>
+            Markham <span className="text-gold italic">Pain Clinic</span>
           </NavLink>
 
           <nav className="hidden xl:flex items-center gap-4 ml-4">

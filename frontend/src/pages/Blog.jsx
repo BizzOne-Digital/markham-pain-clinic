@@ -32,7 +32,7 @@ export default function Blog() {
     <>
       <SEO
         title="Blog"
-        description="Read the latest tips and insights on pain management, physiotherapy, and recovery from Remarkable Physiotherapy."
+        description="Read the latest tips and insights on pain management, physiotherapy, and recovery from Markham Pain Clinic."
       />
       <PageBanner title="Latest News & Blogs" crumb="Blog" />
       <section className="section-padding bg-white">
