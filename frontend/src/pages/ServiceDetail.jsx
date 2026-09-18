@@ -149,46 +149,93 @@ export default function ServiceDetail() {
               </div>
             )}
 
-            {service.whoCanBenefit?.length > 0 && (
+            {service.whoCanBenefitDetails?.length > 0 ? (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Who Can Benefit</h2>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {service.whoCanBenefit.map((w) => (
-                    <li key={w} className="flex items-center gap-2 text-textMain text-sm">
-                      <FiCheckCircle className="text-gold flex-shrink-0" /> {w}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {service.conditionsTreated?.length > 0 && (
-              <div className="mb-8">
-                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Conditions Treated</h2>
-                <div className="flex flex-wrap gap-3">
-                  {service.conditionsTreated.map((c) => (
-                    <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">
-                      {c}
-                    </span>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {service.whoCanBenefitDetails.map((w) => (
+                    <div key={w.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{w.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{w.description}</p>
+                    </div>
                   ))}
                 </div>
               </div>
+            ) : (
+              service.whoCanBenefit?.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Who Can Benefit</h2>
+                  <ul className="grid sm:grid-cols-2 gap-3">
+                    {service.whoCanBenefit.map((w) => (
+                      <li key={w} className="flex items-center gap-2 text-textMain text-sm">
+                        <FiCheckCircle className="text-gold flex-shrink-0" /> {w}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
             )}
 
-            {service.treatmentProcess?.length > 0 && (
+            {service.conditionsTreatedDetails?.length > 0 ? (
+              <div className="mb-8">
+                <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Conditions Treated</h2>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {service.conditionsTreatedDetails.map((c) => (
+                    <div key={c.title}>
+                      <h3 className="font-heading font-bold text-textMain mb-1">{c.title}</h3>
+                      <p className="text-textSecondary text-sm leading-relaxed">{c.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              service.conditionsTreated?.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Conditions Treated</h2>
+                  <div className="flex flex-wrap gap-3">
+                    {service.conditionsTreated.map((c) => (
+                      <span key={c} className="bg-beige/50 text-darkCoffee text-sm px-4 py-2 rounded-full">
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
+
+            {service.treatmentProcessDetails?.length > 0 ? (
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Our Process</h2>
                 <ol className="space-y-4">
-                  {service.treatmentProcess.map((step, i) => (
-                    <li key={step} className="flex gap-4 items-start">
+                  {service.treatmentProcessDetails.map((step, i) => (
+                    <li key={step.title} className="flex gap-4 items-start">
                       <span className="w-8 h-8 rounded-full bg-gold text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">
                         {i + 1}
                       </span>
-                      <span className="text-textSecondary pt-1">{step}</span>
+                      <span className="text-textSecondary pt-1">
+                        <strong className="text-textMain">{step.title}</strong>
+                        {step.description ? <> &mdash; {step.description}</> : null}
+                      </span>
                     </li>
                   ))}
                 </ol>
               </div>
+            ) : (
+              service.treatmentProcess?.length > 0 && (
+                <div className="mb-8">
+                  <h2 className="font-heading font-bold text-2xl text-textMain mb-4">Our Process</h2>
+                  <ol className="space-y-4">
+                    {service.treatmentProcess.map((step, i) => (
+                      <li key={step} className="flex gap-4 items-start">
+                        <span className="w-8 h-8 rounded-full bg-gold text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">
+                          {i + 1}
+                        </span>
+                        <span className="text-textSecondary pt-1">{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )
             )}
 
             {service.whyChooseUs?.length > 0 && (

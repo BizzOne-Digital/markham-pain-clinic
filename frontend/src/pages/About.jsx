@@ -62,7 +62,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="rounded-2xl overflow-hidden shadow-soft aspect-[4/5]"
           >
-            <img src="/about.png" alt="Remarkable Physiotherapy clinic" className="w-full h-full object-cover" />
+            <img src="/clinic-reception.jpg" alt="Remarkable Physiotherapy clinic" className="w-full h-full object-cover" />
           </motion.div>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function About() {
 
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end">
             <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop"
+              src="/Why-choose.webp"
               alt="Clinic interior"
               className="absolute inset-0 w-full h-full object-cover"
             />
