@@ -449,10 +449,8 @@ export const PLACEHOLDER_STATS = [
 ]
 
 export const CLINIC_INFO = {
-  phone: '+1 289-800-0441',
-  phoneSecondary: '+1 289-800-9396',
-  whatsapp: '+1 289-892-2241',
-  email: 'remarkablephysio@gmail.com',
+  phone: '+1 905-243-9423',
+  email: 'itssiddharthpatel@gmail.com',
   instagram: '@Markhampainclinic',
   instagramUrl: 'https://instagram.com/Markhampainclinic',
   address: '8 Shadlock St #1, Markham, ON L3S 3K9, Canada',
