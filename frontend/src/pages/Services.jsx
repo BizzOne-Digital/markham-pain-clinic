@@ -7,11 +7,11 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Our Services"
-        description="Explore Markham Pain Clinic's full range of services including physiotherapy, acupuncture, chronic pain management, sports injury rehab, and manual therapy."
+        title="Physiotherapy Services in Markham"
+        description="Explore Markham Pain Clinic's full range of services including physiotherapy, acupuncture, chiropractic care, massage therapy, and manual therapy in Markham, ON."
         path="/services"
       />
-      <PageBanner title="Our Services" crumb="Services" />
+      <PageBanner title="Our Physiotherapy & Pain Services" crumb="Services" />
       <ServicesPreview />
       <AppointmentCTA />
     </>

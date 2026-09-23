@@ -61,13 +61,17 @@ export default function Contact() {
 
   return (
     <>
-      <SEO title="Contact Us" description="Get in touch with Markham Pain Clinic to book an appointment or ask a question." path="/contact" />
-      <PageBanner title="Contact Us" crumb="Contact" />
+      <SEO
+        title="Contact Our Markham Pain Clinic"
+        description="Contact Markham Pain Clinic to book a physiotherapy, chiropractic, or pain management appointment in Markham, ON. Call, email, or send us a message today."
+        path="/contact"
+      />
+      <PageBanner title="Contact Markham Pain Clinic" crumb="Contact" />
 
       <section className="section-padding bg-white">
         <div className="container-app text-center max-w-2xl mx-auto mb-14">
           <SectionLabel>Contact Us</SectionLabel>
-          <h1 className="section-heading mb-4">Contact Markham Pain Clinic in Markham</h1>
+          <h2 className="section-heading mb-4">Contact Markham Pain Clinic in Markham</h2>
           <p className="text-textSecondary leading-relaxed">
             Whatever you're going through, you don't have to face it alone. Reach out to us—we're
             here to help, and your information is always kept safe and confidential.
@@ -218,8 +222,14 @@ export default function Contact() {
         </div>
 
         <div className="container-app mt-12">
-          <div className="rounded-2xl overflow-hidden border border-beige/70 h-72 bg-lightBeige flex items-center justify-center text-textSecondary text-sm">
-            Google Maps embed placeholder — add clinic location map here.
+          <div className="rounded-2xl overflow-hidden border border-beige/70 h-72">
+            <iframe
+              title="Markham Pain Clinic location map"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(CLINIC_INFO.address)}&output=embed`}
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

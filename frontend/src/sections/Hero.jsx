@@ -32,14 +32,14 @@ export default function Hero() {
             YOUR PATH TO
           </p>
           <h1 className="font-heading font-bold text-[2.75rem] sm:text-6xl lg:text-[5.5rem] leading-[1.02] text-white mt-2 [text-shadow:0_2px_16px_rgba(0,0,0,0.55)]">
-            Comfortable Movement
+            Physiotherapy &amp; Pain Management in Markham
           </h1>
           <p className="italic text-gold font-serif text-3xl sm:text-4xl lg:text-5xl mt-2 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
             Starts Here
           </p>
           <p className="text-beige/90 text-base sm:text-lg mt-6 max-w-md leading-relaxed">
-            Hero messaging rotates between recovery, strength and everyday ease, with prominent phone and
-            appointment actions.
+            From recovery after injury to building lasting strength and everyday ease of movement, our
+            Markham team is ready to help — call us or book your appointment online today.
           </p>
           <div className="flex flex-wrap items-center gap-4 mt-8">
             <Button href={`tel:${CLINIC_INFO.phone.replace(/\s/g, '')}`} variant="outline-light">

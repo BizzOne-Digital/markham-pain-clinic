@@ -449,11 +449,11 @@ export const PLACEHOLDER_STATS = [
 ]
 
 export const CLINIC_INFO = {
-  phone: '+1 905-243-9423',
-  email: 'itssiddharthpatel@gmail.com',
+  phone: '+1 905-470-2626',
+  email: 'reception@markhampain.com',
   instagram: '@Markhampainclinic',
   instagramUrl: 'https://instagram.com/Markhampainclinic',
-  address: '8 Shadlock St #1, Markham, ON L3S 3K9, Canada',
+  address: '8312 McCowan Rd Suite #206, Markham, ON L3P 8E1, Canada',
   hours: 'Open 7 Days a Week',
   businessName: 'Markham Pain Clinic',
 }

@@ -22,7 +22,8 @@ export default function AppointmentCTA() {
       >
         <h2 className="font-heading font-bold text-3xl sm:text-4xl mb-4">Move toward a healthier, more active life</h2>
         <p className="text-beige/90 mb-8 leading-relaxed">
-          The closing message invites visitors to connect with the clinic and start their care journey.
+          Connect with Markham Pain Clinic today and take the first step toward lasting relief and a
+          stronger, more active life.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button to="/contact">Book An Appointment</Button>

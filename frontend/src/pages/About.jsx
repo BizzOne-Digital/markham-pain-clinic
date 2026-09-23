@@ -19,11 +19,11 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Us"
+        title="About Our Markham Physiotherapy Clinic"
         description="Learn about Markham Pain Clinic's mission, values, and commitment to evidence-based, patient-centered pain management."
         path="/about"
       />
-      <PageBanner title="About Us" crumb="About Us" />
+      <PageBanner title="About Markham Pain Clinic" crumb="About Us" />
 
       <InsuranceBilling />
 
@@ -32,7 +32,7 @@ export default function About() {
         <div className="container-app grid lg:grid-cols-2 gap-14 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <SectionLabel>About Markham Pain Clinic</SectionLabel>
-            <h2 className="section-heading mb-5">About Us</h2>
+            <h2 className="section-heading mb-5">Our Story</h2>
             <p className="text-textSecondary leading-relaxed mb-4">
               At Markham Pain Clinic, we focus on delivering a high standard of care built around
               each individual&apos;s needs. Every person who walks through our doors has a different
@@ -92,9 +92,9 @@ export default function About() {
                   <FiCheck className="text-gold" /> Our Vision
                 </h3>
                 <p className="text-textSecondary text-sm leading-relaxed">
-                  Our vision is to empower individuals to achieve optimal physical health and
-                  well-being through personalized, evidence-based interventions, fostering a life of
-                  movement, vitality, and independence.
+                  We want every patient in Markham to move through daily life without being held back
+                  by pain, guided by treatment plans built around their own goals, not a one-size-fits-all
+                  protocol.
                 </p>
               </div>
               <div className="bg-white rounded-2xl shadow-soft p-6">
@@ -102,14 +102,14 @@ export default function About() {
                   <FiCheck className="text-gold" /> Our Mission
                 </h3>
                 <p className="text-textSecondary text-sm leading-relaxed">
-                  Your well-being is our top priority, and we are dedicated to helping you achieve
-                  your health goals.
+                  We combine hands-on therapy, modern equipment, and clear communication so every
+                  patient understands their plan and feels supported at each visit.
                 </p>
               </div>
             </div>
             <p className="italic font-serif text-lg text-textMain leading-relaxed">
-              Every step we take is focused on helping you move with ease and confidence. Your
-              progress stays at the center of everything we do.
+              From your first visit to your last follow-up, our Markham team keeps your recovery and
+              your goals at the center of every decision.
             </p>
           </div>
         </div>
