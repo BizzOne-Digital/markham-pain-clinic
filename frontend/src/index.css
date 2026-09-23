@@ -13,9 +13,6 @@ body {
   width: 100%;
 }
 
-#root {
-  overflow-x: clip;
-}
 
 h1, h2, h3, h4 {
   @apply font-serif;
