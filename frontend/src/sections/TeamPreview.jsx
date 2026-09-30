@@ -40,7 +40,7 @@ export default function TeamPreview() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
           {team.slice(0, 4).map((member, i) => (
-            <TeamCard key={member._id || member.slug} member={member} index={i} />
+            <TeamCard key={member._id || member.slug || i} index={i} />
           ))}
         </div>
       </div>

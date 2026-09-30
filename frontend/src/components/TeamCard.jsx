@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { FiUser } from 'react-icons/fi'
 
-export default function TeamCard({ member, index = 0 }) {
+export default function TeamCard({ index = 0 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -10,30 +10,23 @@ export default function TeamCard({ member, index = 0 }) {
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="card p-6"
     >
-      <Link to={`/team/${member.slug}`} className="block">
-        <div className="flex items-center gap-4">
-          <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden flex-shrink-0 border-2 border-gold/40">
-            <img src={member.photo} alt={member.name} loading="lazy" className="w-full h-full object-cover" />
-          </div>
-          <div>
-            <h3 className="font-heading font-bold text-xl text-textMain">{member.name}</h3>
-            <span className="inline-block bg-beige/60 text-darkCoffee text-xs font-semibold px-3 py-1 rounded-full mt-1">
-              {member.role}
-            </span>
-          </div>
+      <div className="flex items-center gap-4">
+        <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden flex-shrink-0 border-2 border-gold/40 bg-beige/40 flex items-center justify-center">
+          <FiUser className="text-darkCoffee/40 text-5xl" />
         </div>
-        <hr className="border-beige my-4" />
-        <div className="flex items-center justify-between gap-3">
-          <span className="bg-white border border-beige text-textMain text-xs font-semibold px-3 py-2 rounded-full whitespace-nowrap">
-            {member.seniorTitle || member.role}
+        <div>
+          <h3 className="font-heading font-bold text-xl text-textMain">Coming Soon</h3>
+          <span className="inline-block bg-beige/60 text-darkCoffee text-xs font-semibold px-3 py-1 rounded-full mt-1">
+            Coming Soon
           </span>
-          {member.yearsExperience && (
-            <span className="bg-white border border-beige text-textMain text-xs font-semibold px-3 py-2 rounded-full whitespace-nowrap">
-              {member.yearsExperience} Years
-            </span>
-          )}
         </div>
-      </Link>
+      </div>
+      <hr className="border-beige my-4" />
+      <div className="flex items-center justify-between gap-3">
+        <span className="bg-white border border-beige text-textMain text-xs font-semibold px-3 py-2 rounded-full whitespace-nowrap">
+          Coming Soon
+        </span>
+      </div>
     </motion.div>
   )
 }

@@ -43,7 +43,7 @@ export default function Team() {
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {team.map((member, i) => (
-                <TeamCard key={member._id || member.slug} member={member} index={i} />
+                <TeamCard key={member._id || member.slug || i} index={i} />
               ))}
             </div>
           )}
